@@ -81,7 +81,6 @@ var cheatsheet = {
     "bg-position": [
       "bg-{left / right / top / bottom}",
       "bg-center",
-      "bg-{left / right}",
       "bg-{left / right}-{top / bottom}"
     ],
     "bg-repeat": [
