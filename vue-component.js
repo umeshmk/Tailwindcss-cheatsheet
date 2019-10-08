@@ -1,8 +1,3 @@
-// var title = `
-// <h1 class="inline text-3xl text-white bg-gray-800 p-2 capitalize">
-// {{ title }}
-// </h1>
-// `;
 var title = `
 <h1 class="inline text-xl text-white bg-purple-800 p-2 capitalize">
 <span class="text-gray-100"># </span>{{ title }}
