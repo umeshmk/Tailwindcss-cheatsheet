@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.1.2/tailwind.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body class="bg-white mx-auto">
+    <!-- **********
+      NAVBAR 
+    ************-->
+    <nav
+      class="flex flex-row items-center justify-between text-white bg-purple-800 mb-6 px-4 py-1"
+    >
+      <div class="flex flex-col">
+        <!-- <div
+          class="hidden md:flex mr-3 bg-blue-100 p-1"
+          id="tailwindIcon"
+        ></div> -->
+        <div class="md:hidde font-extrabold text-xl">
+          <a href="https://umeshmk.github.io/Tailwindcss-cheatsheet/">
+            Tailwindcss
+          </a>
+        </div>
+        <span class="text-sm text-gray-300 font-thin">cheatsheet v-1.0</span>
+      </div>
+      <ul class="flex flex-row items-center text-sm">
+        <li class="flex pr-10 font-thin text-2xl underline">
+          <a href="/">v-2.0 (latest) </a>
+        </li>
+        <li class="flex flex-col">
+          <a href="https://github.com/umeshmk/Tailwindcss-cheatsheet">
+            <!-- <span class="mr-3 p-1" id="githubIcon"></span> -->
+            <i class="fab fa-github text-4xl"></i>
+            <span class="hidden md:block text-gray-300 mt-1"> Github </span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!-- ************ 
+      APP RESPONSIVE
+    ************-->
+    <div
+      class="container mx-auto flex justify-between flex-wrap p-"
+      id="app-responsive"
+    >
+      <div class="w-full md:w-auto my-4">
+        <vc-title ptitle="spacing"></vc-title>
+        <vc-size :psize="spacing"></vc-size>
+      </div>
+      <!-- <div class="flex flex-col flex-grow ml-12"> -->
+      <!-- <div class="flex flex-row justify-between"> -->
+      <div class="flex flex-col justify-around w-full md:w-auto my-4">
+        <div>
+          <div class="flex bg-purple-800 text-blue-200 p-4" id="icons"></div>
+          <vc-responsive :presponsive="responsive"></vc-responsive>
+        </div>
+        <div class="flex flex-row justify-between">
+          <div>
+            <vc-title ptitle="Pseudo-Class"></vc-title>
+            <vc-pseudo :pclass="pseudoClass"></vc-pseudo>
+          </div>
+          <div>
+            <vc-title ptitle="Functions"></vc-title>
+            <vc-function :pfunc="functions"></vc-function>
+          </div>
+        </div>
+      </div>
+      <!-- </div> -->
+      <!-- <div class="flex"> -->
+      <div class="my-4">
+        <vc-title ptitle="colors"></vc-title>
+        <div class="flex flex-row bg-purple-100 px-2">
+          <vc-colors :pcolors="colors" :pdepth="100"></vc-colors>
+          <vc-colors :pcolors="colors" :pdepth="300"></vc-colors>
+          <vc-colors :pcolors="colors" :pdepth="500"></vc-colors>
+          <vc-colors :pcolors="colors" :pdepth="700"></vc-colors>
+          <vc-colors :pcolors="colors" :pdepth="900"></vc-colors>
+        </div>
+      </div>
+      <!-- </div> -->
+      <!-- <div class="flex flex-row items-start justify-between flex-grow my-4">
+        <div class="flex flex-col items-start">
+          <vc-title ptitle="variant"></vc-title>
+          <vc-variant :pvariants="variants"></vc-variant>
+        </div>
+      </div> -->
+      <!-- </div> -->
+    </div>
+
+    <!-- ************ 
+      APP 
+    ************-->
+    <div
+      class="flex flex-row justify-center md:justify-between flex-wrap p-4"
+      id="app-1"
+    >
+      <div>
+        <div class="my-4">
+          <vc-title ptitle="flexbox"></vc-title>
+          <div class="flex flex-row">
+            <vc-heading v-bind:pheading="flexparent"></vc-heading>
+            <vc-heading v-bind:pheading="flexchildren"></vc-heading>
+          </div>
+        </div>
+      </div>
+      <div class="my-4">
+        <vc-title ptitle="Sizing"></vc-title>
+        <div class="flex flex-row">
+          <vc-heading v-bind:pheading="cSizing[0]"></vc-heading>
+          <vc-heading v-bind:pheading="cSizing[1]"></vc-heading>
+        </div>
+      </div>
+      <div class="my-4">
+        <vc-title ptitle="Background"></vc-title>
+        <vc-heading v-bind:pheading="background"></vc-heading>
+      </div>
+      <div class="my-4">
+        <vc-title ptitle="Border"></vc-title>
+        <vc-heading v-bind:pheading="border"></vc-heading>
+      </div>
+      <div>
+        <div class="my-4">
+          <vc-title ptitle="Layout"></vc-title>
+          <div class="flex flex-col md:flex-row">
+            <vc-heading v-bind:pheading="cLayout[0]"></vc-heading>
+            <vc-heading v-bind:pheading="cLayout[1]"></vc-heading>
+            <vc-heading v-bind:pheading="cLayout[2]"></vc-heading>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="my-4">
+          <vc-title ptitle="Typography"></vc-title>
+          <div class="flex flex-col md:flex-row">
+            <vc-heading v-bind:pheading="cTypography[0]"></vc-heading>
+            <vc-heading v-bind:pheading="cTypography[1]"></vc-heading>
+            <vc-heading v-bind:pheading="cTypography[2]"></vc-heading>
+          </div>
+        </div>
+      </div>
+      <div class="my-4">
+        <vc-title ptitle="spacing"></vc-title>
+        <vc-heading v-bind:pheading="spacing"></vc-heading>
+      </div>
+      <!-- <div> -->
+      <div class="my-4">
+        <vc-title ptitle="effect"></vc-title>
+        <vc-heading v-bind:pheading="effect"></vc-heading>
+      </div>
+      <div class="my-4">
+        <vc-title ptitle="table"></vc-title>
+        <vc-heading v-bind:pheading="table"></vc-heading>
+      </div>
+      <!-- </div> -->
+      <div class="rder-last my-4">
+        <vc-title ptitle="Interactivity"></vc-title>
+        <vc-heading v-bind:pheading="interactivity"></vc-heading>
+      </div>
+      <div class="my-4">
+        <vc-title ptitle="svg"></vc-title>
+        <vc-heading v-bind:pheading="svg"></vc-heading>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.15/lodash.min.js"></script>
+    <script src="all.js" type="text/javascript"></script>
+    <script src="icons.js"></script>
+    <script src="vue-component.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
+<!-- 
+<div>
+  <div class="flex flex-col bg-black text-white p-1" v-for="s in size">
+    {{ s }}
+  </div>
+</div> -->
