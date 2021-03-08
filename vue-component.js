@@ -1,17 +1,17 @@
 var title = `
-<h1 class="inline text-xl text-white bg-purple-800 p-2 capitalize">
+<h1 class=" inline text-xl text-white bg-purple-800 p-2 capitalize">
 <span class="text-gray-100"># </span>{{ title }}
 </h1>
 `;
 
 Vue.component("vc-title", {
-  data: function() {
+  data: function () {
     return {
-      title: this.ptitle
+      title: this.ptitle,
     };
   },
   props: ["ptitle"],
-  template: title
+  template: title,
 });
 
 // =========================================
@@ -21,7 +21,7 @@ var heading = `
     <div class="text-purple-600 text-sm uppercase font-semibold w-full p-2"
         v-for="(i,ihead) in heading " >
         {{ ihead }}
-        <div class="text-black text-base font-thin px-2 tracking-wide" v-for="j in i">
+        <div class="text-gray-600 font-mono  px-2 tracking-wide" v-for="j in i">
             <div class="lowercase">.{{ j }}</div>
         </div>
     </div>
@@ -29,15 +29,16 @@ var heading = `
 `;
 
 Vue.component("vc-heading", {
-  data: function() {
+  data: function () {
     return {
-      heading: this.pheading
+      heading: this.pheading,
     };
   },
   props: ["pheading"],
-  template: heading
+  template: heading,
 });
 
+// =========================================
 var reponsiveTemplate = `
 <div class="flex pb-8 md:pb-6 ">
     <div class="flex-1 bg-purple-100 uppercase md:p-3 "
@@ -52,9 +53,10 @@ var reponsiveTemplate = `
 
 Vue.component("vc-responsive", {
   props: ["presponsive"],
-  template: reponsiveTemplate
+  template: reponsiveTemplate,
 });
 
+// =========================================
 var colorsTemplate = `
 <div class="flex flex-col justify-between flex-wrap pt-4 ">
   <div class="flex flex-col items-center flex-wrap" v-for="c in pcolors">    
@@ -69,9 +71,10 @@ var colorsTemplate = `
 
 Vue.component("vc-colors", {
   props: ["pcolors", "pdepth"],
-  template: colorsTemplate
+  template: colorsTemplate,
 });
 
+// =========================================
 var sizeTemplate = `
 <div class="flex flex-col items-start justify-center bg-purple-100 p-6 ">
   <div class="flex flex-row items-center pt-1" v-for="s in psize">
@@ -83,9 +86,10 @@ var sizeTemplate = `
 
 Vue.component("vc-size", {
   props: ["psize"],
-  template: sizeTemplate
+  template: sizeTemplate,
 });
 
+// =========================================
 // var pseudoTemplate = `
 // <div class="flex flex-row justify-around w-full italic bg-purple-100 py-3 px-2 mb-6 tracking-wide">
 //   <div>
@@ -118,9 +122,10 @@ var pseudoTemplate = `
 
 Vue.component("vc-pseudo", {
   props: ["pclass"],
-  template: pseudoTemplate
+  template: pseudoTemplate,
 });
 
+// =========================================
 var functionTemplate = `
 <div class="flex flex-col justify-between py-3 px-2 bg-purple-100 ">
   <div  v-for="f in pfunc">
@@ -131,9 +136,10 @@ var functionTemplate = `
 
 Vue.component("vc-function", {
   props: ["pfunc"],
-  template: functionTemplate
+  template: functionTemplate,
 });
 
+// =========================================
 var variantTemplate = `
 <div class="flex flex-row justify-between  py-3 px-2 bg-purple-100 tracking-wide">
   <div class="flex-1 mx-4" v-for="(variant, key) in pvariants">
@@ -147,5 +153,5 @@ var variantTemplate = `
 
 Vue.component("vc-variant", {
   props: ["pvariants"],
-  template: variantTemplate
+  template: variantTemplate,
 });

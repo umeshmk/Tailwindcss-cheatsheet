@@ -1,67 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
+  <!-- HEAD -->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
-    <link
+    <title>Tailwindcss-cheatsheet</title>
+    <!-- <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.1.2/tailwind.min.css"
+    /> -->
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
     />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
     />
     <link rel="stylesheet" href="main.css" />
   </head>
+
+  <!-- BODY -->
   <body class="bg-white mx-auto">
     <!-- **********
       NAVBAR 
     ************-->
     <nav
-      class="flex flex-row items-center justify-between text-white bg-purple-800 mb-6 px-4 py-1"
+      class="flex flex-row items-center justify-between text-white bg-purple-900 px-4 py-1"
     >
-      <div class="flex flex-col ">
+      <div class="flex flex-col">
         <!-- <div
           class="hidden md:flex mr-3 bg-blue-100 p-1"
           id="tailwindIcon"
         ></div> -->
-        <div class="md:hidde  font-extrabold text-xl">
+        <div class="md:hidde font-extrabold text-xl">
           <a href="https://umeshmk.github.io/Tailwindcss-cheatsheet/">
             Tailwindcss
           </a>
         </div>
-        <span class="text-sm text-gray-300 font-thin">cheatsheet v-1.0</span>
+        <span class="text-sm text-gray-300 font-thin">cheatsheet v-2.0</span>
       </div>
       <ul class="flex flex-row items-center text-sm">
-        <li class="flex flex-col ">
+        <li class="flex flex-col">
           <a href="https://github.com/umeshmk/Tailwindcss-cheatsheet">
             <!-- <span class="mr-3 p-1" id="githubIcon"></span> -->
             <i class="fab fa-github text-4xl"></i>
-            <span class="hidden md:block text-gray-300 mt-1">
-              Github
-            </span>
+            <span class="hidden md:block text-gray-300 mt-1"> Github </span>
           </a>
         </li>
       </ul>
     </nav>
     <!-- ************ 
-      APP RESPONSIVE
+      APP RESPONSIVE(GRID)
     ************-->
     <div
-      class="container mx-auto flex justify-between flex-wrap p-"
+      class="grid md:grid-cols-12 gap-3 md:bg-purple-300 md:p-5 md:py-20"
       id="app-responsive"
     >
-      <div class=" w-full md:w-auto my-4 ">
+      <div class="col-span-full md:col-span-4">
         <vc-title ptitle="spacing"></vc-title>
         <vc-size :psize="spacing"></vc-size>
       </div>
-      <!-- <div class="flex flex-col flex-grow ml-12"> -->
-      <!-- <div class="flex flex-row justify-between"> -->
+      <div class="col-span-full md:col-span-8 grid grid-cols-12 grid-rows-">
+        <div class="col-span-full md:col-span-8">
+          <vc-title ptitle="colors"></vc-title>
+          <div class="flex flex-row justify-around bg-purple-100 p-5">
+            <vc-colors :pcolors="colors" :pdepth="50"></vc-colors>
+            <vc-colors :pcolors="colors" :pdepth="100"></vc-colors>
+            <vc-colors :pcolors="colors" :pdepth="200"></vc-colors>
+            <vc-colors :pcolors="colors" :pdepth="300"></vc-colors>
+            <vc-colors :pcolors="colors" :pdepth="400"></vc-colors>
+            <vc-colors :pcolors="colors" :pdepth="500"></vc-colors>
+            <vc-colors :pcolors="colors" :pdepth="600"></vc-colors>
+            <vc-colors :pcolors="colors" :pdepth="700"></vc-colors>
+            <vc-colors :pcolors="colors" :pdepth="800"></vc-colors>
+            <vc-colors :pcolors="colors" :pdepth="900"></vc-colors>
+          </div>
+        </div>
+
+        <div class="col-span-full md:col-span-4 flex justify-around">
+          <div>
+            <vc-title ptitle="Pseudo-Class"></vc-title>
+            <vc-pseudo :pclass="pseudoClass"></vc-pseudo>
+          </div>
+          <div>
+            <vc-title ptitle="Opacity"></vc-title>
+            <vc-pseudo :pclass="opacity"></vc-pseudo>
+          </div>
+        </div>
+        <div class="col-span-full md:col-span-8">
+          <vc-title ptitle="Breakpoints"></vc-title>
+          <div class="flex bg-purple-900 text-blue-200 p-4" id="icons"></div>
+          <vc-responsive :presponsive="responsive"></vc-responsive>
+        </div>
+
+        <div class="col-span-full md:col-span-4 flex justify-around">
+          <div>
+            <vc-title ptitle="Colors"></vc-title>
+            <vc-pseudo :pclass="colorsNum"></vc-pseudo>
+          </div>
+          <div>
+            <vc-title ptitle="Functions"></vc-title>
+            <vc-function :pfunc="functions"></vc-function>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- *************************** 
+      APP RESPONSIVE(FLEX)(OLD)
+    ********************************-->
+    <!-- <div
+      class="container mx-auto flex justify-between flex-wrap p-"
+      id="app-responsive"
+    > -->
+    <!-- <div class="w-full md:w-auto my-4">
+        <vc-title ptitle="spacing"></vc-title>
+        <vc-size :psize="spacing"></vc-size>
+      </div>
       <div class="flex flex-col justify-around w-full md:w-auto my-4">
         <div>
-          <div class="flex bg-purple-800 text-blue-200 p-4 " id="icons"></div>
+          <vc-title ptitle="Breakpoints"></vc-title>
+          <div class="flex bg-purple-900 text-blue-200 p-4" id="icons"></div>
           <vc-responsive :presponsive="responsive"></vc-responsive>
         </div>
         <div class="flex flex-row justify-between">
@@ -70,32 +131,40 @@
             <vc-pseudo :pclass="pseudoClass"></vc-pseudo>
           </div>
           <div>
+            <vc-title ptitle="Opacity"></vc-title>
+            <vc-pseudo :pclass="opacity"></vc-pseudo>
+          </div>
+          <div>
+            <vc-title ptitle="Colors"></vc-title>
+            <vc-pseudo :pclass="colorsNum"></vc-pseudo>
+          </div>
+          <div>
             <vc-title ptitle="Functions"></vc-title>
             <vc-function :pfunc="functions"></vc-function>
           </div>
         </div>
-      </div>
-      <!-- </div> -->
-      <!-- <div class="flex"> -->
-      <div class="my-4">
+      </div> -->
+    <!-- <div class="my-4">
         <vc-title ptitle="colors"></vc-title>
-        <div class="flex flex-row bg-purple-100  px-2">
+        <div class="flex flex-row bg-purple-100 px-2 mb-5">
+          <vc-colors :pcolors="colors" :pdepth="50"></vc-colors>
           <vc-colors :pcolors="colors" :pdepth="100"></vc-colors>
           <vc-colors :pcolors="colors" :pdepth="300"></vc-colors>
           <vc-colors :pcolors="colors" :pdepth="500"></vc-colors>
           <vc-colors :pcolors="colors" :pdepth="700"></vc-colors>
           <vc-colors :pcolors="colors" :pdepth="900"></vc-colors>
         </div>
-      </div>
-      <!-- </div> -->
-      <!-- <div class="flex flex-row items-start justify-between flex-grow my-4">
+        <vc-title ptitle="colors"></vc-title>
+      </div> -->
+
+    <!-- <div class="flex flex-row items-start justify-between flex-grow my-4">
         <div class="flex flex-col items-start">
           <vc-title ptitle="variant"></vc-title>
           <vc-variant :pvariants="variants"></vc-variant>
         </div>
       </div> -->
-      <!-- </div> -->
-    </div>
+
+    <!-- </div> -->
 
     <!-- ************ 
       APP 
@@ -107,10 +176,23 @@
       <div>
         <div class="my-4">
           <vc-title ptitle="flexbox"></vc-title>
-          <div class="flex flex-row">
-            <vc-heading v-bind:pheading="flexparent"></vc-heading>
-            <vc-heading v-bind:pheading="flexchildren"></vc-heading>
+          <div class="flex flex-col">
+            <vc-heading v-bind:pheading="flexbox"></vc-heading>
           </div>
+        </div>
+      </div>
+      <div class="my-4">
+        <vc-title ptitle="Grid"></vc-title>
+        <div class="flex flex-row">
+          <vc-heading v-bind:pheading="cGrid[0]"></vc-heading>
+          <vc-heading v-bind:pheading="cGrid[1]"></vc-heading>
+        </div>
+      </div>
+      <div class="my-4">
+        <vc-title ptitle="Box-alignment"></vc-title>
+        <div class="flex flex-row">
+          <vc-heading v-bind:pheading="cBoxAlignment[0]"></vc-heading>
+          <vc-heading v-bind:pheading="cBoxAlignment[1]"></vc-heading>
         </div>
       </div>
       <div class="my-4">
@@ -120,13 +202,10 @@
           <vc-heading v-bind:pheading="cSizing[1]"></vc-heading>
         </div>
       </div>
+
       <div class="my-4">
-        <vc-title ptitle="Background"></vc-title>
-        <vc-heading v-bind:pheading="background"></vc-heading>
-      </div>
-      <div class="my-4">
-        <vc-title ptitle="Border"></vc-title>
-        <vc-heading v-bind:pheading="border"></vc-heading>
+        <vc-title ptitle="spacing"></vc-title>
+        <vc-heading v-bind:pheading="spacing"></vc-heading>
       </div>
       <div>
         <div class="my-4">
@@ -138,6 +217,7 @@
           </div>
         </div>
       </div>
+
       <div>
         <div class="my-4">
           <vc-title ptitle="Typography"></vc-title>
@@ -145,14 +225,34 @@
             <vc-heading v-bind:pheading="cTypography[0]"></vc-heading>
             <vc-heading v-bind:pheading="cTypography[1]"></vc-heading>
             <vc-heading v-bind:pheading="cTypography[2]"></vc-heading>
+            <vc-heading v-bind:pheading="cTypography[3]"></vc-heading>
           </div>
         </div>
       </div>
+
       <div class="my-4">
-        <vc-title ptitle="spacing"></vc-title>
-        <vc-heading v-bind:pheading="spacing"></vc-heading>
+        <vc-title ptitle="Background"></vc-title>
+        <div class="flex flex-col md:flex-row">
+          <vc-heading v-bind:pheading="cBackground[0]"></vc-heading>
+          <vc-heading v-bind:pheading="cBackground[1]"></vc-heading>
+        </div>
       </div>
-      <!-- <div> -->
+      <div class="my-4">
+        <vc-title ptitle="Border"></vc-title>
+        <div class="flex flex-col md:flex-row">
+          <vc-heading v-bind:pheading="cBorder[0]"></vc-heading>
+          <vc-heading v-bind:pheading="cBorder[1]"></vc-heading>
+        </div>
+      </div>
+
+      <div class="my-4">
+        <vc-title ptitle="transition"></vc-title>
+        <vc-heading v-bind:pheading="transition"></vc-heading>
+      </div>
+      <div class="my-4">
+        <vc-title ptitle="transform"></vc-title>
+        <vc-heading v-bind:pheading="transform"></vc-heading>
+      </div>
       <div class="my-4">
         <vc-title ptitle="effect"></vc-title>
         <vc-heading v-bind:pheading="effect"></vc-heading>
@@ -170,7 +270,21 @@
         <vc-title ptitle="svg"></vc-title>
         <vc-heading v-bind:pheading="svg"></vc-heading>
       </div>
+      <div class="my-4">
+        <vc-title ptitle="accessibility"></vc-title>
+        <vc-heading v-bind:pheading="accessibility"></vc-heading>
+      </div>
     </div>
+    <div class="mt-20"></div>
+    <footer
+      class="flex flex-col w-full items-center italic text-xl md:text-2xl py-32 font-thin bg-purple-200"
+    >
+      <div>Made with</div>
+      <div class="align-center bg-red-300 p-2 rounded-xl">❤</div>
+      <a class="text-blue-900 pt-3 underline" href="https://github.com/umeshmk">
+        Umesh Kadam
+      </a>
+    </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>

@@ -3,59 +3,82 @@ var responsive = {
   "Tablet (Portrait)": ["640px", "sm:flex"],
   "Tablet (Landscape)": ["768px", "md:flex"],
   Laptop: ["1024px", "lg:flex"],
-  Desktop: ["1280px", "xl:flex"]
+  Desktop: ["1280px", "xl:flex"],
+  DesktopLarge: ["1536px", "2xl:flex"],
 };
 
 var basic = {
   spacing: [
     "0",
     "px",
+    "0.5",
     "1",
+    "1.5",
     "2",
+    "2.5",
     "3",
+    "3.5",
     "4",
     "5",
     "6",
+    "7",
     "8",
+    "9",
     "10",
+    "11",
     "12",
+    "14",
     "16",
     "20",
     "24",
+    "28",
     "32",
+    "36",
     "40",
+    "44",
     "48",
+    "52",
     "56",
-    "64"
+    "60",
+    "64",
+    "72",
+    "80",
+    "96",
   ],
 
   colors: [
     "gray",
     "red",
-    "orange",
+    // "orange",
     "yellow",
     "green",
-    "teal",
+    // "teal",
     "blue",
     "indigo",
     "purple",
-    "pink"
+    "pink",
   ],
 
   pseudoClass: [
     "responsive",
+    "focus",
+    "hover",
+    "active",
     "group-hover",
+    "group-focus",
     "focus-within",
+    "focus-visible",
+    "motion-safe",
+    "motion-reduce",
+    "disabled",
+    "visited",
+    "checked",
     "first",
     "last",
     "odd",
     "even",
-    "focus",
-    "active",
-    "visited",
-    "disabled"
   ],
-  functions: ["tailwind", "apply", "responsive", "variants", "screen"],
+  functions: ["tailwind", "apply", "layer", "responsive", "variants", "screen"],
   variants: {
     "all-utility": ["responsive"],
     "background-color": ["hover", "focus"],
@@ -65,65 +88,117 @@ var basic = {
     opacity: ["hover", "focus"],
     outline: ["focus"],
     "text-color": ["hover", "focus"],
-    "text-decoration": ["hover", "focus"]
-  }
+    "text-decoration": ["hover", "focus"],
+  },
+  opacity: [0, 5, 10, 20, 25, 30, 40, 50, 60, 70, 75, 80, 90, 95, 100],
+  colorsNum: [50, 100, 200, 300, 400, 500, 600, 700, 800, 900],
 };
 
 var cheatsheet = {
   background: {
     "bg-attachment": ["bg-fixed", "bg-local", "bg-scroll"],
+
+    "bg-clip": [
+      "bg-clip-border",
+      "bg-clip-padding",
+      "bg-clip-content",
+      "bg-clip-text",
+    ],
     "bg-color": [
       "bg-transparent",
+      "bg-current",
       "bg-white",
       "bg-black",
-      "bg-{color}-{100-900}"
+      "bg-[ $color ]-[ 50-900 ]",
     ],
+    "bg-opacity": ["bg-opacity-[ $OPACITY ]"],
     "bg-position": [
-      "bg-{left / right / top / bottom}",
+      "bg-{left|right|top|bottom}",
       "bg-center",
-      "bg-{left / right}-{top / bottom}"
+      "bg-{left|right}-{top|bottom}",
+    ],
+
+    "bg-image": [
+      "bg-none",
+      "bg-gradient-to-[ t|r|b|l ]",
+      "bg-gradient-to-[ tl|tr|bl|br ]",
+      //
+    ],
+    "gradient-Color-Stops": [
+      "from-transparent",
+      "from-current",
+      "from-black",
+      "from-white",
+      "from-[ $color ]-[ 50-900 ]",
     ],
     "bg-repeat": [
       "bg-repeat",
       "bg-norepeat",
-      "bg-repeat-{x / y}",
-      "bg-repeat-{round / space}"
+      "bg-repeat-[ x|y ]",
+      "bg-repeat-round",
+      "bg-repeat-space",
     ],
-    "bg-size": ["bg-auto", "bg-cover", "bg-contain"]
+    "bg-size": ["bg-auto", "bg-cover", "bg-contain"],
   },
   border: {
-    "border-color": [
-      "border-transparent",
-      "border-white",
-      "border-black",
-      "border-{color}-{100-900}"
+    "[ border|divide|ring|ring-offset ]-color": [
+      "[ border|divide|ring|ring-offset ]-transparent",
+      "[ border|divide|ring|ring-offset ]-current",
+      "[ border|divide|ring|ring-offset ]-white",
+      "[ border|divide|ring|ring-offset ]-black",
+      "[ border|divide|ring|ring-offset ]-{$color}-{50-900}",
     ],
-    "border-style": [
-      "border-solid",
-      "border-dotted",
-      "border-dashed",
-      "border-double",
-      "border-none"
+    // "border-color": [
+    //   "border-transparent",
+    //   "border-current",
+    //   "border-white",
+    //   "border-black",
+    //   "border-{$color}-{50-900}",
+    // ],
+    "[ border|divide ]-style": [
+      "[ border|divide ]-solid",
+      "[ border|divide ]-dotted",
+      "[ border|divide ]-dashed",
+      "[ border|divide ]-double",
+      "[ border|divide ]-none",
     ],
     "border-width": [
-      "border-0",
       "border",
-      "border-{2/4/8}",
-      "border-{t/r/b/l}",
-      "border-{t/r/b/l}-0",
-      "border-{t/r/b/l}-{2/4/8}"
+      "border-{0|2|4|8}",
+      "border-{t|r|b|l}",
+      "border-{t|r|b|l}-{0|2|4|8}",
     ],
+    "border-opacity": ["border-opacity-[ $OPACITY ]"],
+    "divide width": [
+      "divide-[ x|y ]",
+      "divide-[ x|y ]-reverse",
+      "divide-[ x|y ]-[ 0|2|4|8 ]",
+    ],
+    "[ divide|ring ]-opacity": ["[ divide|ring ]-opacity-[ $OPACITY ]"],
+    // "divide-style": [
+    //   "divide-solid",
+    //   "divide-dotted",
+    //   "divide-dashed",
+    //   "divide-double",
+    //   "divide-none",
+    // ],
+    "ring-width": ["ring", "ring-inset", "ring-[ 0|1|2|4|8 ]"],
+    "ring-offset-width": ["ring-offset-[ 0|1|2|4|8 ]"],
+
     "border-radius": [
-      "rounded-{none/sm}",
       "rounded",
-      "rounded-{lg/full}",
-      "rounded-{t/r/b/l}-{none/sm}",
-      "rounded-{t/r/b/l}",
-      "rounded-{t/r/b/l}-{lg/full}",
-      "rounded-{tr/tl/br/bl}-{none/sm}",
-      "rounded-{tr/tl/br/bl}",
-      "rounded-{tr/tl/br/bl}-{lg/full}"
-    ]
+      "rounded-{sm|md|lg|xl}",
+      "rounded-[2|3]xl",
+      "rounded-{full|none}",
+      "rounded-{t|r|b|l}",
+      "rounded-{t|r|b|l}-{sm|md|lg|xl}",
+      "rounded-{t|r|b|l}-[2|3]xl",
+      "rounded-{t|r|b|l}-{full|none}",
+      "rounded-{tr|tl|br|bl}",
+      "rounded-{tr|tl|br|bl}-{sm|md|lg|xl}",
+      "rounded-{tr|tl|br|bl}-[2|3]xl",
+      "rounded-{tr|tl|br|bl}-{full|none}",
+    ],
   },
   interactivity: {
     cursor: [
@@ -133,49 +208,41 @@ var cheatsheet = {
       "cursor-wait",
       "cursor-text",
       "cursor-move",
-      "cursor-not-allowed"
+      "cursor-not-allowed",
     ],
     "user-select": ["select-none", "select-text", "select-all", "select-auto"],
     resize: ["resize", "resize-{x/y}", "resize-none"],
     "pointer-events": ["pointer-events-auto", "pointer-events-none"],
-    outline: ["outline-none"],
-    appearance: ["appearance-none"]
+    outline: ["outline-none", "outline-white", "outline-black"],
+    appearance: ["appearance-none"],
   },
   others: {
     table: {
       collapse: ["border-collapse", "border-separate"],
-      Layout: ["table-auto", "table-fixed"]
+      Layout: ["table-auto", "table-fixed"],
     },
     effect: {
-      opacity: [
-        "opacity-0",
-        "opacity-25",
-        "opacity-50",
-        "opacity-75",
-        "opacity-100"
-      ],
+      opacity: ["opacity-[ $OPACITY  ]"],
       "box-shadow": [
         "shadow",
-        "shadow-md",
-        "shadow-lg",
-        "shadow-xl",
-        "shadow-2xl",
+        "shadow-[ sm|md|lg|xl|2xl ]",
         "shadow-inner",
-        "shadow-outline",
-        "shadow-none"
-      ]
+        "shadow-none",
+      ],
     },
     svg: {
       fill: ["fill-current"],
-      stroke: ["stroke-current"]
-    }
+      stroke: ["stroke-current"],
+      "stroke-width": ["stroke-[ 0|1|2 ]"],
+    },
+    accessibility: {
+      "screen-reader": ["sr-only", "not-sr-only"],
+    },
   },
   sizing: {
     width: [
-      "w-0",
-      "w-px",
       "w-auto",
-      "w-{0-64}",
+      "w-[ $SPACING  ]",
       "w-1/2",
       "w-{1-2}/3",
       "w-{1-3}/4",
@@ -183,40 +250,64 @@ var cheatsheet = {
       "w-{1-5}/6",
       "w-{1-11}/12",
       "w-full",
-      "w-screen"
+      "w-screen",
+      "w-min",
+      "w-max",
     ],
-    "min-width": ["min-w-0", "min-w-full"],
+    "min-width": ["min-w-0", "min-w-full", "min-w-min", "min-w-max"],
     "max-width": [
-      "max-w-xs",
-      "max-w-sm",
-      "max-w-md",
-      "max-w-lg",
+      "max-w-0",
+      "max-w-none",
+      "max-w-[ xs|sm|md|lg ]",
       "max-w-xl",
-      "max-w-{2-6}xl",
-      "max-w-full"
+      "max-w-{2-7}xl",
+      "max-w-full",
+      "max-w-full",
+      "max-w-min",
+      "max-w-max",
+      "max-w-prose",
+      "max-w-screen-[ xs|sm|md|lg ]",
+      "max-w-screen-[ xl|2xl ]",
     ],
-    height: ["h-{0-64}", "h-px", "h-auto", "h-full", "h-screen"],
+    height: [
+      "h-auto",
+      "h-[ $SPACING  ]",
+      "h-1/2",
+      "h-{1-2}/3",
+      "h-{1-3}/4",
+      "h-{1-4}/5",
+      "h-{1-5}/6",
+      "h-full",
+      "h-screen",
+    ],
     "min-height": ["min-h-0", "min-h-full", "min-h-screen"],
-    "max-height": ["max-h-full", "max-h-screen"]
+    "max-height": [
+      "max-h-[ $SPACING  ]",
+      //
+      "max-h-full",
+      "max-h-screen",
+    ],
   },
   spacing: {
     padding: [
-      "p-px",
-      "p-{0-64}",
-      "p{x/y}-px",
-      "p{x/y}-{0-64}",
-      "p{t/r/b/l}-px",
-      "p{t/r/b/l}-{0-64}"
+      "p-[ $SPACING  ]",
+      "p[ x|y ]-[ $SPACING  ]",
+      "p[ t|r|b|l ]-[ $SPACING  ]",
     ],
     margin: [
-      "{-}m-px",
       "m-auto",
-      "{-}m-{0-64}",
-      "{-}m{x/y}-px",
-      "{-}m{x/y}-{0-64}",
-      "{-}m{t/r/b/l}-px",
-      "{-}m{t/r/b/l}-{0-64}"
-    ]
+      "-m-[ $SPACING  ]",
+      "-m[ x|y ]-[ $SPACING  ]",
+      "-m[ t|r|b|l ]-[ $SPACING  ]",
+      "m-[ $SPACING  ]",
+      "m[ x|y ]-[ $SPACING  ]",
+      "m[ t|r|b|l ]-[ $SPACING  ]",
+    ],
+    spaceBetween: [
+      "-space-[ x|y ]-[ $SPACING  ]",
+      "space-[ x|y ]-[ $SPACING  ]",
+      "space-[ x|y ]-reverse",
+    ],
   },
   typography: {
     Family: ["font-sans", "font-serif", "font-mono"],
@@ -226,24 +317,31 @@ var cheatsheet = {
       "text-base",
       "text-lg",
       "text-xl",
-      "text-2xl",
-      "text-3xl",
-      "text-4xl",
-      "text-5xl",
-      "text-6xl"
+      "text-[ 2-9 ]xl",
     ],
     smoothing: ["antialiased", "subpixel-antialiased"],
     style: ["italic", "not-italic"],
     weight: [
-      "font-hairline",
       "font-thin",
+      "font-extralight",
       "font-light",
       "font-normal",
       "font-medium",
       "font-semibold",
       "font-bold",
       "font-extrabold",
-      "font-black"
+      "font-black",
+    ],
+    "font-variant-numeric": [
+      "normal-nums",
+      "ordinal",
+      "slashed-zero",
+      "lining-nums",
+      "oldstyle-nums",
+      "proportional-nums",
+      "tabular-nums",
+      "diagonal-fractions",
+      "stacked-fractions",
     ],
     "letter-spacing": [
       "tracking-tighter",
@@ -251,147 +349,296 @@ var cheatsheet = {
       "tracking-normal",
       "tracking-wide",
       "tracking-wider",
-      "tracking-widest"
+      "tracking-widest",
     ],
     "line-height": [
+      "leading-[ 3-10 ]",
       "leading-none",
       "leading-tight",
       "leading-snug",
       "leading-normal",
       "leading-relaxed",
-      "leading-loose"
+      "leading-loose",
     ],
     "list-style-type": ["list-none", "list-disc", "list-decimal"],
     "list-style-positions": ["list-inside", "list-outside"],
-    "[placeholder/text}-color": [
-      "[placeholder/text}-transparent",
-      "[placeholder/text}-white",
-      "[placeholder/text}-black",
-      "[placeholder/text}-[color}-[100-900}"
+    "[placeholder/text]-color": [
+      "[placeholder/text]-transparent",
+      "[placeholder/text]-current",
+      "[placeholder/text]-[ white/black ]",
+      "[placeholder/text]-[color}-[50-900}",
     ],
-    "text-align": ["text-left", "text-right", "text-center", "text-justify"],
-    "text-decoration": ["underline", "no-underline", "line-through"],
-    transform: ["uppercase", "lowercase", "capitalize", "normal-case"],
+    "[placeholder|text]-opacity": ["[placeholder|text]-opacity-[ $OPACITY ]"],
     "vertical-align": [
       "align-baseline",
       "align-top",
       "align-middle",
       "align-bottom",
       "align-text-top",
-      "align-text-bottom"
+      "align-text-bottom",
     ],
     "white-spacing": [
       "whitespacing-normal",
       "whitespacing-no-wrap",
       "whitespacing-pre",
       "whitespacing-pre-line",
-      "whitespacing-pre-wrap"
+      "whitespacing-pre-wrap",
     ],
-    "word-break": ["break-normal", "break-words", "break-all", "truncate"]
+    "text-align": ["text-left", "text-right", "text-center", "text-justify"],
+    "text-decoration": ["underline", "no-underline", "line-through"],
+    "text-overflow": ["truncate", "overflow-ellipsis", "overflow-clip"],
+    transform: ["uppercase", "lowercase", "capitalize", "normal-case"],
+    "word-break": ["break-normal", "break-words", "break-all"],
   },
   flexbox: {
-    parent: {
-      direction: [
-        "flex-row",
-        "flex-col",
-        "flex-row-reverse",
-        "flex-col-reverse"
-      ],
-      wrap: ["flex-wrap", "flex-no-wrap", "flex-wrap-reverse"],
-      "align-items": [
-        "items-stretch",
-        "items-start",
-        "items-center",
-        "items-end",
-        "items-baseline"
-      ],
-      "align-content": [
-        "content-start",
-        "content-center",
-        "content-end",
-        "content-between",
-        "content-around"
-      ],
-      "justify-content": [
-        "justify-start",
-        "justify-center",
-        "justify-end",
-        "justify-between",
-        "justify-around"
-      ]
-    },
-    children: {
-      "align-self": [
-        "self-auto",
-        "self-start",
-        "self-center",
-        "self-end",
-        "self-stretch"
-      ],
-      flex: ["flex-initial", "flex-1", "flex-auto", "flex-none"],
-      "flex-grow": ["flex-grow", "flex-grow-0"],
-      "flex-shrink": ["flex-shrink", "flex-shrink-0"],
-      "flex-order": ["order-first", "order-last", "order-none", "order-{1-12}"]
-    }
+    direction: ["flex-row", "flex-col", "flex-row-reverse", "flex-col-reverse"],
+    wrap: ["flex-wrap", "flex-wrap-reverse", "flex-nowrap"],
+    flex: ["flex-initial", "flex-1", "flex-auto", "flex-none"],
+    "flex-grow": ["flex-grow", "flex-grow-0"],
+    "flex-shrink": ["flex-shrink", "flex-shrink-0"],
+    "flex-order": ["order-first", "order-last", "order-none", "order-{1-12}"],
   },
   layout: {
     Container: ["container"],
-    Display: [
-      "block",
-      "inline-block",
-      "inline",
-      "flex",
-      "inline-flex",
-      "table",
-      "table-row",
-      "table-cell",
-      "hidden"
-    ],
-    Float: ["float-right", "float-left", "float-none", "clearfix"],
+    "Box-Sizing": ["box-border", "box-content"],
+    Float: ["float-right", "float-left", "float-none"],
+    Clear: ["clear-left", "clear-right", "clear-both", "clear-none"],
+
+    Visible: ["visible", "invisible"],
+    "z-index": ["z-[ 0|10|20|30|40|50 ]", "z-auto"],
     Overflow: [
       "overflow-auto",
       "overflow-hidden",
       "overflow-visible",
       "overflow-scroll",
-      "object-left-top",
-      "overflow-x-auto",
-      "overflow-y-auto",
-      "overflow-x-hidden",
-      "overflow-y-hidden",
-      "overflow-x-visible",
-      "overflow-y-visible",
-      "overflow-x-scroll",
-      "overflow-y-scroll",
-      "scrolling-touch (webkit)",
-      "scrolling-auto (webkit)"
+      "overflow-[ x|y ]-auto",
+      "overflow-[ x|y ]-hidden",
+      "overflow-[ x|y ]-visible",
+      "overflow-[ x|y ]-scroll",
+    ],
+    "overscroll-behavior": [
+      "overscroll-auto",
+      "overscroll-contain",
+      "overscroll-none",
+      "overscroll-[ x|y ]-auto",
+      "overscroll-[ x|y ]-contain",
+      "overscroll-[ x|y ]-none",
     ],
     "Object-Fit": [
       "object-contain",
       "object-cover",
       "object-fill",
-      "object-none"
+      "object-none",
+      "object-scale-down",
     ],
     "Object-Positions": [
-      "object-bottom",
       "object-center",
-      "object-left",
-      "object-left-bottom",
-      "object-scale-down",
-      "object-right",
-      "object-right-bottom",
-      "object-right-top",
-      "object-top"
+      "object-[ top|bottom ]",
+      "object-[ left|right ]",
+      "object-[ left|right ]-[ top|bottom ]",
+    ],
+
+    Display: [
+      "[ block|inline|inline-block ]",
+      "[ flex|inline-flex ]",
+      "[ grid|inline-grid ]",
+      "table",
+      "table-[ caption|cell ]",
+      "table-[ row|column ]",
+      "table-[ row|column ]-group",
+      "table-[ header|footer ]-group",
+      "flow-root",
+      "contents",
+      "hidden",
     ],
     Positions: ["static", "relative", "absolute", "fixed", "sticky"],
+
     "Positions-TRBL": [
-      "[ top/right/bottom/left ]-0",
-      "[ top/right/bottom/left ]-auto",
-      "inset-0",
+      "[ top|right|bottom|left ]-[ $SPACING ]",
+      "[ top|right|bottom|left ]-auto",
+      "[ top|right|bottom|left ]-full",
+      "inset-[$SPACING]",
       "inset-auto",
-      "inset-[x/y]-0",
-      "inset-[x/y]-auto"
+      "inset-full",
+      "inset-1/[ 2|3|4 ]",
+      "inset-2/[ 3|4 ]",
+      "inset-3/4",
+      "inset-[x|y]-[$SPACING]",
+      "inset-[x|y]-auto",
+      "inset-[x|y]-full",
+      "inset-[x|y]-1/[ 2|3|4 ]",
+      "inset-[x|y]-2/[ 3|4 ]",
+      "inset-[x|y]-3/4",
     ],
-    Visible: ["visible", "invisible"],
-    "z-index": ["z-0", "z-10", "z-20", "z-30", "z-40", "z-50", "z-auto"]
-  }
+  },
+  grid: {
+    "grid-template-columns": ["grid-cols-[1-12]", "grid-cols-none"],
+
+    "grid-column-[ start|end ]": [
+      "col-auto",
+      "col-span-[ 1-12 ]",
+      "col-span-full",
+      "col-start-[ 1-13 ]",
+      "col-start-auto",
+      "col-end-[ 1-13 ]",
+      "col-end-auto",
+    ],
+
+    "grid-template-rows": ["grid-rows-[ 1-6 ]", "grid-rows-none"],
+
+    "grid-row-[ start|end ]": [
+      "row-auto",
+      "row-span-[ 1-6 ]",
+      "row-span-full",
+      "row-start-[ 1-7 ]",
+      "row-start-auto",
+      "row-end-[ 1-7 ]",
+      "row-end-auto",
+    ],
+
+    "grid-auto-flow": [
+      "grid-flow-row",
+      "grid-flow-col",
+      "grid-flow-row-dense",
+      "grid-flow-col-dense",
+    ],
+
+    "grid-auto-columns": [
+      "auto-cols-auto",
+      "auto-cols-min",
+      "auto-cols-max",
+      "auto-cols-fr",
+    ],
+
+    "grid-auto-rows": [
+      "auto-rows-auto",
+      "auto-rows-min",
+      "auto-rows-max",
+      "auto-rows-fr",
+    ],
+
+    gap: ["gap-[ $SPACING ]", "gap-x-[ $SPACING ]", "gap-y-[ $SPACING ]"],
+  },
+  boxAlignment: {
+    "justify-content": [
+      "justify-start",
+      "justify-center",
+      "justify-end",
+      "justify-between",
+      "justify-around",
+      "justify-evenly",
+    ],
+
+    "justify-items": [
+      "justify-items-auto",
+      "justify-items-start",
+      "justify-items-end",
+      "justify-items-center",
+      "justify-items-stretch",
+    ],
+
+    "justify-self": [
+      "justify-self-auto",
+      "justify-self-start",
+      "justify-self-end",
+      "justify-self-center",
+      "justify-self-stretch",
+    ],
+
+    "align-content": [
+      "content-center",
+      "content-start",
+      "content-end",
+      "content-between",
+      "content-around",
+      "content-evenly",
+    ],
+
+    "align-items": [
+      "items-start",
+      "items-end",
+      "items-center",
+      "items-baseline",
+      "items-stretch",
+    ],
+
+    "align-self": [
+      "self-auto",
+      "self-start",
+      "self-end",
+      "self-center",
+      "self-stretch",
+    ],
+
+    "place-content": [
+      "place-content-center",
+      "place-content-start",
+      "place-content-end",
+      "place-content-between",
+      "place-content-around",
+      "place-content-evenly",
+      "place-content-stretch",
+    ],
+
+    "place-items": [
+      "place-items-auto",
+      "place-items-start",
+      "place-items-end",
+      "place-items-center",
+      "place-items-stretch",
+    ],
+
+    "place-self": [
+      "place-self-auto",
+      "place-self-start",
+      "place-self-end",
+      "place-self-center",
+      "place-self-stretch",
+    ],
+  },
+  transition: {
+    property: [
+      "transition-none",
+      "transition-all",
+      "transition",
+      "transition-colors",
+      "transition-opacity",
+      "transition-shadow",
+      "transition-transform",
+    ],
+    duration: ["duration-[ 75|100|150|200|300|500|700|1000  ]"],
+    "timing function": ["ease-linear", "ease-in", "ease-out", "ease-in-out"],
+    delay: ["delay-[ 75|100|150|200|300|500|700|1000  ]"],
+    animation: [
+      "animate-none",
+      "animate-spin",
+      "animate-ping",
+      "animate-pulse",
+      "animate-bounce",
+    ],
+  },
+  transform: {
+    tranform: ["transform", "transform-gpu", "transform-none"],
+    "transform-origin": [
+      "origin-[ top|right|bottom|left ]",
+      "origin-[ top|bottom ]-[ right|left ]",
+      "origin-center",
+    ],
+    scale: [
+      "scale-[ 0|50|75|90|95|100|105|110|125|150 ]",
+      "scale-[ x|y ]-[ 0|50|75|90|95|100|105|110|125|150 ]",
+    ],
+    rotate: [
+      "rotate-[ 0.1.2.3.6.12.45.90.180]",
+      "-rotate-[ 1.2.3.6.12.45.90.180]",
+    ],
+    translate: [
+      "{-}translate-[ x|y ]-[ $spacing ]",
+      "{-}translate-[ x|y ]-1/2",
+      "{-}translate-[ x|y ]-[ 1|2 ]/3",
+      "{-}translate-[ x|y ]-[ 1|2|3 ]/4",
+      "{-}translate-[ x|y ]-[ full| ]",
+    ],
+    skew: ["{-}skew-[ x|y ]-[ 0.1.2.3.6.12]"],
+  },
 };
