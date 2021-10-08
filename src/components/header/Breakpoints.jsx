@@ -6,10 +6,10 @@ let responsiveJsx = (res) => (
   <div class="flex pb-8 md:pb-6 ">
     {Object.values(res).map((v) => {
       return (
-        <div class="flex-1 bg-purple-100 uppercase md:p-3 ">
+        <div class="flex-1 bg-purple-100 uppercase md:p-3 " key={v}>
           {v.map((j, key) => {
             return (
-              <div class="p-2 tracking-wide lowercase">
+              <div class="p-2 tracking-wide lowercase" key={key}>
                 <div
                   class={
                     key === 0

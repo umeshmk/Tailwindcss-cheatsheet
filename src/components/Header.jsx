@@ -2,6 +2,7 @@ import React from "react";
 import Breakpoints from "./header/Breakpoints";
 import Spacing from "./header/Spacing";
 import Colors from "./header/Colors";
+import Others from "./header/Others";
 
 function Header({ title }) {
   return (
@@ -9,6 +10,7 @@ function Header({ title }) {
       <Spacing />
       <Colors />
       <Breakpoints />
+      <Others />
     </header>
   );
 }

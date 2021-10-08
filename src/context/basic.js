@@ -69,7 +69,15 @@ export let basic = {
     "odd",
     "even",
   ],
-  functions: ["tailwind", "apply", "layer", "responsive", "variants", "screen"],
+
+  functions: [
+    "@tailwind",
+    "@apply",
+    "@layer",
+    "@responsive",
+    "@variants",
+    "@screen",
+  ],
   variants: {
     "all-utility": ["responsive"],
     "background-color": ["hover", "focus"],
