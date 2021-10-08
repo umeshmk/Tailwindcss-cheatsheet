@@ -8,3 +8,9 @@
 ---
 
 ![](https://i.imgur.com/rrC2G38.png)
+
+### Logs
+
+**8 Oct 2021 :**
+
+- Recreated the project using react with vite.
