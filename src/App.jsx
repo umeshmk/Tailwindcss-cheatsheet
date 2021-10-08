@@ -1,14 +1,19 @@
 import { useState } from "react";
 import "./App.css";
+import Nav from "./components/Nav";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import { TailwindContext, data } from "./context/TailwindContext";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <div>
-      <h1 className="bg-red-600">Nav</h1>
-      <h1>Header</h1>
-      <h1>Footer</h1>
+    <div class="bg-white">
+      <TailwindContext.Provider value={data}>
+        <Nav />
+        <Header />
+        <h1>Section</h1>
+        <Footer />
+      </TailwindContext.Provider>
     </div>
   );
 }
