@@ -1,3 +1,5 @@
+import { pick as _pick, chunk as _chunk, keys as _keys } from "lodash";
+
 export let cheatsheet = {
   background: {
     "bg-attachment": ["bg-fixed", "bg-local", "bg-scroll"],
@@ -120,28 +122,26 @@ export let cheatsheet = {
     outline: ["outline-none", "outline-white", "outline-black"],
     appearance: ["appearance-none"],
   },
-  others: {
-    table: {
-      collapse: ["border-collapse", "border-separate"],
-      Layout: ["table-auto", "table-fixed"],
-    },
-    effect: {
-      opacity: ["opacity-[ $OPACITY  ]"],
-      "box-shadow": [
-        "shadow",
-        "shadow-[ sm|md|lg|xl|2xl ]",
-        "shadow-inner",
-        "shadow-none",
-      ],
-    },
-    svg: {
-      fill: ["fill-current"],
-      stroke: ["stroke-current"],
-      "stroke-width": ["stroke-[ 0|1|2 ]"],
-    },
-    accessibility: {
-      "screen-reader": ["sr-only", "not-sr-only"],
-    },
+  table: {
+    collapse: ["border-collapse", "border-separate"],
+    Layout: ["table-auto", "table-fixed"],
+  },
+  effect: {
+    opacity: ["opacity-[ $OPACITY  ]"],
+    "box-shadow": [
+      "shadow",
+      "shadow-[ sm|md|lg|xl|2xl ]",
+      "shadow-inner",
+      "shadow-none",
+    ],
+  },
+  svg: {
+    fill: ["fill-current"],
+    stroke: ["stroke-current"],
+    "stroke-width": ["stroke-[ 0|1|2 ]"],
+  },
+  accessibility: {
+    "screen-reader": ["sr-only", "not-sr-only"],
   },
   sizing: {
     width: [
@@ -544,5 +544,80 @@ export let cheatsheet = {
       "{-}translate-[ x|y ]-[ full| ]",
     ],
     skew: ["{-}skew-[ x|y ]-[ 0.1.2.3.6.12]"],
+  },
+};
+
+export let cheatsheetComputed = {
+  get cLayout() {
+    var x = cheatsheet.layout;
+    var keys = _chunk(_keys(x), 5);
+    // var p0 = _pick(x, keys[0]);
+    var p0 = _pick(x, [
+      "Container",
+      "Box-Sizing",
+      "Float",
+      "Clear",
+      "Visible",
+      // "z-index",
+      // "Object-Fit",
+      "Positions",
+    ]);
+    // var p1 = _pick(x, keys[1]);
+    var p1 = _pick(x, [
+      "Overflow",
+      "overscroll-behavior",
+      "Object-Fit",
+      "Object-Positions",
+    ]);
+    // var p2 = _pick(x, keys[2]);
+    var p2 = _pick(x, ["Display", "Positions-TRBL", "z-index"]);
+
+    // return [p0, p1, p2, p3];
+    return [p0, p1, p2];
+  },
+  get cTypography() {
+    var x = cheatsheet.typography;
+    var keys = _chunk(_keys(x), 5);
+    var p0 = _pick(x, keys[0]);
+    var p1 = _pick(x, keys[1]);
+    var p2 = _pick(x, keys[2]);
+    var p3 = _pick(x, keys[3]);
+
+    return [p0, p1, p2, p3];
+  },
+  get cSizing() {
+    var x = cheatsheet.sizing;
+    var keys = _chunk(_keys(x), 3);
+    var p0 = _pick(x, keys[0]);
+    var p1 = _pick(x, keys[1]);
+    return [p0, p1];
+  },
+  get cGrid() {
+    var x = cheatsheet.grid;
+    var keys = _chunk(_keys(x), 4);
+    var p0 = _pick(x, keys[0]);
+    var p1 = _pick(x, keys[1]);
+    return [p0, p1];
+  },
+  get cBoxAlignment() {
+    var x = cheatsheet.boxAlignment;
+    var keys = _chunk(_keys(x), 5);
+    var p0 = _pick(x, keys[0]);
+    var p1 = _pick(x, keys[1]);
+    return [p0, p1];
+  },
+  get cBorder() {
+    var x = cheatsheet.border;
+    var keys = _chunk(_keys(x), 5);
+    var p0 = _pick(x, keys[0]);
+    var p1 = _pick(x, keys[1]);
+    return [p0, p1];
+  },
+  get cBackground() {
+    var x = cheatsheet.background;
+    var keys = _chunk(_keys(x), 5);
+    var p0 = _pick(x, keys[0]);
+    var p1 = _pick(x, keys[1]);
+    return [p0, p1];
   },
 };

@@ -3,6 +3,7 @@ import "./App.css";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import Content from "./components/Content";
 import { TailwindContext, data } from "./context/TailwindContext";
 
 function App() {
@@ -11,7 +12,7 @@ function App() {
       <TailwindContext.Provider value={data}>
         <Nav />
         <Header />
-        <h1>Section</h1>
+        <Content />
         <Footer />
       </TailwindContext.Provider>
     </div>

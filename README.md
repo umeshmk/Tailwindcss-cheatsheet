@@ -7,10 +7,14 @@
 
 ---
 
-![](https://i.imgur.com/rrC2G38.png)
+<!-- ![](https://i.imgur.com/rrC2G38.png) -->
+
+![](https://i.imgur.com/mt2wnyp.png)
 
 ### Logs
 
-**8 Oct 2021 :**
+**9 Oct 2021 :**
 
-- Recreated the project using react with vite.
+- Recreated the project using `react` with `vite`.
+- Made Highly responsive using `tailwind`.
+- Little change in layout's header
