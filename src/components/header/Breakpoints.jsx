@@ -39,7 +39,7 @@ function Breakpoints({ title }) {
   return (
     <div class="">
       <Title title="Breakpoints" />
-      <div class="grid text-center overflow-scroll">
+      <div class="grid text-center overflow-x-scroll lg:overflow-hidden">
         <div
           class="grid grid-cols-6  bg-purple-800 text-blue-200 py-6 "
           ref={ref}

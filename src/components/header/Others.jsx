@@ -17,7 +17,7 @@ function Others() {
   const { pseudoClass, functions, opacity, colorsNum } = basic;
 
   return (
-    <div>
+    <div class="lg:grid lg:grid-cols-2 lg:gap-2 2xl:grid-cols-4 2xl:gap-5">
       <div>
         <Title title="Pseudo-Class" />
         {jsx(pseudoClass)}

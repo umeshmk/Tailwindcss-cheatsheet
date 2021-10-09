@@ -28,8 +28,8 @@ function Colors({ title }) {
     <div class="">
       <Title title="Colors" />
 
-      <div class="col-span-full xl:col-span-8">
-        <div class="grid grid-cols-4 gap-y-2 bg-purple-100 overflow-scroll  ">
+      <div class="">
+        <div class="grid grid-cols-4 gap-y-2 2xl:grid-cols-8 bg-purple-100   ">
           {colors.map((v) => {
             return listColorSize(v);
           })}
