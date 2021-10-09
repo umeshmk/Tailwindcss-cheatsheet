@@ -23,18 +23,14 @@ function Nav() {
       </div>
       <ul className="flex flex-row items-center text-sm">
         <li className="flex pr-5 lg:pr-10 font-thin text-sm lg:text-lg underline">
-          <a href="https://umeshmk.github.io/Tailwindcss-cheatsheet/v2.0/">
-            v2
-          </a>
+          <a href="v2.0/">v2</a>
         </li>
         <li className="flex pr-5 lg:pr-10 font-thin text-sm lg:text-lg underline">
-          <a href="https://umeshmk.github.io/Tailwindcss-cheatsheet/v1/">v1</a>
+          <a href="v1/">v1</a>
         </li>
         <li className="flex flex-col">
           <a href="https://github.com/umeshmk/Tailwindcss-cheatsheet">
-            {/* <span className="mr-3 p-1" id="githubIcon"></span>  */}
             <i className="fab fa-github text-red-700 text-4xl"></i>
-            {/* <span className="hidden md:block text-gray-300 mt-1"> Github </span> */}
           </a>
         </li>
       </ul>
