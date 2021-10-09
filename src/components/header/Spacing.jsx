@@ -6,14 +6,14 @@ function Spacing({ title }) {
   const { basic } = useContext(TailwindContext);
 
   return (
-    <div class="">
+    <div className="">
       <Title title="Spacing" />
-      <div class="flex flex-col items-start justify-center bg-purple-100 p-6 overflow-x-scroll lg:overflow-hidden">
+      <div className="flex flex-col items-start justify-center bg-purple-100 p-6 overflow-x-scroll lg:overflow-hidden">
         {basic.spacing.map((v) => {
           return (
-            <div class="flex flex-row items-center pt-1" key={v}>
-              <div class="w-6 text-sm text-purple-800"> {v} </div>
-              <div class={"bg-purple-300 h-2 w-" + v}></div>
+            <div className="flex flex-row items-center pt-1" key={v}>
+              <div className="w-10 text-sm text-gray-800"> {v} </div>
+              <div className={"bg-purple-300 h-2 w-" + v}></div>
             </div>
           );
         })}

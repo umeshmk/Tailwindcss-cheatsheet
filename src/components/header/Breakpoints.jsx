@@ -3,18 +3,18 @@ import Title from "../Title";
 import { TailwindContext } from "../../context/TailwindContext";
 
 let responsiveJsx = (res) => (
-  <div class="flex pb-8 md:pb-6 ">
+  <div className="flex pb-8 md:pb-6 ">
     {Object.values(res).map((v) => {
       return (
-        <div class="flex-1 bg-purple-100 uppercase md:p-3 " key={v}>
+        <div className="flex-1 bg-purple-100 uppercase md:p-3 " key={v}>
           {v.map((j, key) => {
             return (
-              <div class="p-2 tracking-wide lowercase" key={key}>
+              <div className="p-2 tracking-wide lowercase" key={key}>
                 <div
-                  class={
+                  className={
                     key === 0
-                      ? "text-gray-700 italic"
-                      : "text-black font-semibold pt-2"
+                      ? "text-gray-700 italic border-b-2 border-purple-300 pb-2"
+                      : "ffamily-b text-red-800 font-normal px-2"
                   }
                 >
                   {j}
@@ -37,11 +37,11 @@ function Breakpoints({ title }) {
   }, []);
 
   return (
-    <div class="">
+    <div className="">
       <Title title="Breakpoints" />
-      <div class="grid text-center overflow-x-scroll lg:overflow-hidden">
+      <div className="grid text-center overflow-x-scroll lg:overflow-hidden">
         <div
-          class="grid grid-cols-6  bg-purple-800 text-blue-200 py-6 "
+          className="grid grid-cols-6  bg-purple-100 text-blue-500 py-6 "
           ref={ref}
         ></div>
         {responsiveJsx(responsive)}

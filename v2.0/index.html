@@ -48,12 +48,17 @@
             Tailwindcss
           </a>
         </div>
-        <span class="text-sm text-gray-300 font-thin">cheatsheet v-2.0</span>
+        <span class="text-sm text-gray-300 font-thin">cheatsheet v2.0</span>
       </div>
       <ul class="flex flex-row items-center text-sm">
         <li class="flex pr-10 font-thin text-xl underline">
+          <a href="https://umeshmk.github.io/Tailwindcss-cheatsheet/"
+            >v2.1(latest)</a
+          >
+        </li>
+        <li class="flex pr-10 font-thin text-xl underline">
           <a href="https://umeshmk.github.io/Tailwindcss-cheatsheet/v1/"
-            >v-1.0</a
+            >v1.0</a
           >
         </li>
         <li class="flex flex-col">
@@ -65,20 +70,19 @@
         </li>
       </ul>
     </nav>
-
     <!-- ************ 
       APP RESPONSIVE(GRID)
-      ************-->
+    ************-->
     <div
       class="grid md:grid-cols-12 gap-3 md:bg-purple-300 md:p-5 md:py-20"
       id="app-responsive"
     >
-      <div class="col-span-full xl:col-span-4">
+      <div class="col-span-full md:col-span-4">
         <vc-title ptitle="spacing"></vc-title>
         <vc-size :psize="spacing"></vc-size>
       </div>
-      <div class="col-span-full xl:col-span-8 grid grid-cols-12 grid-rows-">
-        <div class="col-span-full xl:col-span-8">
+      <div class="col-span-full md:col-span-8 grid grid-cols-12 grid-rows-">
+        <div class="col-span-full md:col-span-8">
           <vc-title ptitle="colors"></vc-title>
           <div class="flex flex-row justify-around bg-purple-100 p-5">
             <vc-colors :pcolors="colors" :pdepth="50"></vc-colors>
@@ -94,14 +98,7 @@
           </div>
         </div>
 
-        <!-- Breakpoints tabs/laptop - for < xl -->
-        <div class="col-span-full xl:hidden">
-          <vc-title ptitle="Breakpoints"></vc-title>
-          <div class="flex bg-purple-900 text-blue-200 p-4" id="icons"></div>
-          <vc-responsive :presponsive="responsive"></vc-responsive>
-        </div>
-
-        <div class="col-span-full xl:col-span-4 flex justify-around">
+        <div class="col-span-full md:col-span-4 flex justify-around">
           <div>
             <vc-title ptitle="Pseudo-Class"></vc-title>
             <vc-pseudo :pclass="pseudoClass"></vc-pseudo>
@@ -111,15 +108,13 @@
             <vc-pseudo :pclass="opacity"></vc-pseudo>
           </div>
         </div>
-
-        <!-- Breakpoints desktop- for >= xl -->
-        <div class="hidden xl:block xl:col-span-8">
+        <div class="col-span-full md:col-span-8">
           <vc-title ptitle="Breakpoints"></vc-title>
           <div class="flex bg-purple-900 text-blue-200 p-4" id="icons"></div>
           <vc-responsive :presponsive="responsive"></vc-responsive>
         </div>
 
-        <div class="col-span-full xl:col-span-4 flex justify-around">
+        <div class="col-span-full md:col-span-4 flex justify-around">
           <div>
             <vc-title ptitle="Colors"></vc-title>
             <vc-pseudo :pclass="colorsNum"></vc-pseudo>

@@ -14,7 +14,7 @@ var responsiveIcons = `
     ></path>
   </svg>
   </div>
-  <div class="flex-">
+  <div class="flex-1">
   <svg
     width="11.999999999999998"
     height="24"

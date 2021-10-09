@@ -3,8 +3,8 @@ import React from "react";
 function Title({ title }) {
   return (
     <div>
-      <h1 class=" inline-block text-xl text-white bg-purple-800 p-2 capitalize ">
-        <span class="text-gray-100"># </span>
+      <h1 className=" inline-block text-xl text-gray-800 bg-purple-100 font-bold p-2 capitalize ">
+        <span className="text-red-700 font-normal"># </span>
         {title}
       </h1>
     </div>

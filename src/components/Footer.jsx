@@ -3,21 +3,23 @@ import React from "react";
 function Footer() {
   return (
     <footer
-      class="
+      className="
         flex flex-col
         w-full
         items-center
         italic
+        font-mono
         text-xl
         md:text-2xl
         py-32
         font-thin
         bg-purple-200
+        text-red-700
       "
     >
       <div>Made with</div>
-      <div class="align-center bg-red-300 p-2 rounded-xl">❤</div>
-      <a class="text-blue-900 pt-3 underline" href="https://github.com/umeshmk">
+      <div className="align-center bg-red-300 my-2 p-2 rounded-xl">❤</div>
+      <a className="" href="https://github.com/umeshmk">
         Umesh Kadam
       </a>
     </footer>
