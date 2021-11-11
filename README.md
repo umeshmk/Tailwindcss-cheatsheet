@@ -1,22 +1,17 @@
-# Tailwindcss-cheatsheet (v-2.0)
+# Tailwind CSS Cheatsheet
 
-### A very elegant and helpful Tailwindcss cheatsheet.
+## A helpful Tailwindcss cheatsheet improved for readability
 
-- [Tailwindcss-cheatsheet-2.1](https://umeshmk.github.io/Tailwindcss-cheatsheet/)
-- [Tailwindcss-cheatsheet-2.0](https://umeshmk.github.io/Tailwindcss-cheatsheet/v2.0)
-- [Tailwindcss-cheatsheet-1.0](https://umeshmk.github.io/Tailwindcss-cheatsheet/v1)
+- [Tailwindcss-cheatsheet-2.1](https://anibalsanchez.github.io/Tailwindcss-cheatsheet/)
+- [Tailwindcss-cheatsheet-2.0](https://anibalsanchez.github.io/Tailwindcss-cheatsheet/v2.0)
+- [Tailwindcss-cheatsheet-1.0](https://anibalsanchez.github.io/Tailwindcss-cheatsheet/v1)
 
----
+## Changelog
 
-<!-- ![](https://i.imgur.com/rrC2G38.png) -->
-<!-- ![](https://i.imgur.com/mt2wnyp.png) -->
+### 11 November 2021
 
-![](https://i.imgur.com/lAz0cZc.png)
+- Improved for readability
 
-### Logs
+## Acknowledgement
 
-**9 Oct 2021 :**
-
-- Improved aesthetics greatly.
-- Recreated & refactored the project using `react` with `vite`. It used `vuejs` earlier.
-- Made highly responsive using `tailwind`.
+Based on <https://github.com/umeshmk/Tailwindcss-cheatsheet> A very elegant and helpful Tailwind CSS cheat-sheet.

@@ -23,68 +23,60 @@
   </head>
 
   <!-- BODY -->
-  <body class="bg-white mx-auto">
+  <body class="mx-auto bg-white">
     <!-- **********
-      NAVBAR 
+      NAVBAR
     ************-->
     <nav
-      class="
-        flex flex-row
-        items-center
-        justify-between
-        text-white
-        bg-purple-900
-        px-4
-        py-1
-      "
+      class="flex flex-row items-center justify-between px-4 py-1 text-white bg-purple-900 "
     >
       <div class="flex flex-col">
         <!-- <div
-          class="hidden md:flex mr-3 bg-blue-100 p-1"
+          class="hidden p-1 mr-3 bg-blue-100 md:flex"
           id="tailwindIcon"
         ></div> -->
-        <div class="md:hidde font-extrabold text-xl">
-          <a href="https://umeshmk.github.io/Tailwindcss-cheatsheet/">
+        <div class="text-xl font-extrabold md:hidde">
+          <a href="https://anibalsanchez.github.io/Tailwindcss-cheatsheet/">
             Tailwindcss
           </a>
         </div>
-        <span class="text-sm text-gray-300 font-thin">cheatsheet v2.0</span>
+        <span class="text-sm font-thin text-gray-300">cheatsheet v2.0</span>
       </div>
       <ul class="flex flex-row items-center text-sm">
-        <li class="flex pr-10 font-thin text-xl underline">
-          <a href="https://umeshmk.github.io/Tailwindcss-cheatsheet/"
+        <li class="flex pr-10 text-xl font-thin underline">
+          <a href="https://anibalsanchez.github.io/Tailwindcss-cheatsheet/"
             >v2.1(latest)</a
           >
         </li>
-        <li class="flex pr-10 font-thin text-xl underline">
-          <a href="https://umeshmk.github.io/Tailwindcss-cheatsheet/v1/"
+        <li class="flex pr-10 text-xl font-thin underline">
+          <a href="https://anibalsanchez.github.io/Tailwindcss-cheatsheet/v1/"
             >v1.0</a
           >
         </li>
         <li class="flex flex-col">
-          <a href="https://github.com/umeshmk/Tailwindcss-cheatsheet">
-            <!-- <span class="mr-3 p-1" id="githubIcon"></span> -->
-            <i class="fab fa-github text-4xl"></i>
-            <span class="hidden md:block text-gray-300 mt-1"> Github </span>
+          <a href="https://github.com/anibalsanchez/Tailwindcss-cheatsheet/Tailwindcss-cheatsheet">
+            <!-- <span class="p-1 mr-3" id="githubIcon"></span> -->
+            <i class="text-4xl fab fa-github"></i>
+            <span class="hidden mt-1 text-gray-300 md:block"> Github </span>
           </a>
         </li>
       </ul>
     </nav>
-    <!-- ************ 
+    <!-- ************
       APP RESPONSIVE(GRID)
     ************-->
     <div
-      class="grid md:grid-cols-12 gap-3 md:bg-purple-300 md:p-5 md:py-20"
+      class="grid gap-3 md:grid-cols-12 md:bg-purple-300 md:p-5 md:py-20"
       id="app-responsive"
     >
       <div class="col-span-full md:col-span-4">
         <vc-title ptitle="spacing"></vc-title>
         <vc-size :psize="spacing"></vc-size>
       </div>
-      <div class="col-span-full md:col-span-8 grid grid-cols-12 grid-rows-">
+      <div class="grid grid-cols-12 col-span-full md:col-span-8 grid-rows-">
         <div class="col-span-full md:col-span-8">
           <vc-title ptitle="colors"></vc-title>
-          <div class="flex flex-row justify-around bg-purple-100 p-5">
+          <div class="flex flex-row justify-around p-5 border">
             <vc-colors :pcolors="colors" :pdepth="50"></vc-colors>
             <vc-colors :pcolors="colors" :pdepth="100"></vc-colors>
             <vc-colors :pcolors="colors" :pdepth="200"></vc-colors>
@@ -98,7 +90,7 @@
           </div>
         </div>
 
-        <div class="col-span-full md:col-span-4 flex justify-around">
+        <div class="flex justify-around col-span-full md:col-span-4">
           <div>
             <vc-title ptitle="Pseudo-Class"></vc-title>
             <vc-pseudo :pclass="pseudoClass"></vc-pseudo>
@@ -110,11 +102,11 @@
         </div>
         <div class="col-span-full md:col-span-8">
           <vc-title ptitle="Breakpoints"></vc-title>
-          <div class="flex bg-purple-900 text-blue-200 p-4" id="icons"></div>
+          <div class="flex p-4 text-blue-200 bg-purple-900" id="icons"></div>
           <vc-responsive :presponsive="responsive"></vc-responsive>
         </div>
 
-        <div class="col-span-full md:col-span-4 flex justify-around">
+        <div class="flex justify-around col-span-full md:col-span-4">
           <div>
             <vc-title ptitle="Colors"></vc-title>
             <vc-pseudo :pclass="colorsNum"></vc-pseudo>
@@ -126,21 +118,21 @@
         </div>
       </div>
     </div>
-    <!-- *************************** 
+    <!-- ***************************
       APP RESPONSIVE(FLEX)(OLD)
     ********************************-->
     <!-- <div
-      class="container mx-auto flex justify-between flex-wrap p-"
+      class="container flex flex-wrap justify-between mx-auto p-"
       id="app-responsive"
     > -->
-    <!-- <div class="w-full md:w-auto my-4">
+    <!-- <div class="w-full my-4 md:w-auto">
         <vc-title ptitle="spacing"></vc-title>
         <vc-size :psize="spacing"></vc-size>
       </div>
-      <div class="flex flex-col justify-around w-full md:w-auto my-4">
+      <div class="flex flex-col justify-around w-full my-4 md:w-auto">
         <div>
           <vc-title ptitle="Breakpoints"></vc-title>
-          <div class="flex bg-purple-900 text-blue-200 p-4" id="icons"></div>
+          <div class="flex p-4 text-blue-200 bg-purple-900" id="icons"></div>
           <vc-responsive :presponsive="responsive"></vc-responsive>
         </div>
         <div class="flex flex-row justify-between">
@@ -164,7 +156,7 @@
       </div> -->
     <!-- <div class="my-4">
         <vc-title ptitle="colors"></vc-title>
-        <div class="flex flex-row bg-purple-100 px-2 mb-5">
+        <div class="flex flex-row px-2 mb-5 border">
           <vc-colors :pcolors="colors" :pdepth="50"></vc-colors>
           <vc-colors :pcolors="colors" :pdepth="100"></vc-colors>
           <vc-colors :pcolors="colors" :pdepth="300"></vc-colors>
@@ -184,11 +176,11 @@
 
     <!-- </div> -->
 
-    <!-- ************ 
-      APP 
+    <!-- ************
+      APP
     ************-->
     <div
-      class="flex flex-row justify-center md:justify-between flex-wrap p-4"
+      class="flex flex-row flex-wrap justify-center p-4 md:justify-between"
       id="app-1"
     >
       <div>
@@ -280,7 +272,7 @@
         <vc-heading v-bind:pheading="table"></vc-heading>
       </div>
       <!-- </div> -->
-      <div class="rder-last my-4">
+      <div class="my-4 rder-last">
         <vc-title ptitle="Interactivity"></vc-title>
         <vc-heading v-bind:pheading="interactivity"></vc-heading>
       </div>
@@ -295,21 +287,14 @@
     </div>
     <div class="mt-20"></div>
     <footer
-      class="
-        flex flex-col
-        w-full
-        items-center
-        italic
-        text-xl
-        md:text-2xl
-        py-32
-        font-thin
-        bg-purple-200
-      "
+      class="flex flex-col items-center w-full py-32 text-xl italic font-thin border md:text-2xl"
     >
-      <div>Made with</div>
-      <div class="align-center bg-red-300 p-2 rounded-xl">❤</div>
-      <a class="text-blue-900 pt-3 underline" href="https://github.com/umeshmk">
+      <div>Tweaked By</div>
+      <a class="pt-3 mb-6 text-blue-900 underline" href="https://github.com/anibalsanchez/Tailwindcss-cheatsheet">
+        Anibal Sanchez
+      </a>
+      <div>Originally Made By</div>
+      <a class="pt-3 text-blue-900 underline" href="https://github.com/umeshmk/Tailwindcss-cheatsheet">
         Umesh Kadam
       </a>
     </footer>
@@ -323,9 +308,9 @@
     <script src="main.js"></script>
   </body>
 </html>
-<!-- 
+<!--
 <div>
-  <div class="flex flex-col bg-black text-white p-1" v-for="s in size">
+  <div class="flex flex-col p-1 text-white bg-black" v-for="s in size">
     {{ s }}
   </div>
 </div> -->

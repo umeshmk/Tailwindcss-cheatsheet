@@ -207,7 +207,7 @@ export let cheatsheet = {
       "m[ x|y ]-[ $SPACING  ]",
       "m[ t|r|b|l ]-[ $SPACING  ]",
     ],
-    spaceBetween: [
+    "spaceBetween (Flex)": [
       "-space-[ x|y ]-[ $SPACING  ]",
       "space-[ x|y ]-[ $SPACING  ]",
       "space-[ x|y ]-reverse",
@@ -424,7 +424,23 @@ export let cheatsheet = {
     gap: ["gap-[ $SPACING ]", "gap-x-[ $SPACING ]", "gap-y-[ $SPACING ]"],
   },
   boxAlignment: {
-    "justify-content": [
+    "align-items (Item)": [
+      "items-start",
+      "items-end",
+      "items-center",
+      "items-baseline",
+      "items-stretch",
+    ],
+
+    "align-self (Item)": [
+      "self-auto",
+      "self-start",
+      "self-end",
+      "self-center",
+      "self-stretch",
+    ],
+
+    "justify-content (Flex & Grid)": [
       "justify-start",
       "justify-center",
       "justify-end",
@@ -433,7 +449,7 @@ export let cheatsheet = {
       "justify-evenly",
     ],
 
-    "justify-items": [
+    "justify-items (Grid)": [
       "justify-items-auto",
       "justify-items-start",
       "justify-items-end",
@@ -441,7 +457,7 @@ export let cheatsheet = {
       "justify-items-stretch",
     ],
 
-    "justify-self": [
+    "justify-self (Grid)": [
       "justify-self-auto",
       "justify-self-start",
       "justify-self-end",
@@ -449,7 +465,7 @@ export let cheatsheet = {
       "justify-self-stretch",
     ],
 
-    "align-content": [
+    "align-content (Flex & Grid)": [
       "content-center",
       "content-start",
       "content-end",
@@ -458,23 +474,7 @@ export let cheatsheet = {
       "content-evenly",
     ],
 
-    "align-items": [
-      "items-start",
-      "items-end",
-      "items-center",
-      "items-baseline",
-      "items-stretch",
-    ],
-
-    "align-self": [
-      "self-auto",
-      "self-start",
-      "self-end",
-      "self-center",
-      "self-stretch",
-    ],
-
-    "place-content": [
+    "place-content (Grid)": [
       "place-content-center",
       "place-content-start",
       "place-content-end",
@@ -484,7 +484,7 @@ export let cheatsheet = {
       "place-content-stretch",
     ],
 
-    "place-items": [
+    "place-items (Grid)": [
       "place-items-auto",
       "place-items-start",
       "place-items-end",
@@ -492,7 +492,7 @@ export let cheatsheet = {
       "place-items-stretch",
     ],
 
-    "place-self": [
+    "place-self (Grid)": [
       "place-self-auto",
       "place-self-start",
       "place-self-end",

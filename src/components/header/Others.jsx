@@ -3,7 +3,7 @@ import Title from "../Title";
 import { TailwindContext } from "../../context/TailwindContext";
 
 var jsx = (c) => (
-  <div className="grid grid-cols-2 italic bg-purple-100 py-3 px-2 mb-6 tracking-wide">
+  <div className="grid grid-cols-2 px-2 py-3 mb-6 italic tracking-wide border">
     {c.map((v) => (
       <div className="" key={v}>
         {v}

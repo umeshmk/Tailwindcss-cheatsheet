@@ -15,13 +15,15 @@ cd dist
 
 # if you are deploying to a custom domain
 echo "Deploying....."
-echo "https://umeshmk.github.io/Tailwindcss-cheatsheet/" 
-# echo "https://umeshmk.github.io/Tailwindcss-cheatsheet/" > CNAME
+echo "https://anibalsanchez.github.io/Tailwindcss-cheatsheet/"
+# echo "https://anibalsanchez.github.io/Tailwindcss-cheatsheet/" > CNAME
 
 git init
 git add -A
 git commit -m "deploy" &&
 
-git push -f git@github.com:umeshmk/Tailwindcss-cheatsheet.git master:gh-pages
+git push -f git@github.com:anibalsanchez/Tailwindcss-cheatsheet.git master:gh-pages
 
 cd -
+
+https://github.com/anibalsanchez/Tailwindcss-cheatsheet

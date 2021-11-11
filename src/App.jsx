@@ -10,7 +10,9 @@ function App() {
       <TailwindContext.Provider value={data}>
         <Nav />
         <Header />
+        <div class="pagebreak" />
         <Content />
+        <div class="pagebreak" />
         <Footer />
       </TailwindContext.Provider>
     </div>

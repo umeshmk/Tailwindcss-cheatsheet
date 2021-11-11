@@ -6,7 +6,7 @@ let responsiveJsx = (res) => (
   <div className="flex pb-8 md:pb-6 ">
     {Object.values(res).map((v) => {
       return (
-        <div className="flex-1 bg-purple-100 uppercase md:p-3 " key={v}>
+        <div className="flex-1 uppercase border md:p-3 " key={v}>
           {v.map((j, key) => {
             return (
               <div className="p-2 tracking-wide lowercase" key={key}>
@@ -14,7 +14,7 @@ let responsiveJsx = (res) => (
                   className={
                     key === 0
                       ? "text-gray-700 italic border-b-2 border-purple-300 pb-2"
-                      : "ffamily-b text-red-800 font-normal px-2"
+                      : "ffamily-b text-gray-800 font-normal px-2"
                   }
                 >
                   {j}
@@ -39,9 +39,9 @@ function Breakpoints({ title }) {
   return (
     <div className="">
       <Title title="Breakpoints" />
-      <div className="grid text-center overflow-x-scroll lg:overflow-hidden">
+      <div className="grid overflow-x-scroll text-center lg:overflow-hidden">
         <div
-          className="grid grid-cols-6  bg-purple-100 text-blue-500 py-6 "
+          className="grid grid-cols-6 py-6 text-blue-500 border "
           ref={ref}
         ></div>
         {responsiveJsx(responsive)}

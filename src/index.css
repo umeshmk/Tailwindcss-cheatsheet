@@ -15,3 +15,8 @@ body {
 .ffamily-b {
   font-family: "Inconsolata";
 }
+
+.pagebreak {
+  clear: both;
+  page-break-after: always;
+}

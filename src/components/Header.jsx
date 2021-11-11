@@ -6,8 +6,8 @@ import Others from "./header/Others";
 
 function Header({ title }) {
   return (
-    <header className="grid grid-cols-1 gap-5 bg-purple-200 p-5 lg:py-20">
-      <div className="grid grid-cols-1 gap-10 lg:grid-cols-2  lg:gap-3 2xl:gap-10 ">
+    <header className="grid grid-cols-1 gap-5 p-5 border lg:py-20">
+      <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-3 2xl:gap-10 ">
         <Spacing />
         <div className="2xl:grid 2xl:gap-10">
           <Colors />

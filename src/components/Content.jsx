@@ -3,17 +3,17 @@ import Title from "./Title";
 import { TailwindContext } from "../context/TailwindContext";
 
 const Heading = ({ data }) => (
-  <div className="flex flex-col flex-none bg-purple-100 py-6 px-1">
+  <div className="flex flex-col px-1 py-6 border">
     {Object.keys(data).map((title) => (
       <div
-        // className="text-purple-500 text-sm uppercase font-semibold w-full p-2"
-        className="text-gray-600 text-sm uppercase font-semibold w-full p-2"
+        // className="w-full p-2 text-sm font-semibold text-purple-500 uppercase"
+        className="w-full p-2 text-sm font-semibold text-gray-600 uppercase"
         key={title}
       >
         {title}
         {data[title].map((c, i) => (
-          <div className="text-red-800 font-normal px-2 " key={i}>
-            <code className="ffamily-b lowercase">.{c}</code>
+          <div className="px-2 font-normal text-gray-800 whitespace-nowrap" key={i}>
+            <code className="lowercase ffamily-b">.{c}</code>
           </div>
         ))}
       </div>
@@ -26,7 +26,7 @@ function Content() {
     useContext(TailwindContext);
 
   return (
-    <div className="grid grid-cols-1 lg:flex lg:flex-wrap lg:justify-around   p-4 ">
+    <div className="grid grid-cols-1 p-4 lg:flex lg:flex-wrap lg:justify-between">
       <div className="my-4">
         <Title title="flexbox" />
         <div className="flex flex-col">
@@ -36,21 +36,21 @@ function Content() {
 
       <div className="my-4">
         <Title title="Grid" />
-        <div className="flex flex-row overflow-x-scroll lg:overflow-hidden">
+        <div className="flex flex-row">
           <Heading data={chc.cGrid[0]} />
           <Heading data={chc.cGrid[1]} />
         </div>
       </div>
       <div className="my-4">
         <Title title="Box-alignment" />
-        <div className="flex flex-row overflow-x-scroll lg:overflow-hidden">
+        <div className="flex flex-row">
           <Heading data={chc.cBoxAlignment[0]} />
           <Heading data={chc.cBoxAlignment[1]} />
         </div>
       </div>
       <div className="my-4">
         <Title title="Sizing" />
-        <div className="flex flex-row overflow-x-scroll lg:overflow-hidden">
+        <div className="flex flex-row">
           <Heading data={chc.cSizing[0]} />
           <Heading data={chc.cSizing[1]} />
         </div>
@@ -63,7 +63,7 @@ function Content() {
 
       <div className="my-4">
         <Title title="Layout" />
-        <div className="flex flex-row overflow-x-scroll lg:overflow-hidden">
+        <div className="flex flex-row">
           <Heading data={chc.cLayout[0]} />
           <Heading data={chc.cLayout[1]} />
           <Heading data={chc.cLayout[2]} />
@@ -72,7 +72,7 @@ function Content() {
 
       <div className="my-4">
         <Title title="Typography" />
-        <div className="flex flex-row overflow-x-scroll lg:overflow-hidden">
+        <div className="flex flex-row">
           <Heading data={chc.cTypography[0]} />
           <Heading data={chc.cTypography[1]} />
           <Heading data={chc.cTypography[2]} />
@@ -82,7 +82,7 @@ function Content() {
 
       <div className="my-4">
         <Title title="Background" />
-        <div className="flex flex-row overflow-x-scroll lg:overflow-hidden">
+        <div className="flex flex-row">
           <Heading data={chc.cBackground[0]} />
           <Heading data={chc.cBackground[1]} />
         </div>
@@ -90,7 +90,7 @@ function Content() {
 
       <div className="my-4">
         <Title title="Border" />
-        <div className="flex flex-row overflow-x-scroll lg:overflow-hidden">
+        <div className="flex flex-row">
           <Heading data={chc.cBorder[0]} />
           <Heading data={chc.cBorder[1]} />
         </div>

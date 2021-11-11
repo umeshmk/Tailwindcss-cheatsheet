@@ -8,7 +8,7 @@ function Spacing({ title }) {
   return (
     <div className="">
       <Title title="Spacing" />
-      <div className="flex flex-col items-start justify-center bg-purple-100 p-6 overflow-x-scroll lg:overflow-hidden">
+      <div className="flex flex-col items-start justify-center p-6 overflow-x-scroll border lg:overflow-hidden">
         {basic.spacing.map((v) => {
           return (
             <div className="flex flex-row items-center pt-1" key={v}>

@@ -1,6 +1,6 @@
 export let responsiveIcons = `
 
-<div class="flex-1"> 
+<div class="flex-1">
 <svg
     width="8.57142857142857"
     height="24"
@@ -68,7 +68,7 @@ export let responsiveIcons = `
       d="M20.857 24l.857 3H24v1H12v-1h2.286l.857-3H1.5A1.5 1.5 0 0 1 0 22.5v-21A1.5 1.5 0 0 1 1.5 0h33A1.5 1.5 0 0 1 36 1.5v21a1.5 1.5 0 0 1-1.5 1.5H20.857zM2 2v18h32V2H2z"
     ></path>
   </svg>
-  </div>  
+  </div>
   <div class="flex-1">
   <svg
     width="30.85714285714285"
@@ -93,8 +93,8 @@ export let tailwindIcon = `
                     <linearGradient id="paint0_linear" x1="3.5" y1="16" x2="59" y2="48" gradientUnits="userSpaceOnUse">
                       <stop stop-color="#2298BD"></stop>
                       <stop offset="1" stop-color="#0ED7B5"></stop>
-                      
-                      
+
+
                     </linearGradient>
                   </defs>
                 </svg>
