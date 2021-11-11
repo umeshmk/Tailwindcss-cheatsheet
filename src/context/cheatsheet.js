@@ -424,7 +424,7 @@ export let cheatsheet = {
     gap: ["gap-[ $SPACING ]", "gap-x-[ $SPACING ]", "gap-y-[ $SPACING ]"],
   },
   boxAlignment: {
-    "align-items (Item)": [
+    "align-items (Flex)": [
       "items-start",
       "items-end",
       "items-center",
@@ -432,12 +432,13 @@ export let cheatsheet = {
       "items-stretch",
     ],
 
-    "align-self (Item)": [
-      "self-auto",
-      "self-start",
-      "self-end",
-      "self-center",
-      "self-stretch",
+    "align-content (Flex & Grid)": [
+      "content-center",
+      "content-start",
+      "content-end",
+      "content-between",
+      "content-around",
+      "content-evenly",
     ],
 
     "justify-content (Flex & Grid)": [
@@ -465,15 +466,6 @@ export let cheatsheet = {
       "justify-self-stretch",
     ],
 
-    "align-content (Flex & Grid)": [
-      "content-center",
-      "content-start",
-      "content-end",
-      "content-between",
-      "content-around",
-      "content-evenly",
-    ],
-
     "place-content (Grid)": [
       "place-content-center",
       "place-content-start",
@@ -498,6 +490,14 @@ export let cheatsheet = {
       "place-self-end",
       "place-self-center",
       "place-self-stretch",
+    ],
+
+    "align-self (Item)": [
+      "self-auto",
+      "self-start",
+      "self-end",
+      "self-center",
+      "self-stretch",
     ],
   },
   transition: {
