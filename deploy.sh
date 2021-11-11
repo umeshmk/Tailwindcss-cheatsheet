@@ -25,5 +25,3 @@ git commit -m "deploy" &&
 git push -f git@github.com:anibalsanchez/Tailwindcss-cheatsheet.git master:gh-pages
 
 cd -
-
-https://github.com/anibalsanchez/Tailwindcss-cheatsheet
