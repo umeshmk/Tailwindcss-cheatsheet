@@ -1,5 +1,6 @@
 import {pick as _pick, chunk as _chunk, keys as _keys} from 'lodash';
 import layout from './layout.json';
+import others from './others.json';
 import flexboxAndGrid from './flexbox-and-grid.json';
 
 const createColArray = (data) => {
@@ -8,17 +9,17 @@ const createColArray = (data) => {
     if (v.col > maxCol) maxCol = v.col;
   });
 
-  // console.log(data);
+  // console.log('data', data);
   const finalArray = [];
   for (let i = 1; i <= maxCol; i++) {
     const colObj = {};
     Object.entries(data).map(([k, v]) => {
       if (v.col === i) colObj[k] = v.data;
     });
-    // console.log(colObj);
+    // console.log(`col-${i}`, colObj);
     finalArray.push(colObj);
   }
-  // console.log(finalArray);
+  // console.log('final array', finalArray);
   return finalArray;
 };
 
@@ -165,76 +166,8 @@ export let cheatsheet = {
   accessibility: {
     'screen-reader': ['sr-only', 'not-sr-only'],
   },
-  sizing: {
-    width: [
-      'w-auto',
-      'w-[ $SPACING  ]',
-      'w-1/2',
-      'w-{1-2}/3',
-      'w-{1-3}/4',
-      'w-{1-4}/5',
-      'w-{1-5}/6',
-      'w-{1-11}/12',
-      'w-full',
-      'w-screen',
-      'w-min',
-      'w-max',
-    ],
-    'min-width': ['min-w-0', 'min-w-full', 'min-w-min', 'min-w-max'],
-    'max-width': [
-      'max-w-0',
-      'max-w-none',
-      'max-w-[ xs|sm|md|lg ]',
-      'max-w-xl',
-      'max-w-{2-7}xl',
-      'max-w-full',
-      'max-w-full',
-      'max-w-min',
-      'max-w-max',
-      'max-w-prose',
-      'max-w-screen-[ xs|sm|md|lg ]',
-      'max-w-screen-[ xl|2xl ]',
-    ],
-    height: [
-      'h-auto',
-      'h-[ $SPACING  ]',
-      'h-1/2',
-      'h-{1-2}/3',
-      'h-{1-3}/4',
-      'h-{1-4}/5',
-      'h-{1-5}/6',
-      'h-full',
-      'h-screen',
-    ],
-    'min-height': ['min-h-0', 'min-h-full', 'min-h-screen'],
-    'max-height': [
-      'max-h-[ $SPACING  ]',
-      //
-      'max-h-full',
-      'max-h-screen',
-    ],
-  },
-  spacing: {
-    padding: [
-      'p-[ $SPACING  ]',
-      'p[ x|y ]-[ $SPACING  ]',
-      'p[ t|r|b|l ]-[ $SPACING  ]',
-    ],
-    margin: [
-      'm-auto',
-      '-m-[ $SPACING  ]',
-      '-m[ x|y ]-[ $SPACING  ]',
-      '-m[ t|r|b|l ]-[ $SPACING  ]',
-      'm-[ $SPACING  ]',
-      'm[ x|y ]-[ $SPACING  ]',
-      'm[ t|r|b|l ]-[ $SPACING  ]',
-    ],
-    spaceBetween: [
-      '-space-[ x|y ]-[ $SPACING  ]',
-      'space-[ x|y ]-[ $SPACING  ]',
-      'space-[ x|y ]-reverse',
-    ],
-  },
+  sizing: others.sizing,
+  spacing: others.spacing,
   typography: {
     Family: ['font-sans', 'font-serif', 'font-mono'],
     size: [
@@ -381,12 +314,11 @@ export let cheatsheetComputed = {
 
     return [p0, p1, p2, p3];
   },
+  get cSpacing() {
+    return createColArray(cheatsheet.spacing);
+  },
   get cSizing() {
-    var x = cheatsheet.sizing;
-    var keys = _chunk(_keys(x), 3);
-    var p0 = _pick(x, keys[0]);
-    var p1 = _pick(x, keys[1]);
-    return [p0, p1];
+    return createColArray(cheatsheet.sizing);
   },
   get cGrid() {
     return createColArray(cheatsheet.grid);

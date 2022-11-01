@@ -1,0 +1,110 @@
+{
+  "spacing": {
+    "padding": {
+      "col": 1,
+      "data": ["p-[$SPACING]", "p[x|y ]-[$SPACING]", "p[t|r|b|l ]-[$SPACING]"]
+    },
+    "margin": {
+      "col": 1,
+      "data": [
+        "m-auto",
+        "-m-[$SPACING]",
+        "-m[x|y ]-[$SPACING]",
+        "-m[t|r|b|l ]-[$SPACING]",
+        "m-[$SPACING]",
+        "m[x|y ]-[$SPACING]",
+        "m[t|r|b|l ]-[$SPACING]"
+      ]
+    },
+    "spaceBetween": {
+      "col": 1,
+      "data": [
+        "-space-[x|y]-[$SPACING]",
+        "space-[x|y]-[$SPACING]",
+        "space-[x|y]-reverse"
+      ]
+    }
+  },
+
+  "sizing": {
+    "width": {
+      "col": 1,
+      "data": [
+        "w-auto",
+        "w-[$SPACING]",
+        "w-1/2",
+        "w-{1-2}/3",
+        "w-{1-3}/4",
+        "w-{1-4}/5",
+        "w-{1-5}/6",
+        "w-{1-11}/12",
+        "w-full",
+        "w-screen",
+        "w-min",
+        "w-max",
+        "w-fit"
+      ]
+    },
+    "min-width": {
+      "col": 1,
+      "data": ["min-w-0", "min-w-full", "min-w-min", "min-w-max", "min-w-fit"]
+    },
+    "max-width": {
+      "col": 1,
+      "data": [
+        "max-w-0",
+        "max-w-none",
+        "max-w-[xs|sm|md|lg]",
+        "max-w-xl",
+        "max-w-{2-7}xl",
+        "max-w-full",
+        "max-w-full",
+        "max-w-min",
+        "max-w-max",
+        "max-w-fit",
+        "max-w-prose",
+        "max-w-screen-[xs|sm|md|lg]",
+        "max-w-screen-[xl|2xl]"
+      ]
+    },
+    "height": {
+      "col": 2,
+      "data": [
+        "h-auto",
+        "h-[$SPACING]",
+        "h-1/2",
+        "h-{1-2}/3",
+        "h-{1-3}/4",
+        "h-{1-4}/5",
+        "h-{1-5}/6",
+        "h-full",
+        "h-screen",
+        "h-min",
+        "h-max",
+        "h-fit"
+      ]
+    },
+    "min-height": {
+      "col": 2,
+      "data": [
+        "min-h-0",
+        "min-h-full",
+        "min-h-screen",
+        "min-h-min",
+        "min-h-max",
+        "min-h-fit"
+      ]
+    },
+    "max-height": {
+      "col": 2,
+      "data": [
+        "max-h-[$SPACING]",
+        "max-h-full",
+        "max-h-screen",
+        "max-h-min",
+        "max-h-max",
+        "max-h-fit"
+      ]
+    }
+  }
+}

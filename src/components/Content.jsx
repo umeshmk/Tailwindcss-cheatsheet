@@ -60,7 +60,9 @@ function Content() {
 
       <div className="my-4">
         <Title title="spacing" />
-        <Heading data={ch.spacing} />
+        {chc.cSpacing.map((v) => (
+          <Heading data={v} />
+        ))}
       </div>
 
       <div className="my-4">
