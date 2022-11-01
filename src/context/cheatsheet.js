@@ -1,6 +1,7 @@
 import {pick as _pick, chunk as _chunk, keys as _keys} from 'lodash';
 import layout from './layout.json';
 import others from './others.json';
+import typography from './typography.json';
 import flexboxAndGrid from './flexbox-and-grid.json';
 
 const createColArray = (data) => {
@@ -168,87 +169,7 @@ export let cheatsheet = {
   },
   sizing: others.sizing,
   spacing: others.spacing,
-  typography: {
-    Family: ['font-sans', 'font-serif', 'font-mono'],
-    size: [
-      'text-xs',
-      'text-sm',
-      'text-base',
-      'text-lg',
-      'text-xl',
-      'text-[ 2-9 ]xl',
-    ],
-    smoothing: ['antialiased', 'subpixel-antialiased'],
-    style: ['italic', 'not-italic'],
-    weight: [
-      'font-thin',
-      'font-extralight',
-      'font-light',
-      'font-normal',
-      'font-medium',
-      'font-semibold',
-      'font-bold',
-      'font-extrabold',
-      'font-black',
-    ],
-    'font-variant-numeric': [
-      'normal-nums',
-      'ordinal',
-      'slashed-zero',
-      'lining-nums',
-      'oldstyle-nums',
-      'proportional-nums',
-      'tabular-nums',
-      'diagonal-fractions',
-      'stacked-fractions',
-    ],
-    'letter-spacing': [
-      'tracking-tighter',
-      'tracking-tight',
-      'tracking-normal',
-      'tracking-wide',
-      'tracking-wider',
-      'tracking-widest',
-    ],
-    'line-height': [
-      'leading-[ 3-10 ]',
-      'leading-none',
-      'leading-tight',
-      'leading-snug',
-      'leading-normal',
-      'leading-relaxed',
-      'leading-loose',
-    ],
-    'list-style-type': ['list-none', 'list-disc', 'list-decimal'],
-    'list-style-positions': ['list-inside', 'list-outside'],
-    '[placeholder/text]-color': [
-      '[placeholder/text]-transparent',
-      '[placeholder/text]-current',
-      '[placeholder/text]-[ white/black ]',
-      '[placeholder/text]-[color}-[50-900}',
-    ],
-    '[placeholder|text]-opacity': ['[placeholder|text]-opacity-[ $OPACITY ]'],
-    'vertical-align': [
-      'align-baseline',
-      'align-top',
-      'align-middle',
-      'align-bottom',
-      'align-text-top',
-      'align-text-bottom',
-    ],
-    'white-spacing': [
-      'whitespacing-normal',
-      'whitespacing-no-wrap',
-      'whitespacing-pre',
-      'whitespacing-pre-line',
-      'whitespacing-pre-wrap',
-    ],
-    'text-align': ['text-left', 'text-right', 'text-center', 'text-justify'],
-    'text-decoration': ['underline', 'no-underline', 'line-through'],
-    'text-overflow': ['truncate', 'overflow-ellipsis', 'overflow-clip'],
-    transform: ['uppercase', 'lowercase', 'capitalize', 'normal-case'],
-    'word-break': ['break-normal', 'break-words', 'break-all'],
-  },
+  typography: typography,
   flexbox: flexboxAndGrid.flexbox,
   layout: layout,
   grid: flexboxAndGrid.grid,
@@ -305,14 +226,7 @@ export let cheatsheetComputed = {
     return createColArray(cheatsheet.layout);
   },
   get cTypography() {
-    var x = cheatsheet.typography;
-    var keys = _chunk(_keys(x), 5);
-    var p0 = _pick(x, keys[0]);
-    var p1 = _pick(x, keys[1]);
-    var p2 = _pick(x, keys[2]);
-    var p3 = _pick(x, keys[3]);
-
-    return [p0, p1, p2, p3];
+    return createColArray(cheatsheet.typography);
   },
   get cSpacing() {
     return createColArray(cheatsheet.spacing);

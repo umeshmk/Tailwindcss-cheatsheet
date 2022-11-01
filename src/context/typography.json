@@ -1,0 +1,169 @@
+{
+  "Family": {"col": 1, "data": ["font-sans", "font-serif", "font-mono"]},
+  "size": {
+    "col": 1,
+    "data": [
+      "text-xs",
+      "text-sm",
+      "text-base",
+      "text-lg",
+      "text-xl",
+      "text-[ 2-9 ]xl"
+    ]
+  },
+  "smoothing": {"col": 1, "data": ["antialiased", "subpixel-antialiased"]},
+  "style": {"col": 1, "data": ["italic", "not-italic"]},
+  "weight": {
+    "col": 1,
+    "data": [
+      "font-thin",
+      "font-extralight",
+      "font-light",
+      "font-normal",
+      "font-medium",
+      "font-semibold",
+      "font-bold",
+      "font-extrabold",
+      "font-black"
+    ]
+  },
+  "font-variant-numeric": {
+    "col": 1,
+    "data": [
+      "normal-nums",
+      "ordinal",
+      "slashed-zero",
+      "lining-nums",
+      "oldstyle-nums",
+      "proportional-nums",
+      "tabular-nums",
+      "diagonal-fractions",
+      "stacked-fractions"
+    ]
+  },
+  "letter-spacing": {
+    "col": 2,
+    "data": [
+      "tracking-tighter",
+      "tracking-tight",
+      "tracking-normal",
+      "tracking-wide",
+      "tracking-wider",
+      "tracking-widest"
+    ]
+  },
+  "line-height": {
+    "col": 2,
+    "data": [
+      "leading-[ 3-10 ]",
+      "leading-none",
+      "leading-tight",
+      "leading-snug",
+      "leading-normal",
+      "leading-relaxed",
+      "leading-loose"
+    ]
+  },
+  "list-style-type": {
+    "col": 2,
+    "data": ["list-none", "list-disc", "list-decimal"]
+  },
+  "list-style-positions": {"col": 2, "data": ["list-inside", "list-outside"]},
+  "text-align": {
+    "col": 2,
+    "data": [
+      "text-left",
+      "text-right",
+      "text-center",
+      "text-justify",
+      "text-start",
+      "text-end"
+    ]
+  },
+  "[placeholder/text]-color": {
+    "col": 2,
+    "data": [
+      "[placeholder/text]-transparent",
+      "[placeholder/text]-current",
+      "[placeholder/text]-[white/black]",
+      "[placeholder/text]-[$COLOR]-[50-900}"
+    ]
+  },
+  "text-decoration": {
+    "col": 2,
+    "data": ["underline", "no-underline", "line-through", "overline"]
+  },
+  "text-decoration-color": {
+    "col": 3,
+    "data": [
+      "decoration-inherit",
+      "decoration-transparent",
+      "decoration-current",
+      "decoration-[white/black]",
+      "decoration-[$COLOR]-[50-900}"
+    ]
+  },
+  "text-decoration-style": {
+    "col": 3,
+    "data": [
+      "decoration-solid",
+      "decoration-double",
+      "decoration-dashed",
+      "decoration-dotted",
+      "decoration-wavy"
+    ]
+  },
+  "text-decoration-thickness": {
+    "col": 3,
+    "data": [
+      "decoration-auto",
+      "decoration-from-font",
+      "decoration-[0|1|2|4|8]"
+    ]
+  },
+  "text-underline-offset": {
+    "col": 3,
+    "data": ["underline-offset-auto", "underline-offset-[0|1|2|4|8]"]
+  },
+  "text-transform": {
+    "col": 3,
+    "data": ["uppercase", "lowercase", "capitalize", "normal-case"]
+  },
+  "text-overflow": {
+    "col": 3,
+    "data": ["truncate", "text-ellipsis", "text-clip"]
+  },
+  "text-indent": {"col": 4, "data": ["indent-[$SPACING]"]},
+  "---?---[placeholder|text]-opacity": {
+    "col": 4,
+    "data": ["[placeholder|text]-opacity-[ $OPACITY ]"]
+  },
+  "vertical-align": {
+    "col": 4,
+    "data": [
+      "align-baseline",
+      "align-top",
+      "align-middle",
+      "align-bottom",
+      "align-text-top",
+      "align-text-bottom",
+      "align-sub",
+      "align-super"
+    ]
+  },
+  "white-space": {
+    "col": 4,
+    "data": [
+      "whitespacing-normal",
+      "whitespacing-no-wrap",
+      "whitespacing-pre",
+      "whitespacing-pre-line",
+      "whitespacing-pre-wrap"
+    ]
+  },
+  "word-break": {
+    "col": 4,
+    "data": ["break-normal", "break-words", "break-all", "break-keep"]
+  },
+  "content": {"col": 4, "data": ["content-none"]}
+}
