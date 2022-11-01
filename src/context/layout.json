@@ -1,0 +1,149 @@
+{
+  "Aspect Ratio": {
+    "col": 2,
+    "data": ["aspect-auto", "aspect-square", "aspect-video"]
+  },
+  "Container": {"col": 2, "data": ["container"]},
+  "Columns": {
+    "col": 2,
+    "data": [
+      "columns-{1-12}",
+      "columns-auto",
+      "coloumns-[ 3xs|2xs|xs ]",
+      "coloumns-[ sm|md|lg ]",
+      "coloumns-[ xl|{2-7}xl ]"
+    ]
+  },
+  "Break After": {
+    "col": 1,
+    "data": [
+      "break-after-auto",
+      "break-after-avoid",
+      "break-after-all",
+      "break-after-avoid-page",
+      "break-after-page",
+      "break-after-left",
+      "break-after-right",
+      "break-after-column"
+    ]
+  },
+  "Break Before": {
+    "col": 1,
+    "data": [
+      "break-before-auto",
+      "break-before-avoid",
+      "break-before-all",
+      "break-before-avoid-page",
+      "break-before-page",
+      "break-before-left",
+      "break-before-right",
+      "break-before-column"
+    ]
+  },
+  "Break Inside": {
+    "col": 1,
+    "data": [
+      "break-inside-auto",
+      "break-inside-avoid",
+      "break-inside-avoid-page",
+      "break-inside-avoid-column"
+    ]
+  },
+  "Box Decoration Break": {
+    "col": 1,
+    "data": ["box-decoration-clone", "box-decoration-slice"]
+  },
+  "Box Sizing": {"col": 1, "data": ["box-border", "box-content"]},
+  "Display": {
+    "col": 4,
+    "data": [
+      "[ block|inline|inline-block ]",
+      "[ flex|inline-flex ]",
+      "[ grid|inline-grid ]",
+      "table",
+      "table-[ caption|cell ]",
+      "table-[ row|column ]",
+      "table-[ row|column ]-group",
+      "table-[ header|footer ]-group",
+      "flow-root",
+      "contents",
+      "hidden"
+    ]
+  },
+  "Float": {"col": 2, "data": ["float-right", "float-left", "float-none"]},
+  "Clear": {
+    "col": 2,
+    "data": ["clear-left", "clear-right", "clear-both", "clear-none"]
+  },
+  "Isolation": {"col": 1, "data": ["isolate", "isolation-auto"]},
+  "Object-Fit": {
+    "col": 3,
+    "data": [
+      "object-contain",
+      "object-cover",
+      "object-fill",
+      "object-none",
+      "object-scale-down"
+    ]
+  },
+  "Object-Positions": {
+    "col": 4,
+    "data": [
+      "object-center",
+      "object-[ top|bottom ]",
+      "object-[ left|right ]",
+      "object-[ left|right ]-[ top|bottom ]"
+    ]
+  },
+
+  "Overflow": {
+    "col": 3,
+    "data": [
+      "overflow-auto",
+      "overflow-hidden",
+      "overflow-visible",
+      "overflow-scroll",
+      "overflow-[ x|y ]-auto",
+      "overflow-[ x|y ]-hidden",
+      "overflow-[ x|y ]-visible",
+      "overflow-[ x|y ]-scroll"
+    ]
+  },
+  "overscroll-behavior": {
+    "col": 3,
+    "data": [
+      "overscroll-auto",
+      "overscroll-contain",
+      "overscroll-none",
+      "overscroll-[ x|y ]-auto",
+      "overscroll-[ x|y ]-contain",
+      "overscroll-[ x|y ]-none"
+    ]
+  },
+  "Positions": {
+    "col": 4,
+    "data": ["static", "relative", "absolute", "fixed", "sticky"]
+  },
+  "Positions-TRBL": {
+    "col": 4,
+    "data": [
+      "[ top|right|bottom|left ]-[$SPACING]",
+      "[ top|right|bottom|left ]-auto",
+      "[ top|right|bottom|left ]-full",
+      "inset-[$SPACING]",
+      "inset-auto",
+      "inset-full",
+      "inset-1/[ 2|3|4 ]",
+      "inset-2/[ 3|4 ]",
+      "inset-3/4",
+      "inset-[x|y]-[$SPACING]",
+      "inset-[x|y]-auto",
+      "inset-[x|y]-full",
+      "inset-[x|y]-1/[ 2|3|4 ]",
+      "inset-[x|y]-2/[ 3|4 ]",
+      "inset-[x|y]-3/4"
+    ]
+  },
+  "Visible": {"col": 3, "data": ["visible", "invisible", "collapse"]},
+  "z-index": {"col": 3, "data": ["z-[ 0|10|20|30|40|50 ]", "z-auto"]}
+}

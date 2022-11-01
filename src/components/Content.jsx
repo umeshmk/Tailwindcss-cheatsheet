@@ -1,15 +1,14 @@
-import React, { useContext } from "react";
-import Title from "./Title";
-import { TailwindContext } from "../context/TailwindContext";
+import React, {useContext} from 'react';
+import Title from './Title';
+import {TailwindContext} from '../context/TailwindContext';
 
-const Heading = ({ data }) => (
+const Heading = ({data}) => (
   <div className="flex flex-col flex-none bg-purple-100 py-6 px-1">
     {Object.keys(data).map((title) => (
       <div
         // className="text-purple-500 text-sm uppercase font-semibold w-full p-2"
         className="text-gray-600 text-sm uppercase font-semibold w-full p-2"
-        key={title}
-      >
+        key={title}>
         {title}
         {data[title].map((c, i) => (
           <div className="text-red-800 font-normal px-2 " key={i}>
@@ -22,8 +21,7 @@ const Heading = ({ data }) => (
 );
 
 function Content() {
-  const { cheatsheet: ch, cheatsheetComputed: chc } =
-    useContext(TailwindContext);
+  const {cheatsheet: ch, cheatsheetComputed: chc} = useContext(TailwindContext);
 
   return (
     <div className="grid grid-cols-1 lg:flex lg:flex-wrap lg:justify-around   p-4 ">
@@ -67,6 +65,7 @@ function Content() {
           <Heading data={chc.cLayout[0]} />
           <Heading data={chc.cLayout[1]} />
           <Heading data={chc.cLayout[2]} />
+          <Heading data={chc.cLayout[3]} />
         </div>
       </div>
 
