@@ -26,31 +26,35 @@ function Content() {
   return (
     <div className="grid grid-cols-1 lg:flex lg:flex-wrap lg:justify-around   p-4 ">
       <div className="my-4">
-        <Title title="flexbox" />
+        <Title title="flex" />
         <div className="flex flex-col">
-          <Heading data={ch.flexbox} />
+          {chc.cFlexbox.map((v) => (
+            <Heading data={v} />
+          ))}
         </div>
       </div>
-
       <div className="my-4">
         <Title title="Grid" />
         <div className="flex flex-row overflow-x-scroll lg:overflow-hidden">
-          <Heading data={chc.cGrid[0]} />
-          <Heading data={chc.cGrid[1]} />
+          {chc.cGrid.map((v) => (
+            <Heading data={v} />
+          ))}
         </div>
       </div>
       <div className="my-4">
-        <Title title="Box-alignment" />
+        <Title title="Flex/Grid" />
         <div className="flex flex-row overflow-x-scroll lg:overflow-hidden">
-          <Heading data={chc.cBoxAlignment[0]} />
-          <Heading data={chc.cBoxAlignment[1]} />
+          {chc.cFlexboxAndGrid.map((v) => (
+            <Heading data={v} />
+          ))}
         </div>
       </div>
       <div className="my-4">
         <Title title="Sizing" />
         <div className="flex flex-row overflow-x-scroll lg:overflow-hidden">
-          <Heading data={chc.cSizing[0]} />
-          <Heading data={chc.cSizing[1]} />
+          {chc.cSizing.map((v) => (
+            <Heading data={v} />
+          ))}
         </div>
       </div>
 
@@ -62,36 +66,36 @@ function Content() {
       <div className="my-4">
         <Title title="Layout" />
         <div className="flex flex-row overflow-x-scroll lg:overflow-hidden">
-          <Heading data={chc.cLayout[0]} />
-          <Heading data={chc.cLayout[1]} />
-          <Heading data={chc.cLayout[2]} />
-          <Heading data={chc.cLayout[3]} />
+          {chc.cLayout.map((v) => (
+            <Heading data={v} />
+          ))}
         </div>
       </div>
 
       <div className="my-4">
         <Title title="Typography" />
         <div className="flex flex-row overflow-x-scroll lg:overflow-hidden">
-          <Heading data={chc.cTypography[0]} />
-          <Heading data={chc.cTypography[1]} />
-          <Heading data={chc.cTypography[2]} />
-          <Heading data={chc.cTypography[3]} />
+          {chc.cTypography.map((v) => (
+            <Heading data={v} />
+          ))}
         </div>
       </div>
 
       <div className="my-4">
         <Title title="Background" />
         <div className="flex flex-row overflow-x-scroll lg:overflow-hidden">
-          <Heading data={chc.cBackground[0]} />
-          <Heading data={chc.cBackground[1]} />
+          {chc.cBackground.map((v) => (
+            <Heading data={v} />
+          ))}
         </div>
       </div>
 
       <div className="my-4">
         <Title title="Border" />
         <div className="flex flex-row overflow-x-scroll lg:overflow-hidden">
-          <Heading data={chc.cBorder[0]} />
-          <Heading data={chc.cBorder[1]} />
+          {chc.cBorder.map((v) => (
+            <Heading data={v} />
+          ))}
         </div>
       </div>
 

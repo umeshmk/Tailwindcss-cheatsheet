@@ -1,5 +1,6 @@
 import {pick as _pick, chunk as _chunk, keys as _keys} from 'lodash';
 import layout from './layout.json';
+import flexboxAndGrid from './flexbox-and-grid.json';
 
 const createColArray = (data) => {
   let maxCol = 1;
@@ -7,16 +8,17 @@ const createColArray = (data) => {
     if (v.col > maxCol) maxCol = v.col;
   });
 
-  // data = Object.values(data);
+  // console.log(data);
   const finalArray = [];
   for (let i = 1; i <= maxCol; i++) {
     const colObj = {};
     Object.entries(data).map(([k, v]) => {
       if (v.col === i) colObj[k] = v.data;
     });
+    // console.log(colObj);
     finalArray.push(colObj);
   }
-
+  // console.log(finalArray);
   return finalArray;
 };
 
@@ -314,140 +316,10 @@ export let cheatsheet = {
     transform: ['uppercase', 'lowercase', 'capitalize', 'normal-case'],
     'word-break': ['break-normal', 'break-words', 'break-all'],
   },
-  flexbox: {
-    direction: ['flex-row', 'flex-col', 'flex-row-reverse', 'flex-col-reverse'],
-    wrap: ['flex-wrap', 'flex-wrap-reverse', 'flex-nowrap'],
-    flex: ['flex-initial', 'flex-1', 'flex-auto', 'flex-none'],
-    'flex-grow': ['flex-grow', 'flex-grow-0'],
-    'flex-shrink': ['flex-shrink', 'flex-shrink-0'],
-    'flex-order': ['order-first', 'order-last', 'order-none', 'order-{1-12}'],
-  },
+  flexbox: flexboxAndGrid.flexbox,
   layout: layout,
-  grid: {
-    'grid-template-columns': ['grid-cols-[1-12]', 'grid-cols-none'],
-
-    'grid-column-[ start|end ]': [
-      'col-auto',
-      'col-span-[ 1-12 ]',
-      'col-span-full',
-      'col-start-[ 1-13 ]',
-      'col-start-auto',
-      'col-end-[ 1-13 ]',
-      'col-end-auto',
-    ],
-
-    'grid-template-rows': ['grid-rows-[ 1-6 ]', 'grid-rows-none'],
-
-    'grid-row-[ start|end ]': [
-      'row-auto',
-      'row-span-[ 1-6 ]',
-      'row-span-full',
-      'row-start-[ 1-7 ]',
-      'row-start-auto',
-      'row-end-[ 1-7 ]',
-      'row-end-auto',
-    ],
-
-    'grid-auto-flow': [
-      'grid-flow-row',
-      'grid-flow-col',
-      'grid-flow-row-dense',
-      'grid-flow-col-dense',
-    ],
-
-    'grid-auto-columns': [
-      'auto-cols-auto',
-      'auto-cols-min',
-      'auto-cols-max',
-      'auto-cols-fr',
-    ],
-
-    'grid-auto-rows': [
-      'auto-rows-auto',
-      'auto-rows-min',
-      'auto-rows-max',
-      'auto-rows-fr',
-    ],
-
-    gap: ['gap-[ $SPACING ]', 'gap-x-[ $SPACING ]', 'gap-y-[ $SPACING ]'],
-  },
-  boxAlignment: {
-    'justify-content': [
-      'justify-start',
-      'justify-center',
-      'justify-end',
-      'justify-between',
-      'justify-around',
-      'justify-evenly',
-    ],
-
-    'justify-items': [
-      'justify-items-auto',
-      'justify-items-start',
-      'justify-items-end',
-      'justify-items-center',
-      'justify-items-stretch',
-    ],
-
-    'justify-self': [
-      'justify-self-auto',
-      'justify-self-start',
-      'justify-self-end',
-      'justify-self-center',
-      'justify-self-stretch',
-    ],
-
-    'align-content': [
-      'content-center',
-      'content-start',
-      'content-end',
-      'content-between',
-      'content-around',
-      'content-evenly',
-    ],
-
-    'align-items': [
-      'items-start',
-      'items-end',
-      'items-center',
-      'items-baseline',
-      'items-stretch',
-    ],
-
-    'align-self': [
-      'self-auto',
-      'self-start',
-      'self-end',
-      'self-center',
-      'self-stretch',
-    ],
-
-    'place-content': [
-      'place-content-center',
-      'place-content-start',
-      'place-content-end',
-      'place-content-between',
-      'place-content-around',
-      'place-content-evenly',
-      'place-content-stretch',
-    ],
-
-    'place-items': [
-      'place-items-auto',
-      'place-items-start',
-      'place-items-end',
-      'place-items-center',
-      'place-items-stretch',
-    ],
-
-    'place-self': [
-      'place-self-auto',
-      'place-self-start',
-      'place-self-end',
-      'place-self-center',
-      'place-self-stretch',
-    ],
-  },
+  grid: flexboxAndGrid.grid,
+  flexboxAndGrid: flexboxAndGrid.flexboxAndGrid,
   transition: {
     property: [
       'transition-none',
@@ -496,32 +368,6 @@ export let cheatsheet = {
 };
 
 export let cheatsheetComputed = {
-  get cLayout2() {
-    var x = cheatsheet.layout;
-    var keys = _chunk(_keys(x), 5);
-    var p0 = _pick(x, [
-      'Aspect Ratio',
-      'Container',
-      'Columns',
-      'Box-Sizing',
-      'Float',
-      'Clear',
-      'Visible',
-      // "z-index",
-      // "Object-Fit",
-      'Positions',
-    ]);
-    var p1 = _pick(x, [
-      'Overflow',
-      'overscroll-behavior',
-      'Object-Fit',
-      'Object-Positions',
-    ]);
-    var p2 = _pick(x, ['Display', 'Positions-TRBL', 'z-index']);
-
-    // return [p0, p1, p2, p3];
-    return [p0, p1, p2];
-  },
   get cLayout() {
     return createColArray(cheatsheet.layout);
   },
@@ -543,18 +389,13 @@ export let cheatsheetComputed = {
     return [p0, p1];
   },
   get cGrid() {
-    var x = cheatsheet.grid;
-    var keys = _chunk(_keys(x), 4);
-    var p0 = _pick(x, keys[0]);
-    var p1 = _pick(x, keys[1]);
-    return [p0, p1];
+    return createColArray(cheatsheet.grid);
   },
-  get cBoxAlignment() {
-    var x = cheatsheet.boxAlignment;
-    var keys = _chunk(_keys(x), 5);
-    var p0 = _pick(x, keys[0]);
-    var p1 = _pick(x, keys[1]);
-    return [p0, p1];
+  get cFlexbox() {
+    return createColArray(cheatsheet.flexbox);
+  },
+  get cFlexboxAndGrid() {
+    return createColArray(cheatsheet.flexboxAndGrid);
   },
   get cBorder() {
     var x = cheatsheet.border;

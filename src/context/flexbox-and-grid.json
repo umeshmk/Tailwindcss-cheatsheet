@@ -1,0 +1,200 @@
+{
+  "flexbox": {
+    "flex basis": {
+      "col": 1,
+      "data": [
+        "basis-[$SPACING]",
+        "basis-auto",
+        "basis-full",
+        "basis-1/2",
+        "basis-[1-2]/3",
+        "basis-[1-3]/4",
+        "basis-[1-4]/5",
+        "basis-[1-5]/6",
+        "basis-[1-11]/12"
+      ]
+    },
+    "direction": {
+      "col": 1,
+      "data": ["flex-row", "flex-col", "flex-row-reverse", "flex-col-reverse"]
+    },
+    "wrap": {
+      "col": 1,
+      "data": ["flex-wrap", "flex-wrap-reverse", "flex-nowrap"]
+    },
+    "flex": {
+      "col": 1,
+      "data": ["flex-initial", "flex-1", "flex-auto", "flex-none"]
+    },
+    "flex-grow": {"col": 1, "data": ["grow", "grow-0"]},
+    "flex-shrink": {"col": 1, "data": ["shrink", "shrink-0"]},
+    "flex-order": {
+      "col": 1,
+      "data": ["order-first", "order-last", "order-none", "order-[1-12]"]
+    }
+  },
+  "grid": {
+    "grid-template-columns": {
+      "col": 1,
+      "data": ["grid-cols-[1-12]", "grid-cols-none"]
+    },
+    "grid-column-[start|end]": {
+      "col": 1,
+      "data": [
+        "col-auto",
+        "col-span-[1-12]",
+        "col-span-full",
+        "col-start-[1-13]",
+        "col-start-auto",
+        "col-end-[1-13]",
+        "col-end-auto"
+      ]
+    },
+    "grid-template-rows": {
+      "col": 1,
+      "data": ["grid-rows-[1-6]", "grid-rows-none"]
+    },
+    "grid-row-[start|end]": {
+      "col": 1,
+      "data": [
+        "row-auto",
+        "row-span-[1-6]",
+        "row-span-full",
+        "row-start-[1-7]",
+        "row-start-auto",
+        "row-end-[1-7]",
+        "row-end-auto"
+      ]
+    },
+    "grid-auto-flow": {
+      "col": 2,
+      "data": [
+        "grid-flow-row",
+        "grid-flow-col",
+        "grid-flow-dense",
+        "grid-flow-row-dense",
+        "grid-flow-col-dense"
+      ]
+    },
+    "grid-auto-columns": {
+      "col": 2,
+      "data": [
+        "auto-cols-auto",
+        "auto-cols-min",
+        "auto-cols-max",
+        "auto-cols-fr"
+      ]
+    },
+    "grid-auto-rows": {
+      "col": 2,
+      "data": [
+        "auto-rows-auto",
+        "auto-rows-min",
+        "auto-rows-max",
+        "auto-rows-fr"
+      ]
+    }
+  },
+  "flexboxAndGrid": {
+    "gap": {
+      "col": 1,
+      "data": ["gap-[$SPACING]", "gap-x-[$SPACING]", "gap-y-[$SPACING]"]
+    },
+    "justify-content": {
+      "col": 1,
+      "data": [
+        "justify-start",
+        "justify-center",
+        "justify-end",
+        "justify-between",
+        "justify-around",
+        "justify-evenly"
+      ]
+    },
+    "justify-items": {
+      "col": 1,
+      "data": [
+        "justify-items-start",
+        "justify-items-end",
+        "justify-items-center",
+        "justify-items-stretch"
+      ]
+    },
+    "justify-self": {
+      "col": 1,
+      "data": [
+        "justify-self-auto",
+        "justify-self-start",
+        "justify-self-end",
+        "justify-self-center",
+        "justify-self-stretch"
+      ]
+    },
+    "align-content": {
+      "col": 1,
+      "data": [
+        "content-center",
+        "content-start",
+        "content-end",
+        "content-between",
+        "content-around",
+        "content-evenly",
+        "content-baseline"
+      ]
+    },
+    "align-items": {
+      "col": 2,
+      "data": [
+        "items-start",
+        "items-end",
+        "items-center",
+        "items-baseline",
+        "items-stretch"
+      ]
+    },
+    "align-self": {
+      "col": 2,
+      "data": [
+        "self-auto",
+        "self-start",
+        "self-end",
+        "self-center",
+        "self-stretch",
+        "self-baseline"
+      ]
+    },
+    "place-content": {
+      "col": 2,
+      "data": [
+        "place-content-center",
+        "place-content-start",
+        "place-content-end",
+        "place-content-between",
+        "place-content-around",
+        "place-content-evenly",
+        "place-content-stretch",
+        "place-content-baseline"
+      ]
+    },
+    "place-items": {
+      "col": 2,
+      "data": [
+        "place-items-auto",
+        "place-items-start",
+        "place-items-end",
+        "place-items-center",
+        "place-items-stretch"
+      ]
+    },
+    "place-self": {
+      "col": 2,
+      "data": [
+        "place-self-auto",
+        "place-self-start",
+        "place-self-end",
+        "place-self-center",
+        "place-self-stretch"
+      ]
+    }
+  }
+}
