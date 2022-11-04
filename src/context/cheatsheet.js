@@ -1,6 +1,7 @@
 import {pick as _pick, chunk as _chunk, keys as _keys} from 'lodash';
 import layout from './layout.json';
 import others from './others.json';
+import background from './background.json';
 import typography from './typography.json';
 import flexboxAndGrid from './flexbox-and-grid.json';
 
@@ -25,51 +26,7 @@ const createColArray = (data) => {
 };
 
 export let cheatsheet = {
-  background: {
-    'bg-attachment': ['bg-fixed', 'bg-local', 'bg-scroll'],
-
-    'bg-clip': [
-      'bg-clip-border',
-      'bg-clip-padding',
-      'bg-clip-content',
-      'bg-clip-text',
-    ],
-    'bg-color': [
-      'bg-transparent',
-      'bg-current',
-      'bg-white',
-      'bg-black',
-      'bg-[ $color ]-[ 50-900 ]',
-    ],
-    'bg-opacity': ['bg-opacity-[ $OPACITY ]'],
-    'bg-position': [
-      'bg-{left|right|top|bottom}',
-      'bg-center',
-      'bg-{left|right}-{top|bottom}',
-    ],
-
-    'bg-image': [
-      'bg-none',
-      'bg-gradient-to-[ t|r|b|l ]',
-      'bg-gradient-to-[ tl|tr|bl|br ]',
-      //
-    ],
-    'gradient-Color-Stops': [
-      'from-transparent',
-      'from-current',
-      'from-black',
-      'from-white',
-      'from-[ $color ]-[ 50-900 ]',
-    ],
-    'bg-repeat': [
-      'bg-repeat',
-      'bg-norepeat',
-      'bg-repeat-[ x|y ]',
-      'bg-repeat-round',
-      'bg-repeat-space',
-    ],
-    'bg-size': ['bg-auto', 'bg-cover', 'bg-contain'],
-  },
+  background: background,
   border: {
     '[ border|divide|ring|ring-offset ]-color': [
       '[ border|divide|ring|ring-offset ]-transparent',
@@ -251,10 +208,6 @@ export let cheatsheetComputed = {
     return [p0, p1];
   },
   get cBackground() {
-    var x = cheatsheet.background;
-    var keys = _chunk(_keys(x), 5);
-    var p0 = _pick(x, keys[0]);
-    var p1 = _pick(x, keys[1]);
-    return [p0, p1];
+    return createColArray(cheatsheet.background);
   },
 };

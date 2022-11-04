@@ -1,0 +1,65 @@
+{
+  "bg-attachment": {"col": 1, "data": ["bg-fixed", "bg-local", "bg-scroll"]},
+
+  "bg-clip": {
+    "col": 1,
+    "data": [
+      "bg-clip-border",
+      "bg-clip-padding",
+      "bg-clip-content",
+      "bg-clip-text"
+    ]
+  },
+  "bg-color": {
+    "col": 1,
+    "data": [
+      "bg-transparent",
+      "bg-{inherit|current}",
+      "bg-white",
+      "bg-black",
+      "bg-[$color]-[50-900]"
+    ]
+  },
+  "bg-position": {
+    "col": 1,
+    "data": [
+      "bg-{left|right|top|bottom}",
+      "bg-center",
+      "bg-{left|right}-{top|bottom}"
+    ]
+  },
+
+  "bg-image": {
+    "col": 1,
+    "data": [
+      "bg-none",
+      "bg-gradient-to-[t|r|b|l]",
+      "bg-gradient-to-[tl|tr|bl|br]"
+    ]
+  },
+  "gradient-Color-Stops": {
+    "col": 2,
+    "data": [
+      "from-transparent",
+      "from-{inherit|current}",
+      "from-black",
+      "from-white",
+      "from-[$color]-[50-900]"
+    ]
+  },
+  "bg-repeat": {
+    "col": 2,
+    "data": [
+      "bg-repeat",
+      "bg-norepeat",
+      "bg-repeat-[x|y]",
+      "bg-repeat-round",
+      "bg-repeat-space"
+    ]
+  },
+  "bg-size": {"col": 2, "data": ["bg-auto", "bg-cover", "bg-contain"]},
+  "bg-origin": {
+    "col": 2,
+    "data": ["bg-origin-border", "bg-origin-padding", "bg-origin-content"]
+  }
+}
