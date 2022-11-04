@@ -1,0 +1,67 @@
+{
+  "[border|divide|outline|ring|ring-offset]-color": {
+    "col": 1,
+    "data": [
+      "[border|divide|ring|ring-offset]-transparent",
+      "[border|divide|ring|ring-offset]-{inherit|current}",
+      "[border|divide|ring|ring-offset]-white",
+      "[border|divide|ring|ring-offset]-black",
+      "[border|divide|ring|ring-offset]-{$color}-{50-900}"
+    ]
+  },
+
+  "[border|divide|outline]-style": {
+    "col": 1,
+    "data": [
+      "[border|divide]-solid",
+      "[border|divide|outline]-dotted",
+      "[border|divide|outline]-dashed",
+      "[border|divide|outline]-double",
+      "[border|divide|outline]-none",
+      "border-hidden",
+      "outline"
+    ]
+  },
+  "border-width": {
+    "col": 1,
+    "data": [
+      "border",
+      "border-{0|2|4|8}",
+      "border-{x|y}",
+      "border-{x|y}-{0|2|4|8}",
+      "border-{t|r|b|l}",
+      "border-{t|r|b|l}-{0|2|4|8}"
+    ]
+  },
+  "divide width": {
+    "col": 1,
+    "data": ["divide-[x|y]", "divide-[x|y]-reverse", "divide-[x|y]-[0|2|4|8]"]
+  },
+
+  "[ring|ring-offset]-width": {
+    "col": 1,
+    "data": ["ring", "ring-inset", "[ring|ring-offset]-[0|1|2|4|8]"]
+  },
+  "[outline|outline-offset]-width": {
+    "col": 1,
+    "data": ["[outline|outline-offset]-[0|1|2|4|8]"]
+  },
+
+  "border-radius": {
+    "col": 1,
+    "data": [
+      "rounded",
+      "rounded-{sm|md|lg|xl}",
+      "rounded-[2|3]xl",
+      "rounded-{full|none}",
+      "rounded-{t|r|b|l}",
+      "rounded-{t|r|b|l}-{sm|md|lg|xl}",
+      "rounded-{t|r|b|l}-[2|3]xl",
+      "rounded-{t|r|b|l}-{full|none}",
+      "rounded-{tr|tl|br|bl}",
+      "rounded-{tr|tl|br|bl}-{sm|md|lg|xl}",
+      "rounded-{tr|tl|br|bl}-[2|3]xl",
+      "rounded-{tr|tl|br|bl}-{full|none}"
+    ]
+  }
+}

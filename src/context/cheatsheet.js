@@ -2,6 +2,7 @@ import {pick as _pick, chunk as _chunk, keys as _keys} from 'lodash';
 import layout from './layout.json';
 import others from './others.json';
 import background from './background.json';
+import border from './border.json';
 import typography from './typography.json';
 import flexboxAndGrid from './flexbox-and-grid.json';
 
@@ -27,66 +28,7 @@ const createColArray = (data) => {
 
 export let cheatsheet = {
   background: background,
-  border: {
-    '[ border|divide|ring|ring-offset ]-color': [
-      '[ border|divide|ring|ring-offset ]-transparent',
-      '[ border|divide|ring|ring-offset ]-current',
-      '[ border|divide|ring|ring-offset ]-white',
-      '[ border|divide|ring|ring-offset ]-black',
-      '[ border|divide|ring|ring-offset ]-{$color}-{50-900}',
-    ],
-    // "border-color": [
-    //   "border-transparent",
-    //   "border-current",
-    //   "border-white",
-    //   "border-black",
-    //   "border-{$color}-{50-900}",
-    // ],
-    '[ border|divide ]-style': [
-      '[ border|divide ]-solid',
-      '[ border|divide ]-dotted',
-      '[ border|divide ]-dashed',
-      '[ border|divide ]-double',
-      '[ border|divide ]-none',
-    ],
-    'border-width': [
-      'border',
-      'border-{0|2|4|8}',
-      'border-{t|r|b|l}',
-      'border-{t|r|b|l}-{0|2|4|8}',
-    ],
-    'border-opacity': ['border-opacity-[ $OPACITY ]'],
-    'divide width': [
-      'divide-[ x|y ]',
-      'divide-[ x|y ]-reverse',
-      'divide-[ x|y ]-[ 0|2|4|8 ]',
-    ],
-    '[ divide|ring ]-opacity': ['[ divide|ring ]-opacity-[ $OPACITY ]'],
-    // "divide-style": [
-    //   "divide-solid",
-    //   "divide-dotted",
-    //   "divide-dashed",
-    //   "divide-double",
-    //   "divide-none",
-    // ],
-    'ring-width': ['ring', 'ring-inset', 'ring-[ 0|1|2|4|8 ]'],
-    'ring-offset-width': ['ring-offset-[ 0|1|2|4|8 ]'],
-
-    'border-radius': [
-      'rounded',
-      'rounded-{sm|md|lg|xl}',
-      'rounded-[2|3]xl',
-      'rounded-{full|none}',
-      'rounded-{t|r|b|l}',
-      'rounded-{t|r|b|l}-{sm|md|lg|xl}',
-      'rounded-{t|r|b|l}-[2|3]xl',
-      'rounded-{t|r|b|l}-{full|none}',
-      'rounded-{tr|tl|br|bl}',
-      'rounded-{tr|tl|br|bl}-{sm|md|lg|xl}',
-      'rounded-{tr|tl|br|bl}-[2|3]xl',
-      'rounded-{tr|tl|br|bl}-{full|none}',
-    ],
-  },
+  border: border,
   interactivity: {
     cursor: [
       'cursor-auto',
@@ -201,11 +143,7 @@ export let cheatsheetComputed = {
     return createColArray(cheatsheet.flexboxAndGrid);
   },
   get cBorder() {
-    var x = cheatsheet.border;
-    var keys = _chunk(_keys(x), 5);
-    var p0 = _pick(x, keys[0]);
-    var p1 = _pick(x, keys[1]);
-    return [p0, p1];
+    return createColArray(cheatsheet.border);
   },
   get cBackground() {
     return createColArray(cheatsheet.background);
