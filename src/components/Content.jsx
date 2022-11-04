@@ -111,7 +111,10 @@ function Content() {
       </div>
       <div className="my-4">
         <Title title="effect" />
-        <Heading data={ch.effect} />
+        {chc.cEffect.map((v) => (
+          <Heading data={v} />
+        ))}
+        {/* <Heading data={chc.effect} /> */}
       </div>
       <div className="my-4">
         <Title title="table" />

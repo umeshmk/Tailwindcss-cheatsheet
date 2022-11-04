@@ -49,15 +49,7 @@ export let cheatsheet = {
     collapse: ['border-collapse', 'border-separate'],
     Layout: ['table-auto', 'table-fixed'],
   },
-  effect: {
-    opacity: ['opacity-[ $OPACITY  ]'],
-    'box-shadow': [
-      'shadow',
-      'shadow-[ sm|md|lg|xl|2xl ]',
-      'shadow-inner',
-      'shadow-none',
-    ],
-  },
+  effect: others.effect,
   svg: {
     fill: ['fill-current'],
     stroke: ['stroke-current'],
@@ -147,5 +139,8 @@ export let cheatsheetComputed = {
   },
   get cBackground() {
     return createColArray(cheatsheet.background);
+  },
+  get cEffect() {
+    return createColArray(cheatsheet.effect);
   },
 };

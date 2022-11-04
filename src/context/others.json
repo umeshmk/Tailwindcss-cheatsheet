@@ -2,18 +2,18 @@
   "spacing": {
     "padding": {
       "col": 1,
-      "data": ["p-[$SPACING]", "p[x|y ]-[$SPACING]", "p[t|r|b|l ]-[$SPACING]"]
+      "data": ["p-[$SPACING]", "p[x|y]-[$SPACING]", "p[t|r|b|l]-[$SPACING]"]
     },
     "margin": {
       "col": 1,
       "data": [
         "m-auto",
         "-m-[$SPACING]",
-        "-m[x|y ]-[$SPACING]",
-        "-m[t|r|b|l ]-[$SPACING]",
+        "-m[x|y]-[$SPACING]",
+        "-m[t|r|b|l]-[$SPACING]",
         "m-[$SPACING]",
-        "m[x|y ]-[$SPACING]",
-        "m[t|r|b|l ]-[$SPACING]"
+        "m[x|y]-[$SPACING]",
+        "m[t|r|b|l]-[$SPACING]"
       ]
     },
     "spaceBetween": {
@@ -104,6 +104,47 @@
         "max-h-min",
         "max-h-max",
         "max-h-fit"
+      ]
+    }
+  },
+  "effect": {
+    "Box-Shadow": {
+      "col": 1,
+      "data": [
+        "shadow",
+        "shadow-[sm|md|lg|xl|2xl]",
+        "shadow-inner",
+        "shadow-none"
+      ]
+    },
+    "Box-Shadow-Color": {
+      "col": 1,
+      "data": [
+        "shadow--transparent",
+        "shadow--{inherit|current}",
+        "shadow--white",
+        "shadow--black",
+        "shadow--{$color}-{50-900}"
+      ]
+    },
+    "Opacity": {"col": 1, "data": ["opacity-[$OPACITY ]"]},
+    "[Mix|Background]-Blend-Mode": {
+      "col": 1,
+      "data": [
+        "[mix|bg]-blend-normal",
+        "[mix|bg]-blend-multiply",
+        "[mix|bg]-blend-screen",
+        "[mix|bg]-blend-overlay",
+        "[mix|bg]-blend-{darken|lighten}",
+        "[mix|bg]-blend-color",
+        "[mix|bg]-blend-color-{dodge|burn}",
+        "[mix|bg]-blend-{soft|hard}-light",
+        "[mix|bg]-blend-difference",
+        "[mix|bg]-blend-exclusion",
+        "[mix|bg]-blend-hue",
+        "[mix|bg]-blend-saturation",
+        "[mix|bg]-blend-luminosity",
+        "[mix|bg]-blend-plus-lighter"
       ]
     }
   }
