@@ -125,14 +125,18 @@ function Content() {
           <Heading data={v} />
         ))}
       </div>
-
-      <div className="my-4">
-        <Title title="Interactivity" />
-        <Heading data={ch.interactivity} />
-      </div>
       <div className="my-4">
         <Title title="svg" />
         <Heading data={ch.svg} />
+      </div>
+
+      <div className="my-4">
+        <Title title="Interactivity" />
+        <div className="flex flex-row overflow-x-scroll lg:overflow-hidden">
+          {ch.interactivity.map((v) => (
+            <Heading data={v} />
+          ))}
+        </div>
       </div>
       <div className="my-4">
         <Title title="accessibility" />

@@ -1,11 +1,12 @@
 import {pick as _pick, chunk as _chunk, keys as _keys} from 'lodash';
+import flexboxAndGrid from './flexbox-and-grid.json';
 import layout from './layout.json';
 import others from './others.json';
 import background from './background.json';
 import border from './border.json';
 import typography from './typography.json';
 import filters from './filters.json';
-import flexboxAndGrid from './flexbox-and-grid.json';
+import interactivity from './interactivity.json';
 
 const createColArray = (data) => {
   let maxCol = 1;
@@ -30,22 +31,7 @@ const createColArray = (data) => {
 export let cheatsheet = {
   background: background,
   border: border,
-  interactivity: {
-    cursor: [
-      'cursor-auto',
-      'cursor-default',
-      'cursor-pointer',
-      'cursor-wait',
-      'cursor-text',
-      'cursor-move',
-      'cursor-not-allowed',
-    ],
-    'user-select': ['select-none', 'select-text', 'select-all', 'select-auto'],
-    resize: ['resize', 'resize-{x/y}', 'resize-none'],
-    'pointer-events': ['pointer-events-auto', 'pointer-events-none'],
-    outline: ['outline-none', 'outline-white', 'outline-black'],
-    appearance: ['appearance-none'],
-  },
+  interactivity: createColArray(interactivity),
   table: createColArray(others.table),
   effect: others.effect,
   svg: {
