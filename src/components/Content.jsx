@@ -21,55 +21,55 @@ const Heading = ({data}) => (
 );
 
 function Content() {
-  const {cheatsheet: ch, cheatsheetComputed: chc} = useContext(TailwindContext);
+  const {cheatsheet} = useContext(TailwindContext);
 
   return (
     <div className="grid grid-cols-1 lg:flex lg:flex-wrap lg:justify-around   p-4 ">
       <div className="my-4">
         <Title title="flex" />
         <div className="flex flex-col">
-          {chc.cFlexbox.map((v) => (
-            <Heading data={v} />
+          {cheatsheet.flexbox.map((v, i) => (
+            <Heading data={v} key={i} />
           ))}
         </div>
       </div>
       <div className="my-4">
         <Title title="Grid" />
         <div className="flex flex-row overflow-x-scroll lg:overflow-hidden">
-          {chc.cGrid.map((v) => (
-            <Heading data={v} />
+          {cheatsheet.grid.map((v, i) => (
+            <Heading data={v} key={i} />
           ))}
         </div>
       </div>
       <div className="my-4">
         <Title title="Flex/Grid" />
         <div className="flex flex-row overflow-x-scroll lg:overflow-hidden">
-          {chc.cFlexboxAndGrid.map((v) => (
-            <Heading data={v} />
+          {cheatsheet.flexboxAndGrid.map((v, i) => (
+            <Heading data={v} key={i} />
           ))}
         </div>
       </div>
       <div className="my-4">
         <Title title="Sizing" />
         <div className="flex flex-row overflow-x-scroll lg:overflow-hidden">
-          {chc.cSizing.map((v) => (
-            <Heading data={v} />
+          {cheatsheet.sizing.map((v, i) => (
+            <Heading data={v} key={i} />
           ))}
         </div>
       </div>
 
       <div className="my-4">
         <Title title="spacing" />
-        {chc.cSpacing.map((v) => (
-          <Heading data={v} />
+        {cheatsheet.spacing.map((v, i) => (
+          <Heading data={v} key={i} />
         ))}
       </div>
 
       <div className="my-4">
         <Title title="Layout" />
         <div className="flex flex-row overflow-x-scroll lg:overflow-hidden">
-          {chc.cLayout.map((v) => (
-            <Heading data={v} />
+          {cheatsheet.layout.map((v, i) => (
+            <Heading data={v} key={i} />
           ))}
         </div>
       </div>
@@ -77,8 +77,8 @@ function Content() {
       <div className="my-4">
         <Title title="Typography" />
         <div className="flex flex-row overflow-x-scroll lg:overflow-hidden">
-          {chc.cTypography.map((v) => (
-            <Heading data={v} />
+          {cheatsheet.typography.map((v, i) => (
+            <Heading data={v} key={i} />
           ))}
         </div>
       </div>
@@ -86,8 +86,8 @@ function Content() {
       <div className="my-4">
         <Title title="Background" />
         <div className="flex flex-row overflow-x-scroll lg:overflow-hidden">
-          {chc.cBackground.map((v) => (
-            <Heading data={v} />
+          {cheatsheet.background.map((v, i) => (
+            <Heading data={v} key={i} />
           ))}
         </div>
       </div>
@@ -95,57 +95,61 @@ function Content() {
       <div className="my-4">
         <Title title="Border" />
         <div className="flex flex-row overflow-x-scroll lg:overflow-hidden">
-          {chc.cBorder.map((v) => (
-            <Heading data={v} />
+          {cheatsheet.border.map((v, i) => (
+            <Heading data={v} key={i} />
           ))}
         </div>
       </div>
 
       <div className="my-4">
         <Title title="transition & Animation" />
-        {ch.transition.map((v) => (
-          <Heading data={v} />
+        {cheatsheet.transition.map((v, i) => (
+          <Heading data={v} key={i} />
         ))}
       </div>
       <div className="my-4">
         <Title title="transform" />
-        {ch.transform.map((v) => (
-          <Heading data={v} />
+        {cheatsheet.transform.map((v, i) => (
+          <Heading data={v} key={i} />
         ))}
       </div>
       <div className="my-4">
         <Title title="effect" />
-        {chc.cEffect.map((v) => (
-          <Heading data={v} />
+        {cheatsheet.effect.map((v, i) => (
+          <Heading data={v} key={i} />
         ))}
       </div>
       <div className="my-4">
         <Title title="table" />
-        {ch.table.map((v) => (
-          <Heading data={v} />
+        {cheatsheet.table.map((v, i) => (
+          <Heading data={v} key={i} />
         ))}
       </div>
       <div className="my-4">
         <Title title="svg" />
-        <Heading data={ch.svg} />
+        {cheatsheet.svg.map((v, i) => (
+          <Heading data={v} key={i} />
+        ))}
       </div>
 
       <div className="my-4">
         <Title title="Interactivity" />
         <div className="flex flex-row overflow-x-scroll lg:overflow-hidden">
-          {ch.interactivity.map((v) => (
-            <Heading data={v} />
+          {cheatsheet.interactivity.map((v, i) => (
+            <Heading data={v} key={i} />
           ))}
         </div>
       </div>
       <div className="my-4">
         <Title title="accessibility" />
-        <Heading data={ch.accessibility} />
+        {cheatsheet.accessibility.map((v, i) => (
+          <Heading data={v} key={i} />
+        ))}
       </div>
       <div className="my-4">
         <Title title="filters" />
-        {chc.cFilters.map((v) => (
-          <Heading data={v} />
+        {cheatsheet.filters.map((v, i) => (
+          <Heading data={v} key={i} />
         ))}
       </div>
     </div>

@@ -232,5 +232,33 @@
       ]
     },
     "skew": {"col": 1, "data": ["{-}skew-[x|y]-[0.1.2.3.6.12]"]}
+  },
+
+  "svg": {
+    "fill": {
+      "col": 1,
+      "data": [
+        "fill-none",
+        "fill-transparent",
+        "fill-[inherit|current]",
+        "fill-[white|black]",
+        "fill-[$color]-[50-900]"
+      ]
+    },
+    "stroke": {
+      "col": 1,
+      "data": [
+        "fill-none",
+        "fill-transparent",
+        "fill-[inherit|current]",
+        "fill-[white|black]",
+        "fill-[$color]-[50-900]"
+      ]
+    },
+    "stroke-width": {"col": 1, "data": ["stroke-[0|1|2]"]}
+  },
+
+  "accessibility": {
+    "screen-reader": {"col": 1, "data": ["sr-only", "not-sr-only"]}
   }
 }

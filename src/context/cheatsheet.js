@@ -29,63 +29,21 @@ const createColArray = (data) => {
 };
 
 export let cheatsheet = {
-  background: background,
-  border: border,
+  background: createColArray(background),
+  border: createColArray(border),
   interactivity: createColArray(interactivity),
   table: createColArray(others.table),
-  effect: others.effect,
-  svg: {
-    fill: ['fill-current'],
-    stroke: ['stroke-current'],
-    'stroke-width': ['stroke-[ 0|1|2 ]'],
-  },
-  accessibility: {
-    'screen-reader': ['sr-only', 'not-sr-only'],
-  },
-  sizing: others.sizing,
-  spacing: others.spacing,
-  typography: typography,
-  flexbox: flexboxAndGrid.flexbox,
-  layout: layout,
-  grid: flexboxAndGrid.grid,
-  flexboxAndGrid: flexboxAndGrid.flexboxAndGrid,
+  effect: createColArray(others.effect),
+  svg: createColArray(others.svg),
+  accessibility: createColArray(others.accessibility),
+  sizing: createColArray(others.sizing),
+  spacing: createColArray(others.spacing),
+  typography: createColArray(typography),
+  layout: createColArray(layout),
+  flexbox: createColArray(flexboxAndGrid.flexbox),
+  grid: createColArray(flexboxAndGrid.grid),
+  flexboxAndGrid: createColArray(flexboxAndGrid.flexboxAndGrid),
   transition: createColArray(others.transition),
   transform: createColArray(others.transform),
-  filters: filters,
-};
-
-export let cheatsheetComputed = {
-  get cLayout() {
-    return createColArray(cheatsheet.layout);
-  },
-  get cTypography() {
-    return createColArray(cheatsheet.typography);
-  },
-  get cSpacing() {
-    return createColArray(cheatsheet.spacing);
-  },
-  get cSizing() {
-    return createColArray(cheatsheet.sizing);
-  },
-  get cGrid() {
-    return createColArray(cheatsheet.grid);
-  },
-  get cFlexbox() {
-    return createColArray(cheatsheet.flexbox);
-  },
-  get cFlexboxAndGrid() {
-    return createColArray(cheatsheet.flexboxAndGrid);
-  },
-  get cBorder() {
-    return createColArray(cheatsheet.border);
-  },
-  get cBackground() {
-    return createColArray(cheatsheet.background);
-  },
-  get cEffect() {
-    return createColArray(cheatsheet.effect);
-  },
-  get cFilters() {
-    return createColArray(cheatsheet.filters);
-  },
+  filters: createColArray(filters),
 };
