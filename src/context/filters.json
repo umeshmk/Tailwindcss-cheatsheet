@@ -1,0 +1,58 @@
+{
+  "[Blur|Backdrop-Blur]": {
+    "col": 1,
+    "data": [
+      "[blur|backdrop-blur]",
+      "[blur|backdrop-blur]-[sm|md|lg|xl|2xl|3xl]",
+      "[blur|backdrop-blur]-none"
+    ]
+  },
+  "[Brightness|Backdrop-Brightness]": {
+    "col": 1,
+    "data": [
+      "brightness-[0|50|75|90|95|100]",
+      "brightness-[105|110|125|150|200]",
+      "backdrop-brightness-[0|50|75|90|95|100]",
+      "backdrop-brightness-[105|110|125|150|200]"
+    ]
+  },
+  "[Contrast|Backdrop-Contrast]": {
+    "col": 1,
+    "data": [
+      "contrast-[0|50|75|100]",
+      "contrast-[125|150|200]",
+      "backdrop-contrast-[0|50|75|100]",
+      "backdrop-contrast-[125|150|200]"
+    ]
+  },
+  "Drop-Shadow": {
+    "col": 1,
+    "data": ["drop-shadow", "drop-shadow-[sm|md|lg|xl|2xl]", "drop-shadow-none"]
+  },
+  "[Grayscale|Invert|Sepia]": {
+    "col": 1,
+    "data": ["[grayscale|invert|sepia]-0", "[grayscale|invert|sepia]"]
+  },
+  "Backdrop-[Grayscale|Invert|Sepia]": {
+    "col": 1,
+    "data": [
+      "backdrop-[grayscale|invert|sepia]-0",
+      "backdrop-[grayscale|invert|sepia]"
+    ]
+  },
+  "[Hue-Rotate|Backdrop-Hue-Rotate]": {
+    "col": 1,
+    "data": [
+      "hue-rotate-[0|15|30|60|90|180]",
+      "backdrop-hue-rotate-[0|15|30|60|90|180]"
+    ]
+  },
+  "Backdrop-Opacity": {"col": 1, "data": ["backdrop-opacity-[$OPACITY]"]},
+  "[Saturate|Backdrop-Saturate]": {
+    "col": 1,
+    "data": [
+      "saturate-[0|50|100|150|200]",
+      "backdrop-saturate-[0|50|100|150|200]"
+    ]
+  }
+}

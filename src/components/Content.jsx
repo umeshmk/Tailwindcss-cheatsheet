@@ -102,8 +102,10 @@ function Content() {
       </div>
 
       <div className="my-4">
-        <Title title="transition" />
-        <Heading data={ch.transition} />
+        <Title title="transition & Animation" />
+        {ch.transition.map((v) => (
+          <Heading data={v} />
+        ))}
       </div>
       <div className="my-4">
         <Title title="transform" />
@@ -114,11 +116,12 @@ function Content() {
         {chc.cEffect.map((v) => (
           <Heading data={v} />
         ))}
-        {/* <Heading data={chc.effect} /> */}
       </div>
       <div className="my-4">
         <Title title="table" />
-        <Heading data={ch.table} />
+        {ch.table.map((v) => (
+          <Heading data={v} />
+        ))}
       </div>
 
       <div className="my-4">
@@ -132,6 +135,12 @@ function Content() {
       <div className="my-4">
         <Title title="accessibility" />
         <Heading data={ch.accessibility} />
+      </div>
+      <div className="my-4">
+        <Title title="filters" />
+        {chc.cFilters.map((v) => (
+          <Heading data={v} />
+        ))}
       </div>
     </div>
   );

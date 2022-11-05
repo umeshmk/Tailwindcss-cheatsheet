@@ -4,6 +4,7 @@ import others from './others.json';
 import background from './background.json';
 import border from './border.json';
 import typography from './typography.json';
+import filters from './filters.json';
 import flexboxAndGrid from './flexbox-and-grid.json';
 
 const createColArray = (data) => {
@@ -45,10 +46,7 @@ export let cheatsheet = {
     outline: ['outline-none', 'outline-white', 'outline-black'],
     appearance: ['appearance-none'],
   },
-  table: {
-    collapse: ['border-collapse', 'border-separate'],
-    Layout: ['table-auto', 'table-fixed'],
-  },
+  table: createColArray(others.table),
   effect: others.effect,
   svg: {
     fill: ['fill-current'],
@@ -65,27 +63,7 @@ export let cheatsheet = {
   layout: layout,
   grid: flexboxAndGrid.grid,
   flexboxAndGrid: flexboxAndGrid.flexboxAndGrid,
-  transition: {
-    property: [
-      'transition-none',
-      'transition-all',
-      'transition',
-      'transition-colors',
-      'transition-opacity',
-      'transition-shadow',
-      'transition-transform',
-    ],
-    duration: ['duration-[ 75|100|150|200|300|500|700|1000  ]'],
-    'timing function': ['ease-linear', 'ease-in', 'ease-out', 'ease-in-out'],
-    delay: ['delay-[ 75|100|150|200|300|500|700|1000  ]'],
-    animation: [
-      'animate-none',
-      'animate-spin',
-      'animate-ping',
-      'animate-pulse',
-      'animate-bounce',
-    ],
-  },
+  transition: createColArray(others.transition),
   transform: {
     tranform: ['transform', 'transform-gpu', 'transform-none'],
     'transform-origin': [
@@ -110,6 +88,7 @@ export let cheatsheet = {
     ],
     skew: ['{-}skew-[ x|y ]-[ 0.1.2.3.6.12]'],
   },
+  filters: filters,
 };
 
 export let cheatsheetComputed = {
@@ -142,5 +121,8 @@ export let cheatsheetComputed = {
   },
   get cEffect() {
     return createColArray(cheatsheet.effect);
+  },
+  get cFilters() {
+    return createColArray(cheatsheet.filters);
   },
 };

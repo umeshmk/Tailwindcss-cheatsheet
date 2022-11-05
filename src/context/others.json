@@ -147,5 +147,52 @@
         "[mix|bg]-blend-plus-lighter"
       ]
     }
+  },
+
+  "table": {
+    "border-collapse": {
+      "col": 1,
+      "data": ["border-collapse", "border-separate"]
+    },
+    "border-spacing": {
+      "col": 1,
+      "data": ["border-spacing-[$SPACING]", "border-spacing-[x|y]-[$SPACING]"]
+    },
+    "Table-Layout": {"col": 1, "data": ["table-auto", "table-fixed"]}
+  },
+  "transition": {
+    "property": {
+      "col": 1,
+      "data": [
+        "transition-none",
+        "transition-all",
+        "transition",
+        "transition-colors",
+        "transition-opacity",
+        "transition-shadow",
+        "transition-transform"
+      ]
+    },
+    "[duration|delay]": {
+      "col": 1,
+      "data": [
+        "[duration|delay]-[75|100|150|200]",
+        "[duration|delay]-[300|500|700|1000]"
+      ]
+    },
+    "timing function": {
+      "col": 1,
+      "data": ["ease-linear", "ease-in", "ease-out", "ease-in-out"]
+    },
+    "animation": {
+      "col": 1,
+      "data": [
+        "animate-none",
+        "animate-spin",
+        "animate-ping",
+        "animate-pulse",
+        "animate-bounce"
+      ]
+    }
   }
 }
