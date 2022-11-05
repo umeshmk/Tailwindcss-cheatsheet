@@ -109,7 +109,9 @@ function Content() {
       </div>
       <div className="my-4">
         <Title title="transform" />
-        <Heading data={ch.transform} />
+        {ch.transform.map((v) => (
+          <Heading data={v} />
+        ))}
       </div>
       <div className="my-4">
         <Title title="effect" />

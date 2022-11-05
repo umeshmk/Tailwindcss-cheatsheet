@@ -127,7 +127,7 @@
         "shadow--{$color}-{50-900}"
       ]
     },
-    "Opacity": {"col": 1, "data": ["opacity-[$OPACITY ]"]},
+    "Opacity": {"col": 1, "data": ["opacity-[$OPACITY]"]},
     "[Mix|Background]-Blend-Mode": {
       "col": 1,
       "data": [
@@ -194,5 +194,43 @@
         "animate-bounce"
       ]
     }
+  },
+
+  "transform": {
+    "transform-origin": {
+      "col": 1,
+      "data": [
+        "origin-[top|right|bottom|left]",
+        "origin-[top|bottom]-[right|left]",
+        "origin-center"
+      ]
+    },
+    "scale": {
+      "col": 1,
+      "data": [
+        "scale-[0|50|75|90|95|100]",
+        "scale-[105|110|125|150]",
+        "scale-[x|y]-[0|50|75|90|95|100]",
+        "scale-[x|y]-[105|110|125|150]"
+      ]
+    },
+    "rotate": {
+      "col": 1,
+      "data": [
+        "rotate-[0.1.2.3.6.12.45.90.180]",
+        "-rotate-[1.2.3.6.12.45.90.180]"
+      ]
+    },
+    "translate": {
+      "col": 1,
+      "data": [
+        "{-}translate-[x|y]-[$spacing]",
+        "{-}translate-[x|y]-1/2",
+        "{-}translate-[x|y]-[1|2]/3",
+        "{-}translate-[x|y]-[1|2|3]/4",
+        "{-}translate-[x|y]-[full|]"
+      ]
+    },
+    "skew": {"col": 1, "data": ["{-}skew-[x|y]-[0.1.2.3.6.12]"]}
   }
 }

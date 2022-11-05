@@ -64,30 +64,7 @@ export let cheatsheet = {
   grid: flexboxAndGrid.grid,
   flexboxAndGrid: flexboxAndGrid.flexboxAndGrid,
   transition: createColArray(others.transition),
-  transform: {
-    tranform: ['transform', 'transform-gpu', 'transform-none'],
-    'transform-origin': [
-      'origin-[ top|right|bottom|left ]',
-      'origin-[ top|bottom ]-[ right|left ]',
-      'origin-center',
-    ],
-    scale: [
-      'scale-[ 0|50|75|90|95|100|105|110|125|150 ]',
-      'scale-[ x|y ]-[ 0|50|75|90|95|100|105|110|125|150 ]',
-    ],
-    rotate: [
-      'rotate-[ 0.1.2.3.6.12.45.90.180]',
-      '-rotate-[ 1.2.3.6.12.45.90.180]',
-    ],
-    translate: [
-      '{-}translate-[ x|y ]-[ $spacing ]',
-      '{-}translate-[ x|y ]-1/2',
-      '{-}translate-[ x|y ]-[ 1|2 ]/3',
-      '{-}translate-[ x|y ]-[ 1|2|3 ]/4',
-      '{-}translate-[ x|y ]-[ full| ]',
-    ],
-    skew: ['{-}skew-[ x|y ]-[ 0.1.2.3.6.12]'],
-  },
+  transform: createColArray(others.transform),
   filters: filters,
 };
 
