@@ -23,7 +23,7 @@
     ]
   },
   "border-width": {
-    "col": 1,
+    "col": 2,
     "data": [
       "border",
       "border-{0|2|4|8}",
@@ -34,34 +34,39 @@
     ]
   },
   "divide width": {
-    "col": 1,
+    "col": 2,
     "data": ["divide-[x|y]", "divide-[x|y]-reverse", "divide-[x|y]-[0|2|4|8]"]
   },
 
-  "[ring|ring-offset]-width": {
-    "col": 1,
-    "data": ["ring", "ring-inset", "[ring|ring-offset]-[0|1|2|4|8]"]
+  "ring-width": {
+    "col": 2,
+    "data": ["ring", "ring-inset", "ring-[0|1|2|4|8]"]
   },
-  "[outline|outline-offset]-width": {
-    "col": 1,
-    "data": ["[outline|outline-offset]-[0|1|2|4|8]"]
+  "ring-offset-width": {
+    "col": 2,
+    "data": ["ring-offset-[0|1|2|4|8]"]
+  },
+  "outline-width": {
+    "col": 2,
+    "data": ["outline-[0|1|2|4|8]"]
+  },
+  "outline-offset-width": {
+    "col": 2,
+    "data": ["outline-offset-[0|1|2|4|8]"]
   },
 
   "border-radius": {
     "col": 1,
     "data": [
       "rounded",
-      "rounded-{sm|md|lg|xl}",
-      "rounded-[2|3]xl",
+      "rounded-{sm|md|lg|xl|2xl|3xl}",
       "rounded-{full|none}",
       "rounded-{t|r|b|l}",
-      "rounded-{t|r|b|l}-{sm|md|lg|xl}",
-      "rounded-{t|r|b|l}-[2|3]xl",
       "rounded-{t|r|b|l}-{full|none}",
+      "rounded-{t|r|b|l}-{sm|md|lg|xl|2xl|3xl}",
       "rounded-{tr|tl|br|bl}",
-      "rounded-{tr|tl|br|bl}-{sm|md|lg|xl}",
-      "rounded-{tr|tl|br|bl}-[2|3]xl",
-      "rounded-{tr|tl|br|bl}-{full|none}"
+      "rounded-{tr|tl|br|bl}-{full|none}",
+      "rounded-{tr|tl|br|bl}-{sm|md|lg|xl|2xl|3xl}"
     ]
   }
 }

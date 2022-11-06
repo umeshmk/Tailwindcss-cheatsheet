@@ -3,7 +3,7 @@ import Title from './Title';
 import {TailwindContext} from '../context/TailwindContext';
 
 const Heading = ({data}) => (
-  <div className="flex flex-col flex-none bg-purple-100 py-6 px-1">
+  <div className="flex flex-col flex-none grow  bg-purple-100 py-6 px-1">
     {Object.keys(data).map((title) => (
       <div
         // className="text-purple-500 text-sm uppercase font-semibold w-full p-2"
@@ -26,8 +26,14 @@ function Content() {
   return (
     <div className="grid grid-cols-1 lg:flex lg:flex-wrap lg:justify-around   p-4 ">
       <div className="my-4">
+        <Title title="spacing" />
+        {cheatsheet.spacing.map((v, i) => (
+          <Heading data={v} key={i} />
+        ))}
+      </div>
+      <div className="my-4">
         <Title title="flex" />
-        <div className="flex flex-col">
+        <div className="flex flex-row overflow-x-scroll lg:overflow-hidden">
           {cheatsheet.flexbox.map((v, i) => (
             <Heading data={v} key={i} />
           ))}
@@ -103,21 +109,27 @@ function Content() {
 
       <div className="my-4">
         <Title title="transition & Animation" />
-        {cheatsheet.transition.map((v, i) => (
-          <Heading data={v} key={i} />
-        ))}
+        <div className="flex flex-row overflow-x-scroll lg:overflow-hidden">
+          {cheatsheet.transition.map((v, i) => (
+            <Heading data={v} key={i} />
+          ))}
+        </div>
       </div>
       <div className="my-4">
         <Title title="transform" />
-        {cheatsheet.transform.map((v, i) => (
-          <Heading data={v} key={i} />
-        ))}
+        <div className="flex flex-row overflow-x-scroll lg:overflow-hidden">
+          {cheatsheet.transform.map((v, i) => (
+            <Heading data={v} key={i} />
+          ))}
+        </div>
       </div>
       <div className="my-4">
         <Title title="effect" />
-        {cheatsheet.effect.map((v, i) => (
-          <Heading data={v} key={i} />
-        ))}
+        <div className="flex flex-row overflow-x-scroll lg:overflow-hidden">
+          {cheatsheet.effect.map((v, i) => (
+            <Heading data={v} key={i} />
+          ))}
+        </div>
       </div>
       <div className="my-4">
         <Title title="table" />
@@ -148,9 +160,11 @@ function Content() {
       </div>
       <div className="my-4">
         <Title title="filters" />
-        {cheatsheet.filters.map((v, i) => (
-          <Heading data={v} key={i} />
-        ))}
+        <div className="flex flex-row overflow-x-scroll lg:overflow-hidden">
+          {cheatsheet.filters.map((v, i) => (
+            <Heading data={v} key={i} />
+          ))}
+        </div>
       </div>
     </div>
   );

@@ -16,7 +16,7 @@
         "m[t|r|b|l]-[$SPACING]"
       ]
     },
-    "spaceBetween": {
+    "space Between": {
       "col": 1,
       "data": [
         "-space-[x|y]-[$SPACING]",
@@ -27,89 +27,50 @@
   },
 
   "sizing": {
-    "width": {
+    "[ width|height ]": {
       "col": 1,
       "data": [
-        "w-auto",
-        "w-[$SPACING]",
-        "w-1/2",
-        "w-{1-2}/3",
-        "w-{1-3}/4",
-        "w-{1-4}/5",
-        "w-{1-5}/6",
-        "w-{1-11}/12",
-        "w-full",
-        "w-screen",
-        "w-min",
-        "w-max",
-        "w-fit"
+        "[w|h]-[$SPACING]",
+        "[w|h]-[auto|full|screen|fit]",
+        "[w|h]-[min|max]",
+        "[w|h]-1/2",
+        "[w|h]-{1-2}/3",
+        "[w|h]-{1-3}/4",
+        "[w|h]-{1-4}/5",
+        "[w|h]-{1-5}/6",
+        "w-{1-11}/12"
       ]
     },
-    "min-width": {
+    "min-[ width|height ]": {
       "col": 1,
-      "data": ["min-w-0", "min-w-full", "min-w-min", "min-w-max", "min-w-fit"]
+      "data": [
+        "min-h-screen",
+        "min-[w|h]-0",
+        "min-[w|h]-[full|fit]",
+        "min-[w|h]-[min|max]"
+      ]
     },
     "max-width": {
-      "col": 1,
+      "col": 2,
       "data": [
         "max-w-0",
         "max-w-none",
-        "max-w-[xs|sm|md|lg]",
-        "max-w-xl",
+        "max-w-[xs|sm|md|lg|xl]",
         "max-w-{2-7}xl",
-        "max-w-full",
-        "max-w-full",
-        "max-w-min",
-        "max-w-max",
-        "max-w-fit",
         "max-w-prose",
-        "max-w-screen-[xs|sm|md|lg]",
-        "max-w-screen-[xl|2xl]"
-      ]
-    },
-    "height": {
-      "col": 2,
-      "data": [
-        "h-auto",
-        "h-[$SPACING]",
-        "h-1/2",
-        "h-{1-2}/3",
-        "h-{1-3}/4",
-        "h-{1-4}/5",
-        "h-{1-5}/6",
-        "h-full",
-        "h-screen",
-        "h-min",
-        "h-max",
-        "h-fit"
-      ]
-    },
-    "min-height": {
-      "col": 2,
-      "data": [
-        "min-h-0",
-        "min-h-full",
-        "min-h-screen",
-        "min-h-min",
-        "min-h-max",
-        "min-h-fit"
+        "max-w-screen-[xs|sm|md|lg|xl|2xl]",
+        "max-w-[full|fit]",
+        "max-w-[min|max]"
       ]
     },
     "max-height": {
       "col": 2,
-      "data": [
-        "max-h-[$SPACING]",
-        "max-h-full",
-        "max-h-screen",
-        "max-h-min",
-        "max-h-max",
-        "max-h-fit"
-      ]
+      "data": ["max-h-[full|screen|fit]", "max-h-[min|max]", "max-h-[$SPACING]"]
     }
   },
   "effect": {
     "Box-Shadow": {
-      "col": 1,
+      "col": 2,
       "data": [
         "shadow",
         "shadow-[sm|md|lg|xl|2xl]",
@@ -118,7 +79,7 @@
       ]
     },
     "Box-Shadow-Color": {
-      "col": 1,
+      "col": 2,
       "data": [
         "shadow--transparent",
         "shadow--{inherit|current}",
@@ -127,7 +88,7 @@
         "shadow--{$color}-{50-900}"
       ]
     },
-    "Opacity": {"col": 1, "data": ["opacity-[$OPACITY]"]},
+    "Opacity": {"col": 2, "data": ["opacity-[$OPACITY]"]},
     "[Mix|Background]-Blend-Mode": {
       "col": 1,
       "data": [
@@ -141,8 +102,7 @@
         "[mix|bg]-blend-{soft|hard}-light",
         "[mix|bg]-blend-difference",
         "[mix|bg]-blend-exclusion",
-        "[mix|bg]-blend-hue",
-        "[mix|bg]-blend-saturation",
+        "[mix|bg]-blend-[hue|saturation]",
         "[mix|bg]-blend-luminosity",
         "[mix|bg]-blend-plus-lighter"
       ]
@@ -181,11 +141,11 @@
       ]
     },
     "timing function": {
-      "col": 1,
+      "col": 2,
       "data": ["ease-linear", "ease-in", "ease-out", "ease-in-out"]
     },
     "animation": {
-      "col": 1,
+      "col": 2,
       "data": [
         "animate-none",
         "animate-spin",
@@ -222,7 +182,7 @@
       ]
     },
     "translate": {
-      "col": 1,
+      "col": 2,
       "data": [
         "{-}translate-[x|y]-[$spacing]",
         "{-}translate-[x|y]-1/2",
@@ -231,28 +191,18 @@
         "{-}translate-[x|y]-[full|]"
       ]
     },
-    "skew": {"col": 1, "data": ["{-}skew-[x|y]-[0.1.2.3.6.12]"]}
+    "skew": {"col": 2, "data": ["{-}skew-[x|y]-[0.1.2.3.6.12]"]}
   },
 
   "svg": {
-    "fill": {
+    "[fill|stroke]": {
       "col": 1,
       "data": [
-        "fill-none",
-        "fill-transparent",
-        "fill-[inherit|current]",
-        "fill-[white|black]",
-        "fill-[$color]-[50-900]"
-      ]
-    },
-    "stroke": {
-      "col": 1,
-      "data": [
-        "fill-none",
-        "fill-transparent",
-        "fill-[inherit|current]",
-        "fill-[white|black]",
-        "fill-[$color]-[50-900]"
+        "[fill|stroke]-none",
+        "[fill|stroke]-transparent",
+        "[fill|stroke]-[inherit|current]",
+        "[fill|stroke]-[white|black]",
+        "[fill|stroke]-[$color]-[50-900]"
       ]
     },
     "stroke-width": {"col": 1, "data": ["stroke-[0|1|2]"]}

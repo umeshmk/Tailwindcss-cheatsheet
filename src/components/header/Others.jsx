@@ -43,10 +43,10 @@ function Others() {
         <Title title="Opacity" />
         <Tags arr={opacity} />
       </div>
-      <div>
+      {/* <div>
         <Title title="Colors" />
         <Tags arr={colorsNum} />
-      </div>
+      </div> */}
       <div>
         <Title title="Functions & Directives" />
         <Tags arr={functions} />

@@ -23,17 +23,21 @@
       "data": ["flex-wrap", "flex-wrap-reverse", "flex-nowrap"]
     },
     "flex": {
-      "col": 1,
+      "col": 2,
       "data": ["flex-initial", "flex-1", "flex-auto", "flex-none"]
     },
-    "flex-grow": {"col": 1, "data": ["grow", "grow-0"]},
-    "flex-shrink": {"col": 1, "data": ["shrink", "shrink-0"]},
+    "flex-grow": {"col": 2, "data": ["grow", "grow-0"]},
+    "flex-shrink": {"col": 2, "data": ["shrink", "shrink-0"]},
     "flex-order": {
-      "col": 1,
+      "col": 2,
       "data": ["order-first", "order-last", "order-none", "order-[1-12]"]
     }
   },
   "grid": {
+    "grid-template-rows": {
+      "col": 1,
+      "data": ["grid-rows-[1-6]", "grid-rows-none"]
+    },
     "grid-template-columns": {
       "col": 1,
       "data": ["grid-cols-[1-12]", "grid-cols-none"]
@@ -49,10 +53,6 @@
         "col-end-[1-13]",
         "col-end-auto"
       ]
-    },
-    "grid-template-rows": {
-      "col": 1,
-      "data": ["grid-rows-[1-6]", "grid-rows-none"]
     },
     "grid-row-[start|end]": {
       "col": 1,
@@ -131,7 +131,7 @@
       ]
     },
     "align-content": {
-      "col": 1,
+      "col": 2,
       "data": [
         "content-center",
         "content-start",
@@ -164,7 +164,7 @@
       ]
     },
     "place-content": {
-      "col": 2,
+      "col": 3,
       "data": [
         "place-content-center",
         "place-content-start",
@@ -177,7 +177,7 @@
       ]
     },
     "place-items": {
-      "col": 2,
+      "col": 3,
       "data": [
         "place-items-auto",
         "place-items-start",
@@ -187,7 +187,7 @@
       ]
     },
     "place-self": {
-      "col": 2,
+      "col": 3,
       "data": [
         "place-self-auto",
         "place-self-start",

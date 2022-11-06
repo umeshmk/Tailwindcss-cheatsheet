@@ -10,41 +10,30 @@
       "bg-clip-text"
     ]
   },
-  "bg-color": {
+  "[bg-color|gradient-Color-Stops]": {
     "col": 1,
     "data": [
-      "bg-transparent",
-      "bg-{inherit|current}",
-      "bg-white",
-      "bg-black",
-      "bg-[$color]-[50-900]"
+      "[bg|from]-transparent",
+      "[bg|from]-[inherit|current]",
+      "[bg|from]-[white|black]",
+      "[bg|from]-[$color]-{50-900}"
     ]
   },
   "bg-position": {
     "col": 1,
     "data": [
-      "bg-{left|right|top|bottom}",
       "bg-center",
+      "bg-{left|right|top|bottom}",
       "bg-{left|right}-{top|bottom}"
     ]
   },
 
   "bg-image": {
-    "col": 1,
+    "col": 2,
     "data": [
       "bg-none",
       "bg-gradient-to-[t|r|b|l]",
       "bg-gradient-to-[tl|tr|bl|br]"
-    ]
-  },
-  "gradient-Color-Stops": {
-    "col": 2,
-    "data": [
-      "from-transparent",
-      "from-{inherit|current}",
-      "from-black",
-      "from-white",
-      "from-[$color]-[50-900]"
     ]
   },
   "bg-repeat": {

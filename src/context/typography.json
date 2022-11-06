@@ -2,60 +2,42 @@
   "Family": {"col": 1, "data": ["font-sans", "font-serif", "font-mono"]},
   "size": {
     "col": 1,
-    "data": [
-      "text-xs",
-      "text-sm",
-      "text-base",
-      "text-lg",
-      "text-xl",
-      "text-[ 2-9 ]xl"
-    ]
+    "data": ["text-[xs|sm|lg|xl]", "text-base", "text-[2-9]xl"]
   },
-  "smoothing": {"col": 1, "data": ["antialiased", "subpixel-antialiased"]},
-  "style": {"col": 1, "data": ["italic", "not-italic"]},
+  "smoothing": {"col": 4, "data": ["antialiased", "subpixel-antialiased"]},
+  "style": {"col": 2, "data": ["italic", "not-italic"]},
   "weight": {
-    "col": 1,
+    "col": 2,
     "data": [
-      "font-thin",
-      "font-extralight",
-      "font-light",
+      "font-[thin|extralight|light]",
       "font-normal",
       "font-medium",
-      "font-semibold",
-      "font-bold",
-      "font-extrabold",
+      "font-[semibold|bold|extrabold]",
       "font-black"
     ]
   },
   "font-variant-numeric": {
-    "col": 1,
+    "col": 2,
     "data": [
-      "normal-nums",
       "ordinal",
       "slashed-zero",
-      "lining-nums",
-      "oldstyle-nums",
-      "proportional-nums",
-      "tabular-nums",
-      "diagonal-fractions",
-      "stacked-fractions"
+      "[normal|lining|tabular]-nums",
+      "[oldstyle|proportional]-nums",
+      "[diagonal|stacked]-fractions"
     ]
   },
   "letter-spacing": {
     "col": 2,
     "data": [
-      "tracking-tighter",
-      "tracking-tight",
+      "tracking-[tight|tighter]",
       "tracking-normal",
-      "tracking-wide",
-      "tracking-wider",
-      "tracking-widest"
+      "tracking-[wide|wider|widest]"
     ]
   },
   "line-height": {
-    "col": 2,
+    "col": 1,
     "data": [
-      "leading-[ 3-10 ]",
+      "leading-[3-10]",
       "leading-none",
       "leading-tight",
       "leading-snug",
@@ -65,19 +47,17 @@
     ]
   },
   "list-style-type": {
-    "col": 2,
+    "col": 4,
     "data": ["list-none", "list-disc", "list-decimal"]
   },
-  "list-style-positions": {"col": 2, "data": ["list-inside", "list-outside"]},
+  "list-style-positions": {"col": 4, "data": ["list-inside", "list-outside"]},
   "text-align": {
-    "col": 2,
+    "col": 1,
     "data": [
-      "text-left",
-      "text-right",
+      "text-[left|right]",
       "text-center",
       "text-justify",
-      "text-start",
-      "text-end"
+      "text-[start|end]"
     ]
   },
   "[placeholder/text]-color": {
@@ -89,8 +69,13 @@
       "[placeholder/text]-[$COLOR]-[50-900}"
     ]
   },
+  "text-indent": {"col": 3, "data": ["indent-[$SPACING]"]},
+  "text-opacity": {
+    "col": 3,
+    "data": ["text-opacity-[$OPACITY]"]
+  },
   "text-decoration": {
-    "col": 2,
+    "col": 3,
     "data": ["underline", "no-underline", "line-through", "overline"]
   },
   "text-decoration-color": {
@@ -126,29 +111,20 @@
     "data": ["underline-offset-auto", "underline-offset-[0|1|2|4|8]"]
   },
   "text-transform": {
-    "col": 3,
+    "col": 1,
     "data": ["uppercase", "lowercase", "capitalize", "normal-case"]
   },
   "text-overflow": {
-    "col": 3,
+    "col": 1,
     "data": ["truncate", "text-ellipsis", "text-clip"]
   },
-  "text-indent": {"col": 4, "data": ["indent-[$SPACING]"]},
-  "---?---[placeholder|text]-opacity": {
-    "col": 4,
-    "data": ["[placeholder|text]-opacity-[ $OPACITY ]"]
-  },
   "vertical-align": {
-    "col": 4,
+    "col": 2,
     "data": [
       "align-baseline",
-      "align-top",
-      "align-middle",
-      "align-bottom",
-      "align-text-top",
-      "align-text-bottom",
-      "align-sub",
-      "align-super"
+      "align-[top|middle|bottom]",
+      "align-text-[top|bottom]",
+      "align-[sub|super]"
     ]
   },
   "white-space": {
@@ -157,8 +133,7 @@
       "whitespacing-normal",
       "whitespacing-no-wrap",
       "whitespacing-pre",
-      "whitespacing-pre-line",
-      "whitespacing-pre-wrap"
+      "whitespacing-pre-[line|wrap]"
     ]
   },
   "word-break": {

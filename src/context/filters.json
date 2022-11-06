@@ -1,46 +1,40 @@
 {
-  "[Blur|Backdrop-Blur]": {
-    "col": 1,
+  "Blur": {
+    "col": 2,
     "data": [
       "[blur|backdrop-blur]",
       "[blur|backdrop-blur]-[sm|md|lg|xl|2xl|3xl]",
       "[blur|backdrop-blur]-none"
     ]
   },
-  "[Brightness|Backdrop-Brightness]": {
+  "Brightness": {
     "col": 1,
     "data": [
-      "brightness-[0|50|75|90|95|100]",
-      "brightness-[105|110|125|150|200]",
-      "backdrop-brightness-[0|50|75|90|95|100]",
-      "backdrop-brightness-[105|110|125|150|200]"
+      "brightness-[0|50|75|90|95|100|105|110|125|150|200]",
+      "backdrop-brightness-[0|50|75|90|95|100|105|110|125|150|200]"
     ]
   },
-  "[Contrast|Backdrop-Contrast]": {
+  "Contrast": {
     "col": 1,
     "data": [
-      "contrast-[0|50|75|100]",
-      "contrast-[125|150|200]",
-      "backdrop-contrast-[0|50|75|100]",
-      "backdrop-contrast-[125|150|200]"
+      "contrast-[0|50|75|100|125|150|200]",
+      "backdrop-contrast-[0|50|75|100|125|150|200]"
     ]
   },
   "Drop-Shadow": {
-    "col": 1,
+    "col": 2,
     "data": ["drop-shadow", "drop-shadow-[sm|md|lg|xl|2xl]", "drop-shadow-none"]
   },
-  "[Grayscale|Invert|Sepia]": {
-    "col": 1,
-    "data": ["[grayscale|invert|sepia]-0", "[grayscale|invert|sepia]"]
-  },
-  "Backdrop-[Grayscale|Invert|Sepia]": {
-    "col": 1,
+  "[Grayscale | Invert | Sepia]": {
+    "col": 2,
     "data": [
+      "[grayscale|invert|sepia]-0",
+      "[grayscale|invert|sepia]",
       "backdrop-[grayscale|invert|sepia]-0",
       "backdrop-[grayscale|invert|sepia]"
     ]
   },
-  "[Hue-Rotate|Backdrop-Hue-Rotate]": {
+  "Hue-Rotate": {
     "col": 1,
     "data": [
       "hue-rotate-[0|15|30|60|90|180]",
@@ -48,7 +42,7 @@
     ]
   },
   "Backdrop-Opacity": {"col": 1, "data": ["backdrop-opacity-[$OPACITY]"]},
-  "[Saturate|Backdrop-Saturate]": {
+  "Saturate": {
     "col": 1,
     "data": [
       "saturate-[0|50|100|150|200]",

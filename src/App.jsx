@@ -1,8 +1,8 @@
-import Nav from "./components/Nav";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import Content from "./components/Content";
-import { TailwindContext, data } from "./context/TailwindContext";
+import Nav from './components/Nav';
+import Footer from './components/Footer';
+import Header from './components/Header';
+import Content from './components/Content';
+import {TailwindContext, data} from './context/TailwindContext';
 
 function App() {
   return (

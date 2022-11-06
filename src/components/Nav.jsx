@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 function Nav() {
   return (
@@ -11,17 +11,19 @@ function Nav() {
          bg-purple-100        
         px-4
         py-5
-      "
-    >
+      ">
       <div className="flex flex-col">
         <div className="text-red-700 font-semibold text-xl">
           <a href="https://umeshmk.github.io/Tailwindcss-cheatsheet/">
             Tailwind CSS
           </a>
         </div>
-        <span className="text-sm  font-thin">Cheatsheet v2.1</span>
+        <span className="text-sm  font-thin">Cheatsheet v3</span>
       </div>
       <ul className="flex flex-row items-center text-sm">
+        <li className="flex pr-5 lg:pr-10 font-thin text-sm lg:text-lg underline">
+          <a href="v2.1/">v2.1</a>
+        </li>
         <li className="flex pr-5 lg:pr-10 font-thin text-sm lg:text-lg underline">
           <a href="v2.0/">v2</a>
         </li>

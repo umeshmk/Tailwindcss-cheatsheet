@@ -3,10 +3,10 @@
     "col": 1,
     "data": [
       "accent-transparent",
-      "accent-{inherit|current}",
+      "accent-[inherit|current]",
       "accent-white",
       "accent-black",
-      "accent-{$color}-{50-900}"
+      "accent-[$color]-{50-900}"
     ]
   },
   "Appearance": {"col": 1, "data": ["appearance-none"]},
@@ -34,9 +34,9 @@
     "data": ["pointer-events-auto", "pointer-events-none"]
   },
   "Resize": {"col": 1, "data": ["resize", "resize-{x/y}", "resize-none"]},
-  "Scroll Behavior": {"col": 1, "data": ["scroll-auto", "scroll-smooth"]},
+  "Scroll Behavior": {"col": 2, "data": ["scroll-auto", "scroll-smooth"]},
   "Scroll Margin": {
-    "col": 1,
+    "col": 2,
     "data": [
       "[-]scroll-m-[$spacing]",
       "[-]scroll-m[x|y]-[$spacing]",
@@ -44,7 +44,7 @@
     ]
   },
   "Scroll Padding": {
-    "col": 1,
+    "col": 2,
     "data": [
       "[-]scroll-p-[$spacing]",
       "[-]scroll-p[x|y]-[$spacing]",
@@ -70,7 +70,7 @@
     ]
   },
   "Touch Action": {
-    "col": 2,
+    "col": 1,
     "data": [
       "touch-auto",
       "touch-none",
