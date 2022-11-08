@@ -29,21 +29,55 @@ const createColArray = (data) => {
 };
 
 export let cheatsheet = {
-  background: createColArray(background),
-  border: createColArray(border),
-  interactivity: createColArray(interactivity),
-  table: createColArray(others.table),
-  effect: createColArray(others.effect),
-  svg: createColArray(others.svg),
-  accessibility: createColArray(others.accessibility),
-  sizing: createColArray(others.sizing),
-  spacing: createColArray(others.spacing),
-  typography: createColArray(typography),
-  layout: createColArray(layout),
-  flexbox: createColArray(flexboxAndGrid.flexbox),
-  grid: createColArray(flexboxAndGrid.grid),
-  flexboxAndGrid: createColArray(flexboxAndGrid.flexboxAndGrid),
-  transition: createColArray(others.transition),
-  transform: createColArray(others.transform),
-  filters: createColArray(filters),
+  background: {title: 'Background', data: createColArray(background)},
+  border: {title: 'Border', data: createColArray(border)},
+  effect: {title: 'effect', data: createColArray(others.effect)},
+  table: {title: 'table', data: createColArray(others.table)},
+  svg: {title: 'svg', data: createColArray(others.svg)},
+  interactivity: {title: 'Interactivity', data: createColArray(interactivity)},
+  accessibility: {
+    title: 'accessibility',
+    data: createColArray(others.accessibility),
+  },
+  sizing: {title: 'Sizing', data: createColArray(others.sizing)},
+  spacing: {title: 'spacing', data: createColArray(others.spacing)},
+  typography: {title: 'Typography', data: createColArray(typography)},
+  layout: {title: 'Layout', data: createColArray(layout)},
+  flexbox: {title: 'flex', data: createColArray(flexboxAndGrid.flexbox)},
+  grid: {title: 'Grid', data: createColArray(flexboxAndGrid.grid)},
+  flexboxAndGrid: {
+    title: 'Flex/Grid',
+    data: createColArray(flexboxAndGrid.flexboxAndGrid),
+  },
+  transition: {
+    title: 'transition & Animation',
+    data: createColArray(others.transition),
+  },
+  transform: {title: 'transform', data: createColArray(others.transform)},
+  filters: {title: 'filters', data: createColArray(filters)},
 };
+
+export let cheatsheetOrder = (() => {
+  const order = (sm, lg) => {
+    return {sm: sm, lg: lg ?? sm};
+  };
+  return {
+    flexbox: order(1, 1),
+    grid: order(2, 2),
+    flexboxAndGrid: order(3, 4),
+    background: order(4),
+    border: order(5),
+    sizing: order(6, 7),
+    spacing: order(7, 3),
+    typography: order(8),
+    layout: order(9),
+    interactivity: order(11),
+    transition: order(12),
+    transform: order(13),
+    filters: order(14),
+    effect: order(15, 16),
+    table: order(16, 15),
+    svg: order(16),
+    accessibility: order(17),
+  };
+})();

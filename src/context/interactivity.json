@@ -33,7 +33,7 @@
     "col": 1,
     "data": ["pointer-events-auto", "pointer-events-none"]
   },
-  "Resize": {"col": 1, "data": ["resize", "resize-{x/y}", "resize-none"]},
+  "Resize": {"col": 3, "data": ["resize", "resize-{x/y}", "resize-none"]},
   "Scroll Behavior": {"col": 2, "data": ["scroll-auto", "scroll-smooth"]},
   "Scroll Margin": {
     "col": 2,
@@ -70,7 +70,7 @@
     ]
   },
   "Touch Action": {
-    "col": 1,
+    "col": 3,
     "data": [
       "touch-auto",
       "touch-none",
@@ -82,11 +82,11 @@
     ]
   },
   "User Select": {
-    "col": 2,
+    "col": 3,
     "data": ["select-none", "select-text", "select-all", "select-auto"]
   },
   "Will Change": {
-    "col": 2,
+    "col": 3,
     "data": [
       "will-change-auto",
       "will-change-scroll",

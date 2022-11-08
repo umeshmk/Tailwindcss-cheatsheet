@@ -58,7 +58,8 @@
         "max-w-[xs|sm|md|lg|xl]",
         "max-w-{2-7}xl",
         "max-w-prose",
-        "max-w-screen-[xs|sm|md|lg|xl|2xl]",
+        "max-w-screen-[xs|sm|md]",
+        "max-w-screen-[lg|xl|2xl]",
         "max-w-[full|fit]",
         "max-w-[min|max]"
       ]
