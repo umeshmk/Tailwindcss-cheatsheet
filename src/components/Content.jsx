@@ -42,10 +42,11 @@ function Content() {
 
   return (
     <div>
-      <div className="grid grid-cols-1 lg:flex lg:flex-wrap lg:justify-around lg:gap-2   p-4 pt-20 ">
+      <div className="grid grid-cols-1 lg:flex lg:flex-wrap lg:justify-around lg:gap-2 lg:gap-y-10 p-4 pt-20 py-20 ">
         <Loop className="lg:hidden" screen={'sm'} />
-        <Loop className="hidden lg:block 2xl:hidden" screen={'lg'} />
-        <Loop className="hidden 2xl:block" screen={'2xl'} />
+        <Loop className="hidden lg:block xl:hidden" screen={'lg'} />
+        <Loop className="hidden xl:block 2xl:hidden " screen={'xl'} />
+        <Loop className="hidden 2xl:block " screen={'2xl'} />
       </div>
     </div>
   );

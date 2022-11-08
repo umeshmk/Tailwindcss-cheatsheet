@@ -43,8 +43,6 @@ export let basic = {
     'zinc',
     'neutral',
     'stone',
-    'red',
-    'orange',
     'amber',
     'yellow',
     'lime',
@@ -60,6 +58,8 @@ export let basic = {
     'fuchsia',
     'pink',
     'rose',
+    'red',
+    'orange',
   ],
   pseudoClass: [
     'hover',

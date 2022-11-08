@@ -2,7 +2,7 @@ import React, {useContext} from 'react';
 import Title from '../Title';
 import {TailwindContext} from '../../context/TailwindContext';
 
-function Colors({title}) {
+function Colors() {
   const {basic} = useContext(TailwindContext);
   const {colors, colorsNum} = basic;
 

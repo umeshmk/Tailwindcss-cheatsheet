@@ -14,17 +14,15 @@ const createColArray = (data) => {
     if (v.col > maxCol) maxCol = v.col;
   });
 
-  // console.log('data', data);
   const finalArray = [];
   for (let i = 1; i <= maxCol; i++) {
     const colObj = {};
     Object.entries(data).map(([k, v]) => {
       if (v.col === i) colObj[k] = v.data;
     });
-    // console.log(`col-${i}`, colObj);
     finalArray.push(colObj);
   }
-  // console.log('final array', finalArray);
+
   return finalArray;
 };
 
@@ -58,25 +56,30 @@ export let cheatsheet = {
 };
 
 export let cheatsheetOrder = (() => {
-  const order = (sm, lg, _2xl) => {
-    return {sm: sm, lg: lg ?? sm, '2xl': _2xl ?? lg ?? sm};
+  const order = (sm, lg, xl, _2xl) => {
+    return {
+      sm: sm,
+      lg: lg ?? sm,
+      xl: xl ?? lg ?? sm,
+      '2xl': _2xl ?? lg ?? sm,
+    };
   };
   return {
-    flexbox: order(1, 1, 1),
-    grid: order(2, 2, 2),
-    flexboxAndGrid: order(3, 4, 3),
-    background: order(4, undefined, 7),
-    border: order(5, undefined, 4),
-    sizing: order(6, 7, 12),
-    spacing: order(7, 3),
-    typography: order(8, null, 6),
-    layout: order(9, null, 5),
+    flexbox: order(1, 1, null, 1),
+    grid: order(2, 2, null, 2),
+    flexboxAndGrid: order(3, 4, 3, 3),
+    background: order(4, undefined, null, 7),
+    border: order(5, undefined, null, 4),
+    sizing: order(6, 7, null, 12),
+    spacing: order(7, 3, 4),
+    typography: order(8, null, null, 6),
+    layout: order(9, null, null, 5),
     interactivity: order(11),
     transition: order(12),
     transform: order(13),
-    filters: order(14, null, 11),
-    effect: order(15, 16),
-    table: order(16, 15, 12),
+    filters: order(14, null, null, 11),
+    effect: order(15, 16, 15),
+    table: order(16, 15, null, 12),
     svg: order(16),
     accessibility: order(17),
   };
