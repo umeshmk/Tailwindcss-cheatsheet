@@ -1,18 +1,20 @@
-import React, {useContext} from 'react';
+import React, {useContext, useEffect, useRef} from 'react';
 import Title from './Title';
 import {TailwindContext} from '../context/TailwindContext';
 import {cheatsheetOrder} from '../context/cheatsheet';
 
 const Heading = ({data}) => (
-  <div className="flex flex-col flex-none grow  bg-purple-100 py-6 px-1">
+  <div className="flex flex-col flex-none grow  bg-purple-50 py-6 px-1">
     {Object.keys(data).map((title) => (
       <div
-        className="text-gray-600 text-sm uppercase font-semibold w-full p-2"
+        className="text-gray-60 text-purple-900  text-red-800 text-sm uppercase font-semibold w-full p-2"
         key={title}>
-        {title}
+        <span className="" data-id="sub-heading">
+          {title}
+        </span>
         {data[title].map((c, i) => (
-          <div className="text-red-800 font-normal px-2 " key={i}>
-            <code className="ffamily-b lowercase">.{c}</code>
+          <div className="text-red-800 text-sky-60 font-normal px-2 " key={i}>
+            <code className="ffamily-b lowercase">{c}</code>
           </div>
         ))}
       </div>
@@ -40,8 +42,69 @@ function Content() {
       </div>
     ));
 
+  const ref = useRef();
+
+  useEffect(async () => {
+    if (ref.current) {
+      // CODE TEXT
+      const codeEls = ref.current.querySelectorAll('code');
+      for (let i = 0; i < codeEls.length; i++) {
+        let text = codeEls[i].innerText;
+        const bracketsRegex = /\[(.*?)\]/g;
+        const bracketsArr = text.match(bracketsRegex);
+
+        console.log('yes', text, bracketsArr);
+
+        if (bracketsArr && bracketsArr.length > 0) {
+          bracketsArr.map((v) => {
+            v = v.slice(1, -1);
+            console.log(v);
+            text = text.replaceAll(
+              `${v}`,
+              // `<span class="text-green-600">${v}</span>`
+              // `<span class="text-stone-600">${v}</span>`
+              `<span class="text-sky-600">${v}</span>`
+            );
+          });
+        }
+
+        codeEls[i].innerHTML = text
+          // .replaceAll('|', '<span class="text-stone-400">|</span>')
+          .replaceAll('|', '<span class="text-red-800">|</span>')
+          .replaceAll(
+            '$spacing',
+            '<span class="text-green-700">$spacing</span>'
+          )
+          .replaceAll('$color', '<span class="text-green-700">$color</span>');
+      }
+
+      // SUB HEADINGS
+      const Els = ref.current.querySelectorAll('[data-id="sub-heading"]');
+      for (let i = 0; i < Els.length; i++) {
+        let text = Els[i].innerText;
+        const bracketsRegex = /\[(.*?)\]/g;
+        const bracketsArr = text.match(bracketsRegex);
+
+        if (bracketsArr && bracketsArr.length > 0) {
+          bracketsArr.map((v) => {
+            v = v.slice(1, -1);
+            text = text.replaceAll(
+              `${v}`,
+              `<span class="text-sky-600 font-norma ">${v}</span>`
+            );
+          });
+        }
+
+        Els[i].innerHTML = text.replaceAll(
+          '|',
+          '<span class="text-gray-800"> | </span>'
+        );
+      }
+    }
+  }, []);
+
   return (
-    <div>
+    <div ref={ref}>
       <div className="grid grid-cols-1 lg:flex lg:flex-wrap lg:justify-around lg:gap-2 lg:gap-y-10 p-4 pt-20 py-20 ">
         <Loop className="lg:hidden" screen={'sm'} />
         <Loop className="hidden lg:block xl:hidden" screen={'lg'} />

@@ -16,15 +16,15 @@
       "[bg|from]-transparent",
       "[bg|from]-[inherit|current]",
       "[bg|from]-[white|black]",
-      "[bg|from]-[$color]-{50-900}"
+      "[bg|from]-[$color]-[50-900]"
     ]
   },
   "bg-position": {
     "col": 1,
     "data": [
       "bg-center",
-      "bg-{left|right|top|bottom}",
-      "bg-{left|right}-{top|bottom}"
+      "bg-[left|right|top|bottom]",
+      "bg-[left|right]-[top|bottom]"
     ]
   },
 

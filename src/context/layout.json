@@ -7,11 +7,11 @@
   "Columns": {
     "col": 1,
     "data": [
-      "columns-{1-12}",
+      "columns-[1-12]",
       "columns-auto",
       "coloumns-[3xs|2xs|xs]",
-      "coloumns-[sm|md|lg]",
-      "coloumns-[xl|{2-7}xl]"
+      "coloumns-[sm|md|lg|xl]",
+      "coloumns-[2-7]xl"
     ]
   },
   "Break [Before|After]": {
@@ -114,13 +114,13 @@
       "inset-[$SPACING]",
       "inset-[auto|full]",
       "inset-1/2",
-      "inset-{1-2}/3",
-      "inset-{1-3}/4",
+      "inset-[1-2]/3",
+      "inset-[1-3]/4",
       "inset-[x|y]-[$SPACING]",
       "inset-[x|y]-[auto|full]",
       "inset-[x|y]-1/2",
-      "inset-[x|y]-{1-2}/3",
-      "inset-[x|y]-{1-3}/4"
+      "inset-[x|y]-[1-2]/3",
+      "inset-[x|y]-[1-3]/4"
     ]
   },
   "Visible": {"col": 1, "data": ["visible", "invisible", "collapse"]},

@@ -60,13 +60,13 @@
       "text-[start|end]"
     ]
   },
-  "[placeholder/text]-color": {
+  "[placeholder|text]-color": {
     "col": 2,
     "data": [
-      "[placeholder/text]-transparent",
-      "[placeholder/text]-current",
-      "[placeholder/text]-[white/black]",
-      "[placeholder/text]-[$COLOR]-[50-900}"
+      "[placeholder|text]-transparent",
+      "[placeholder|text]-current",
+      "[placeholder|text]-[white|black]",
+      "[placeholder|text]-[$COLOR]-[50-900]"
     ]
   },
   "text-indent": {"col": 3, "data": ["indent-[$SPACING]"]},
@@ -85,7 +85,7 @@
       "decoration-transparent",
       "decoration-current",
       "decoration-[white/black]",
-      "decoration-[$COLOR]-[50-900}"
+      "decoration-[$COLOR]-[50-900]"
     ]
   },
   "text-decoration-style": {

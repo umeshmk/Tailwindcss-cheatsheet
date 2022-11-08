@@ -3,10 +3,10 @@
     "col": 1,
     "data": [
       "[border|divide|ring|ring-offset]-transparent",
-      "[border|divide|ring|ring-offset]-{inherit|current}",
+      "[border|divide|ring|ring-offset]-[inherit|current]",
       "[border|divide|ring|ring-offset]-white",
       "[border|divide|ring|ring-offset]-black",
-      "[border|divide|ring|ring-offset]-{$color}-{50-900}"
+      "[border|divide|ring|ring-offset]-[$color]-[50-900]"
     ]
   },
 
@@ -26,11 +26,11 @@
     "col": 2,
     "data": [
       "border",
-      "border-{0|2|4|8}",
-      "border-{x|y}",
-      "border-{x|y}-{0|2|4|8}",
-      "border-{t|r|b|l}",
-      "border-{t|r|b|l}-{0|2|4|8}"
+      "border-[0|2|4|8]",
+      "border-[x|y]",
+      "border-[x|y]-[0|2|4|8]",
+      "border-[t|r|b|l]",
+      "border-[t|r|b|l]-[0|2|4|8]"
     ]
   },
   "divide width": {
@@ -59,14 +59,14 @@
     "col": 1,
     "data": [
       "rounded",
-      "rounded-{sm|md|lg|xl|2xl|3xl}",
-      "rounded-{full|none}",
-      "rounded-{t|r|b|l}",
-      "rounded-{t|r|b|l}-{full|none}",
-      "rounded-{t|r|b|l}-{sm|md|lg|xl|2xl|3xl}",
-      "rounded-{tr|tl|br|bl}",
-      "rounded-{tr|tl|br|bl}-{full|none}",
-      "rounded-{tr|tl|br|bl}-{sm|md|lg|xl|2xl|3xl}"
+      "rounded-[sm|md|lg|xl|2xl|3xl]",
+      "rounded-[full|none]",
+      "rounded-[t|r|b|l]",
+      "rounded-[t|r|b|l]-[full|none]",
+      "rounded-[t|r|b|l]-[sm|md|lg|xl|2xl|3xl]",
+      "rounded-[tr|tl|br|bl]",
+      "rounded-[tr|tl|br|bl]-[full|none]",
+      "rounded-[tr|tl|br|bl]-[sm|md|lg|xl|2xl|3xl]"
     ]
   }
 }
