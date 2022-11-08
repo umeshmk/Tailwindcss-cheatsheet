@@ -6,7 +6,7 @@ import Others from './header/Others';
 
 function Header() {
   return (
-    <header className="grid grid-cols-1 gap-5 bg-purple-200  p-5   lg:py-20 lg:pb-32 ">
+    <header className="grid grid-cols-1 gap-5 bg-purple-100  p-5   lg:py-20 lg:pb-32 ">
       {/* MOBILE */}
       <div className="grid grid-cols-1 gap-10 mt-5 lg:hidden">
         <Spacing />

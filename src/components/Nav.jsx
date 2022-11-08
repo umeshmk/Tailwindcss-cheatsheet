@@ -8,7 +8,7 @@ function Nav() {
         items-center
         justify-between
         text-gray-800
-         bg-purple-100        
+        bg-purple-50        
         px-4
         py-5
       ">

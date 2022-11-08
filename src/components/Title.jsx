@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react';
 
-function Title({ title }) {
+function Title({title}) {
   return (
     <div>
-      <h1 className=" inline-block text-xl text-gray-800 bg-purple-100 font-bold p-2 capitalize ">
-        <span className="text-red-700 font-normal"># </span>
+      <h1 className=" inline-block text-xl text-red-900 bg-red-100 font-bold p-2 pr-3 capitalize ">
+        <span className="text-red-600 font-normal"># </span>
         {title}
       </h1>
     </div>

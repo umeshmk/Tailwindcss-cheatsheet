@@ -7,9 +7,9 @@ const Heading = ({data}) => (
   <div className="flex flex-col flex-none grow  bg-purple-50 py-6 px-1">
     {Object.keys(data).map((title) => (
       <div
-        className="text-gray-60 text-purple-900  text-red-800 text-sm uppercase font-semibold w-full p-2"
+        className="text-gray-60 text-purple-900  text-red-800 text-sm w-full p-2"
         key={title}>
-        <span className="" data-id="sub-heading">
+        <span className="lowercase font-bold" data-id="sub-heading">
           {title}
         </span>
         {data[title].map((c, i) => (
@@ -95,10 +95,11 @@ function Content() {
           });
         }
 
-        Els[i].innerHTML = text.replaceAll(
-          '|',
-          '<span class="text-gray-800"> | </span>'
-        );
+        Els[i].innerHTML = text;
+        // Els[i].innerHTML = text.replaceAll(
+        //   '|',
+        //   '<span class="text-gray-800"> | </span>'
+        // );
       }
     }
   }, []);
