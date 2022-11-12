@@ -9,6 +9,7 @@ yarn run build
 # copy old version
 cp -r ./v1 ./dist
 cp -r ./v2.0 ./dist
+cp -r ./v2.1 ./dist
 
 # navigate into the build output directory
 cd dist
