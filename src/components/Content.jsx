@@ -53,23 +53,17 @@ function Content() {
         const bracketsRegex = /\[(.*?)\]/g;
         const bracketsArr = text.match(bracketsRegex);
 
-        console.log('yes', text, bracketsArr);
-
         if (bracketsArr && bracketsArr.length > 0) {
           bracketsArr.map((v) => {
             v = v.slice(1, -1);
-            console.log(v);
             text = text.replaceAll(
               `${v}`,
-              // `<span class="text-green-600">${v}</span>`
-              // `<span class="text-stone-600">${v}</span>`
               `<span class="text-sky-600">${v}</span>`
             );
           });
         }
 
         codeEls[i].innerHTML = text
-          // .replaceAll('|', '<span class="text-stone-400">|</span>')
           .replaceAll('|', '<span class="text-red-800">|</span>')
           .replaceAll(
             '$spacing',
@@ -96,10 +90,6 @@ function Content() {
         }
 
         Els[i].innerHTML = text;
-        // Els[i].innerHTML = text.replaceAll(
-        //   '|',
-        //   '<span class="text-gray-800"> | </span>'
-        // );
       }
     }
   }, []);
