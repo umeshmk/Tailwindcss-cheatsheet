@@ -4,7 +4,7 @@
 set -e
 
 # build
-yarn run build
+npm run build
 
 # copy old version
 cp -r ./v1 ./dist
