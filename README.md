@@ -1,6 +1,6 @@
 # Tailwindcss-cheatsheet (v3.0)
 
-### A very elegant and helpful Tailwindcss cheatsheet.
+### A Very Elegant and Helpful Tailwind CSS Cheatsheet.
 
 - [Tailwindcss-cheatsheet-3](https://umeshmk.github.io/Tailwindcss-cheatsheet/)
 - [Tailwindcss-cheatsheet-2.1](https://umeshmk.github.io/Tailwindcss-cheatsheet/v2.1)
@@ -13,13 +13,13 @@
 <!-- ![](https://i.imgur.com/mt2wnyp.png) -->
 <!-- ![](https://i.imgur.com/lAz0cZc.png) -->
 
-![](https://i.imgur.com/w4LyvSJ.png)
+![Preview](https://i.imgur.com/w4LyvSJ.png)
 
 ### Logs
 
 **v3.0 - 12 Nov 2022 :**
 
-- updated to Tailwindcss v3
+- Updated to Tailwind CSS v3
 - Text highlighting feature added
 - Design changes
 - Refactored source code
