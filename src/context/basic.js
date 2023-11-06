@@ -61,8 +61,6 @@ export let basic = {
     'fuchsia',
     'pink',
     'rose',
-    'red',
-    'orange',
   ],
   pseudoClass: [
     'hover',
