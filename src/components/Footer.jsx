@@ -17,6 +17,10 @@ function Footer() {
         bg-purple-100
         text-red-700
         uppercase
+        print:flex-row
+        print:py-0
+        print:gap-2
+        print:justify-center
       ">
       <div className="text-sm text-gray-700">Made with</div>
       <div className="flex justify-center items-center border-4 border-rose-100  bg-rose-200 my-2 w-10 h-10  p-2 rounded-full">
