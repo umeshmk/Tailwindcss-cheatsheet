@@ -9,7 +9,7 @@ function Breakpoints() {
     <div className="">
       <Title title="Breakpoints" />
       <div className="grid text-center overflow-x-scroll lg:overflow-hidden">
-        <div className="grid grid-cols-1 gap-y-   bg-purple-50 text-blue-500 py-4 ">
+        <div className="grid grid-cols-1 gap-y- bg-purple-50 print:bg-white text-blue-500 py-4 print:border print:border-slate-300">
           {Object.values(responsive).map((v) => {
             return (
               <div className="grid grid-cols-3 py-2" key={v.size}>

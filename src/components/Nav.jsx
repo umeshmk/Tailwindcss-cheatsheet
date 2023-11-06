@@ -11,6 +11,7 @@ function Nav() {
         bg-purple-50        
         px-4
         py-5
+        print:py-2
       ">
       <div className="flex flex-col">
         <div className="text-red-700 font-semibold text-xl">

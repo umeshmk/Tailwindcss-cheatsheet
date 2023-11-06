@@ -4,7 +4,7 @@ import {TailwindContext} from '../context/TailwindContext';
 import {cheatsheetOrder} from '../context/cheatsheet';
 
 const Heading = ({data}) => (
-  <div className="flex flex-col flex-none grow  bg-purple-50 py-6 px-1">
+  <div className="flex flex-col flex-none grow bg-purple-50 print:bg-white py-6 px-1">
     {Object.keys(data).map((title) => (
       <div
         className="text-gray-60 text-purple-900  text-red-800 text-sm w-full p-2"
@@ -28,13 +28,13 @@ function Content() {
   const Loop = ({className, screen}) =>
     Object.entries(cheatsheet).map(([key, v]) => (
       <div
-        className={`my-4 grow lg:grow-0 ${className} `}
+        className={`my-4 grow lg:grow-0 ${className} print:break-inside-avoid-page`}
         key={v.title}
         style={{
           order: cheatsheetOrder[key][screen],
         }}>
         <Title title={v.title} />
-        <div className="flex flex-row overflow-x-scroll lg:overflow-hidden">
+        <div className="flex flex-row overflow-x-scroll lg:overflow-hidden print:border print:border-slate-300">
           {v.data.map((v2, i) => (
             <Heading data={v2} key={i} />
           ))}
@@ -96,11 +96,12 @@ function Content() {
 
   return (
     <div ref={ref}>
-      <div className="grid grid-cols-1 lg:flex lg:flex-wrap lg:justify-around lg:gap-2 lg:gap-y-10 p-4 pt-20 py-20 ">
-        <Loop className="lg:hidden" screen={'sm'} />
-        <Loop className="hidden lg:block xl:hidden" screen={'lg'} />
-        <Loop className="hidden xl:block 2xl:hidden " screen={'xl'} />
-        <Loop className="hidden 2xl:block " screen={'2xl'} />
+      <div className="grid grid-cols-1 lg:flex lg:flex-wrap lg:justify-around lg:gap-2 lg:gap-y-10 p-4 pt-20 py-20 print:break-before-page">
+        <Loop className="lg:hidden print:hidden" screen={'sm'} />
+        <Loop className="hidden lg:block xl:hidden print:hidden lg:print:hidden" screen={'lg'} />
+        <Loop className="hidden xl:block 2xl:hidden print:hidden xl:print:hidden" screen={'xl'} />
+        <Loop className="hidden 2xl:block print:hidden 2xl:print:hidden" screen={'2xl'} />
+        <Loop className="hidden print:block" screen={'xl'} />
       </div>
     </div>
   );

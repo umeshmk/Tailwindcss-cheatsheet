@@ -7,8 +7,8 @@ function Colors() {
   const {colors, colorsNum} = basic;
 
   let listColorSize = (color) => (
-    <div className="mr-1 lg:m-0 border border-red-50 grow" key={color}>
-      <div className={`text-center text-xs py-4 px-0 m-0 text-${color}-500 `}>
+    <div className="mr-1 lg:m-0 border border-red-50 print:border-white grow" key={color}>
+      <div className={`text-center text-xs print:text-sm py-4 px-0 m-0 text-${color}-600 `}>
         {color}
       </div>
 
@@ -17,12 +17,12 @@ function Colors() {
           <div className="" key={v}>
             <div
               className={
-                'py-4 px-4 lg:px-3 m-0 text-xs text-center  bg-' +
+                'py-4 px-4 lg:px-3 m-0 text-xs print:text-sm text-center print:font-semibold bg-' +
                 color +
                 '-' +
                 v
               }>
-              <div className={`text-${color}-${v === 400 ? '6' : '4'}00 `}>
+              <div className={`text-${color}-${v < 500 ? '700' : '200'} print:text-${color}-${v < 500 ? '950' : '50'} `}>
                 {v}
               </div>
             </div>
@@ -36,7 +36,7 @@ function Colors() {
     <div className="">
       <Title title="Colors" />
       <div className="">
-        <div className="flex lg:justify-evenly overflow-x-scroll lg:overflow-x-auto bg-purple-100 ">
+        <div className="flex lg:justify-evenly overflow-x-scroll lg:overflow-x-auto bg-purple-100 print:bg-white print:border print:border-slate-300">
           {colors.map((v) => {
             return listColorSize(v);
           })}

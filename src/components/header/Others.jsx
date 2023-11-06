@@ -3,7 +3,7 @@ import Title from '../Title';
 import {TailwindContext} from '../../context/TailwindContext';
 
 const Tags = ({arr}) => (
-  <div className="flex flex-wrap gap- italic bg-purple-50 g-white py-3 px-2  tracking-wide">
+  <div className="flex flex-wrap gap- italic bg-purple-50 print:bg-white g-white py-3 px-2 tracking-wide print:border print:border-slate-300">
     {arr.map((v) => (
       <div
         className="border-purple-300 border-r-2 py-px p-2 mb-1 last:border-0"
