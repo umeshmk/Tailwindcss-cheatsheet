@@ -44,6 +44,8 @@ export let basic = {
     'zinc',
     'neutral',
     'stone',
+    'red',
+    'orange',
     'amber',
     'yellow',
     'lime',
